@@ -1,0 +1,11 @@
+D:\DesktopCK\desktop_uehchaconner\UEH_Chaconner\BLL\bin\Debug\BLL.dll
+D:\DesktopCK\desktop_uehchaconner\UEH_Chaconner\BLL\bin\Debug\BLL.pdb
+D:\DesktopCK\desktop_uehchaconner\UEH_Chaconner\BLL\bin\Debug\DAL.dll
+D:\DesktopCK\desktop_uehchaconner\UEH_Chaconner\BLL\bin\Debug\DTO.dll
+D:\DesktopCK\desktop_uehchaconner\UEH_Chaconner\BLL\bin\Debug\DAL.pdb
+D:\DesktopCK\desktop_uehchaconner\UEH_Chaconner\BLL\bin\Debug\DTO.pdb
+D:\DesktopCK\desktop_uehchaconner\UEH_Chaconner\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\DesktopCK\desktop_uehchaconner\UEH_Chaconner\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\DesktopCK\desktop_uehchaconner\UEH_Chaconner\BLL\obj\Debug\BLL.csproj.CopyComplete
+D:\DesktopCK\desktop_uehchaconner\UEH_Chaconner\BLL\obj\Debug\BLL.dll
+D:\DesktopCK\desktop_uehchaconner\UEH_Chaconner\BLL\obj\Debug\BLL.pdb

@@ -1,0 +1,9 @@
+D:\DesktopCK\desktop_uehchaconner\UEH_Chaconner\DAL\bin\Debug\DAL.dll
+D:\DesktopCK\desktop_uehchaconner\UEH_Chaconner\DAL\bin\Debug\DAL.pdb
+D:\DesktopCK\desktop_uehchaconner\UEH_Chaconner\DAL\bin\Debug\DTO.dll
+D:\DesktopCK\desktop_uehchaconner\UEH_Chaconner\DAL\bin\Debug\DTO.pdb
+D:\DesktopCK\desktop_uehchaconner\UEH_Chaconner\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\DesktopCK\desktop_uehchaconner\UEH_Chaconner\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\DesktopCK\desktop_uehchaconner\UEH_Chaconner\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\DesktopCK\desktop_uehchaconner\UEH_Chaconner\DAL\obj\Debug\DAL.dll
+D:\DesktopCK\desktop_uehchaconner\UEH_Chaconner\DAL\obj\Debug\DAL.pdb
