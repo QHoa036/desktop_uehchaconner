@@ -1,0 +1,14 @@
+D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\bin\Debug\UEH_Chacorner.exe.config
+D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\bin\Debug\UEH_Chacorner.exe
+D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\bin\Debug\UEH_Chacorner.pdb
+D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\bin\Debug\BLL.dll
+D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\bin\Debug\DTO.dll
+D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\bin\Debug\BLL.pdb
+D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\bin\Debug\DTO.pdb
+D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.csproj.AssemblyReference.cache
+D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.Properties.Resources.resources
+D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.csproj.GenerateResource.cache
+D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.csproj.CoreCompileInputs.cache
+D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.csproj.CopyComplete
+D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.exe
+D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.pdb
