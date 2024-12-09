@@ -12,3 +12,17 @@ D:\DesktopCK\desktop_uehchaconner\UEH_Chaconner\UEH_Chaconner\obj\Debug\UEH_Chac
 D:\DesktopCK\desktop_uehchaconner\UEH_Chaconner\UEH_Chaconner\obj\Debug\UEH_Chaconner.csproj.CopyComplete
 D:\DesktopCK\desktop_uehchaconner\UEH_Chaconner\UEH_Chaconner\obj\Debug\UEH_Chaconner.exe
 D:\DesktopCK\desktop_uehchaconner\UEH_Chaconner\UEH_Chaconner\obj\Debug\UEH_Chaconner.pdb
+D:\Working\Bông\desktop_uehchaconner\UEH_Chaconner\UEH_Chaconner\obj\Debug\UEH_Chaconner.csproj.AssemblyReference.cache
+D:\Working\Bông\desktop_uehchaconner\UEH_Chaconner\UEH_Chaconner\obj\Debug\UEH_Chaconner.Properties.Resources.resources
+D:\Working\Bông\desktop_uehchaconner\UEH_Chaconner\UEH_Chaconner\obj\Debug\UEH_Chaconner.csproj.GenerateResource.cache
+D:\Working\Bông\desktop_uehchaconner\UEH_Chaconner\UEH_Chaconner\obj\Debug\UEH_Chaconner.csproj.CoreCompileInputs.cache
+D:\Working\Bông\desktop_uehchaconner\UEH_Chaconner\UEH_Chaconner\obj\Debug\UEH_Chaconner.exe
+D:\Working\Bông\desktop_uehchaconner\UEH_Chaconner\UEH_Chaconner\obj\Debug\UEH_Chaconner.pdb
+D:\Working\Bông\desktop_uehchaconner\UEH_Chaconner\UEH_Chaconner\bin\Debug\UEH_Chaconner.exe.config
+D:\Working\Bông\desktop_uehchaconner\UEH_Chaconner\UEH_Chaconner\bin\Debug\UEH_Chaconner.exe
+D:\Working\Bông\desktop_uehchaconner\UEH_Chaconner\UEH_Chaconner\bin\Debug\UEH_Chaconner.pdb
+D:\Working\Bông\desktop_uehchaconner\UEH_Chaconner\UEH_Chaconner\bin\Debug\BLL.dll
+D:\Working\Bông\desktop_uehchaconner\UEH_Chaconner\UEH_Chaconner\bin\Debug\DTO.dll
+D:\Working\Bông\desktop_uehchaconner\UEH_Chaconner\UEH_Chaconner\bin\Debug\BLL.pdb
+D:\Working\Bông\desktop_uehchaconner\UEH_Chaconner\UEH_Chaconner\bin\Debug\DTO.pdb
+D:\Working\Bông\desktop_uehchaconner\UEH_Chaconner\UEH_Chaconner\obj\Debug\UEH_Chac.899753D0.Up2Date
