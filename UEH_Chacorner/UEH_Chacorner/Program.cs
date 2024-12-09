@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 
+using UEH_Chacorner;
+
 namespace UEH_Chaconner
 {
     internal static class Program
@@ -13,6 +15,7 @@ namespace UEH_Chaconner
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new FLogin());
         }
     }
 }

@@ -4,3 +4,9 @@ D:\DesktopCK\desktop_uehchaconner\UEH_Chaconner\DTO\obj\Debug\DTO.csproj.Assembl
 D:\DesktopCK\desktop_uehchaconner\UEH_Chaconner\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\DesktopCK\desktop_uehchaconner\UEH_Chaconner\DTO\obj\Debug\DTO.dll
 D:\DesktopCK\desktop_uehchaconner\UEH_Chaconner\DTO\obj\Debug\DTO.pdb
+D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\DTO\bin\Debug\DTO.dll
+D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\DTO\bin\Debug\DTO.pdb
+D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\DTO\obj\Debug\DTO.dll
+D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\DTO\obj\Debug\DTO.pdb

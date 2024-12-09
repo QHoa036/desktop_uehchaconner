@@ -12,3 +12,8 @@ D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chac
 D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.csproj.CopyComplete
 D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.exe
 D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.pdb
+D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\bin\Debug\DAL.dll
+D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\bin\Debug\DAL.pdb
+D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\bin\Debug\Guna.UI2.dll
+D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.FLoading.resources
+D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.FLogin.resources
