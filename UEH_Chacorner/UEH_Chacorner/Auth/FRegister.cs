@@ -10,8 +10,8 @@ namespace UEH_Chacorner
 {
     public partial class FRegister : Form
     {
-        private readonly NHANVIEN_BLL _nvBul = new NHANVIEN_BLL();
-        private readonly TAIKHOAN_BLL _tkBul = new TAIKHOAN_BLL();
+        private readonly NHANVIEN_BLL _nvBll = new NHANVIEN_BLL();
+        private readonly TAIKHOAN_BLL _tkBll = new TAIKHOAN_BLL();
 
         private int _manv;
         private string _quyen = "";
@@ -33,7 +33,7 @@ namespace UEH_Chacorner
         private void Insertnhanvien()
         {
             var nvPublic = new NHANVIEN_DTO();
-            _manv = _nvBul.count_nhanvien();
+            _manv = _nvBll.count_nhanvien();
 
             nvPublic.MaNV = "NV" + _manv;
             nvPublic.TenNV = txthovaten.Text;
@@ -41,7 +41,7 @@ namespace UEH_Chacorner
             nvPublic.SDT = txtsdt.Text;
             nvPublic.GioiTinh = cbgioitinh.Text;
 
-            _nvBul.insert_nhanvien(nvPublic);
+            _nvBll.insert_nhanvien(nvPublic);
         }
 
         private void Inserttaikhoan()
@@ -53,7 +53,7 @@ namespace UEH_Chacorner
                 Quyen = _quyen,
                 MaNV = "NV" + _manv
             };
-            //_tkBul.insert_taikhoan(tkPublic);
+            _tkBll.insert_taikhoan(tkPublic);
         }
 
         #endregion
@@ -171,7 +171,7 @@ namespace UEH_Chacorner
         private void DeleteNhanVien_Loi()
         {
             var nhanvienPublic = new NHANVIEN_DTO {MaNV = "NV" + _manv};
-            _nvBul.delete_nhanvien(nhanvienPublic);
+            _nvBll.delete_nhanvien(nhanvienPublic);
         }
 
         private void rdadmin_CheckedChanged(object sender, EventArgs e)

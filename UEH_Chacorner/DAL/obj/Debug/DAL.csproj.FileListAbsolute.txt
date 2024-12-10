@@ -25,3 +25,12 @@ D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\DAL\obj\Debug\DAL.csproj.CoreCom
 D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\DAL\obj\Debug\DAL.csproj.CopyComplete
 D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\DAL\obj\Debug\DAL.dll
 D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\DAL\obj\Debug\DAL.pdb
+D:\Working\Bông\desktop_uehchaconner\UEH_Chacorner\DAL\bin\Debug\DAL.dll
+D:\Working\Bông\desktop_uehchaconner\UEH_Chacorner\DAL\bin\Debug\DAL.pdb
+D:\Working\Bông\desktop_uehchaconner\UEH_Chacorner\DAL\bin\Debug\DTO.dll
+D:\Working\Bông\desktop_uehchaconner\UEH_Chacorner\DAL\bin\Debug\DTO.pdb
+D:\Working\Bông\desktop_uehchaconner\UEH_Chacorner\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Working\Bông\desktop_uehchaconner\UEH_Chacorner\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Working\Bông\desktop_uehchaconner\UEH_Chacorner\DAL\obj\Debug\DAL.csproj.Up2Date
+D:\Working\Bông\desktop_uehchaconner\UEH_Chacorner\DAL\obj\Debug\DAL.dll
+D:\Working\Bông\desktop_uehchaconner\UEH_Chacorner\DAL\obj\Debug\DAL.pdb

@@ -9,7 +9,7 @@ namespace DAL
 
         public DataTable load_nhanvien()
         {
-            var sql = @"LOAD_NHANVIEN";
+            var sql = @"LOAD_NhanVien";
             return _conn.Load_Data(sql);
         }
 
@@ -31,7 +31,7 @@ namespace DAL
             values[3] = nhanvienPublic.SDT;
             values[4] = nhanvienPublic.GioiTinh;
 
-            var sql = "INSERT_NHANVIEN";
+            var sql = "INSERT_NhanVien";
             return _conn.ExecuteData(sql, name, values, parameter);
         }
 
@@ -53,7 +53,7 @@ namespace DAL
             values[3] = nhanvienPublic.SDT;
             values[4] = nhanvienPublic.GioiTinh;
 
-            var sql = "UPDATE_NHANVIEN";
+            var sql = "UPDATE_NhanVien";
             return _conn.ExecuteData(sql, name, values, parameter);
         }
 
@@ -63,16 +63,16 @@ namespace DAL
             var name = new string[parameter];
             var values = new object[parameter];
 
-            name[0] = "@IDNV";
+            name[0] = "@MaNV";
             values[0] = nhanvienPublic.MaNV;
 
-            var sql = "DELETE_NHANVIEN";
+            var sql = "DELETE_NhanVien";
             return _conn.ExecuteData(sql, name, values, parameter);
         }
 
         public int count_nhanvien()
         {
-            var sql = "COUNT_NHANVIEN";
+            var sql = "COUNT_NhanVien";
             return _conn.ReturnValueInt(sql);
         }
 
@@ -82,10 +82,10 @@ namespace DAL
             var name = new string[parameter];
             var values = new object[parameter];
 
-            name[0] = "@TEN";
+            name[0] = "@TenNV";
             values[0] = nhanvienPublic.TenNV;
 
-            var sql = "TIM_TENNV";
+            var sql = "TIM_TenNV";
             return _conn.LoadDataWithParameter(sql, name, values, parameter);
         }
     }

@@ -15,11 +15,6 @@ namespace UEH_Chacorner
             timer.Start();
         }
 
-        public void FLoading_FormClosing(object sender, FormClosingEventArgs e)
-        {
-
-        }
-
         private void timer_Tick(object sender, EventArgs e)
         {
             if (ProgressBar.Value == 100)
