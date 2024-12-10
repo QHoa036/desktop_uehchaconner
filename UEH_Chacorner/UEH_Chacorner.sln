@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UEH_Chacorner", "UEH_Chacorner\UEH_Chacorner.csproj", "{928D3BA7-F73A-4699-80B6-AC9BD9BFE0C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UEH_ChaCorner", "UEH_Chacorner\UEH_ChaCorner.csproj", "{928D3BA7-F73A-4699-80B6-AC9BD9BFE0C2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{3A6F7E07-8615-4AC4-8705-BE3A423474F4}"
 EndProject

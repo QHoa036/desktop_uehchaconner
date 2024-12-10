@@ -11,6 +11,8 @@ DAL/bin/*
 DAL/obj/*
 DTO/bin/*
 DTO/obj/*
+UEH_ChaCorner/bin/*
+UEH_ChaCorner/obj/*
 # User-specific files
 *.suo
 *.user
@@ -34,6 +36,7 @@ bld/
 
 # Visual Studio 2015 cache/options directory
 .vs/
+*.vs/
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
