@@ -24,7 +24,6 @@ namespace UEH_Chacorner
             else
             {
                 ProgressBar.Increment(2);
-                label_val.Text = (Convert.ToInt32(label_val.Text) + 2).ToString();
             }
         }
     }

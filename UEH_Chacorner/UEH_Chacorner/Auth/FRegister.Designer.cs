@@ -81,8 +81,9 @@ namespace UEH_Chacorner
             this.panelContainer.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
             this.panelContainer.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.panelContainer.Location = new System.Drawing.Point(0, 0);
+            this.panelContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(351, 426);
+            this.panelContainer.Size = new System.Drawing.Size(439, 532);
             this.panelContainer.TabIndex = 90;
             this.panelContainer.UseTransparentBackground = true;
             // 
@@ -99,13 +100,14 @@ namespace UEH_Chacorner
             this.guna2GroupBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(67)))), ((int)(((byte)(53)))));
             this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(96)))), ((int)(((byte)(48)))));
-            this.guna2GroupBox2.Location = new System.Drawing.Point(202, 329);
+            this.guna2GroupBox2.Location = new System.Drawing.Point(252, 411);
+            this.guna2GroupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
             this.guna2GroupBox2.ShadowDecoration.BorderRadius = 20;
             this.guna2GroupBox2.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2GroupBox2.ShadowDecoration.Depth = 40;
             this.guna2GroupBox2.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(7, 0, 0, 7);
-            this.guna2GroupBox2.Size = new System.Drawing.Size(135, 86);
+            this.guna2GroupBox2.Size = new System.Drawing.Size(169, 108);
             this.guna2GroupBox2.TabIndex = 92;
             this.guna2GroupBox2.Text = "Quyền";
             this.guna2GroupBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -116,9 +118,10 @@ namespace UEH_Chacorner
             this.rdnhanvien.AutoSize = true;
             this.rdnhanvien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.rdnhanvien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(151)))), ((int)(((byte)(59)))));
-            this.rdnhanvien.Location = new System.Drawing.Point(29, 60);
+            this.rdnhanvien.Location = new System.Drawing.Point(36, 75);
+            this.rdnhanvien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdnhanvien.Name = "rdnhanvien";
-            this.rdnhanvien.Size = new System.Drawing.Size(99, 21);
+            this.rdnhanvien.Size = new System.Drawing.Size(113, 24);
             this.rdnhanvien.TabIndex = 3;
             this.rdnhanvien.TabStop = true;
             this.rdnhanvien.Text = "Nhân viên";
@@ -130,9 +133,10 @@ namespace UEH_Chacorner
             this.rdadmin.AutoSize = true;
             this.rdadmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.rdadmin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(151)))), ((int)(((byte)(59)))));
-            this.rdadmin.Location = new System.Drawing.Point(29, 34);
+            this.rdadmin.Location = new System.Drawing.Point(36, 42);
+            this.rdadmin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rdadmin.Name = "rdadmin";
-            this.rdadmin.Size = new System.Drawing.Size(70, 21);
+            this.rdadmin.Size = new System.Drawing.Size(82, 24);
             this.rdadmin.TabIndex = 2;
             this.rdadmin.TabStop = true;
             this.rdadmin.Text = "Admin";
@@ -152,13 +156,14 @@ namespace UEH_Chacorner
             this.guna2GroupBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(67)))), ((int)(((byte)(53)))));
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(96)))), ((int)(((byte)(48)))));
-            this.guna2GroupBox1.Location = new System.Drawing.Point(10, 329);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(12, 411);
+            this.guna2GroupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.ShadowDecoration.BorderRadius = 20;
             this.guna2GroupBox1.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.guna2GroupBox1.ShadowDecoration.Depth = 40;
             this.guna2GroupBox1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(7, 0, 0, 7);
-            this.guna2GroupBox1.Size = new System.Drawing.Size(186, 86);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(232, 108);
             this.guna2GroupBox1.TabIndex = 92;
             this.guna2GroupBox1.Text = "Chức năng";
             this.guna2GroupBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -174,11 +179,12 @@ namespace UEH_Chacorner
             this.btthoat.ImageOffset = new System.Drawing.Point(0, 0);
             this.btthoat.ImageRotate = 0F;
             this.btthoat.ImageSize = new System.Drawing.Size(48, 48);
-            this.btthoat.Location = new System.Drawing.Point(99, 38);
+            this.btthoat.Location = new System.Drawing.Point(124, 48);
+            this.btthoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btthoat.Name = "btthoat";
             this.btthoat.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.btthoat.PressedState.ImageSize = new System.Drawing.Size(48, 48);
-            this.btthoat.Size = new System.Drawing.Size(65, 45);
+            this.btthoat.Size = new System.Drawing.Size(81, 56);
             this.btthoat.TabIndex = 50;
             this.btthoat.UseTransparentBackground = true;
             this.btthoat.Click += new System.EventHandler(this.btthoat_Click);
@@ -193,11 +199,12 @@ namespace UEH_Chacorner
             this.btdangky.ImageOffset = new System.Drawing.Point(0, 0);
             this.btdangky.ImageRotate = 0F;
             this.btdangky.ImageSize = new System.Drawing.Size(48, 48);
-            this.btdangky.Location = new System.Drawing.Point(28, 38);
+            this.btdangky.Location = new System.Drawing.Point(35, 48);
+            this.btdangky.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btdangky.Name = "btdangky";
             this.btdangky.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
             this.btdangky.PressedState.ImageSize = new System.Drawing.Size(48, 48);
-            this.btdangky.Size = new System.Drawing.Size(65, 45);
+            this.btdangky.Size = new System.Drawing.Size(81, 56);
             this.btdangky.TabIndex = 51;
             this.btdangky.UseTransparentBackground = true;
             this.btdangky.Click += new System.EventHandler(this.btdangky_Click);
@@ -226,13 +233,14 @@ namespace UEH_Chacorner
             this.grInfo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(67)))), ((int)(((byte)(53)))));
             this.grInfo.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(96)))), ((int)(((byte)(48)))));
-            this.grInfo.Location = new System.Drawing.Point(10, 34);
+            this.grInfo.Location = new System.Drawing.Point(12, 42);
+            this.grInfo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grInfo.Name = "grInfo";
             this.grInfo.ShadowDecoration.BorderRadius = 20;
             this.grInfo.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.grInfo.ShadowDecoration.Depth = 40;
             this.grInfo.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(7, 0, 0, 7);
-            this.grInfo.Size = new System.Drawing.Size(327, 289);
+            this.grInfo.Size = new System.Drawing.Size(409, 361);
             this.grInfo.TabIndex = 91;
             this.grInfo.Text = "Thông tin đăng ký";
             this.grInfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -243,9 +251,10 @@ namespace UEH_Chacorner
             this.lbtrangthai.AutoSize = true;
             this.lbtrangthai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbtrangthai.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbtrangthai.Location = new System.Drawing.Point(26, 262);
+            this.lbtrangthai.Location = new System.Drawing.Point(32, 328);
+            this.lbtrangthai.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbtrangthai.Name = "lbtrangthai";
-            this.lbtrangthai.Size = new System.Drawing.Size(0, 15);
+            this.lbtrangthai.Size = new System.Drawing.Size(0, 18);
             this.lbtrangthai.TabIndex = 66;
             // 
             // txtsdt
@@ -254,7 +263,7 @@ namespace UEH_Chacorner
             this.txtsdt.Animated = true;
             this.txtsdt.AutoRoundedCorners = true;
             this.txtsdt.BorderColor = System.Drawing.Color.Transparent;
-            this.txtsdt.BorderRadius = 10;
+            this.txtsdt.BorderRadius = 13;
             this.txtsdt.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtsdt.DefaultText = "";
             this.txtsdt.DisabledState.BorderColor = System.Drawing.Color.Transparent;
@@ -266,15 +275,15 @@ namespace UEH_Chacorner
             this.txtsdt.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtsdt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(151)))), ((int)(((byte)(59)))));
             this.txtsdt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(151)))), ((int)(((byte)(59)))));
-            this.txtsdt.Location = new System.Drawing.Point(125, 199);
-            this.txtsdt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtsdt.Location = new System.Drawing.Point(156, 249);
+            this.txtsdt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtsdt.Name = "txtsdt";
             this.txtsdt.PasswordChar = '\0';
             this.txtsdt.PlaceholderText = "";
             this.txtsdt.SelectedText = "";
             this.txtsdt.ShadowDecoration.BorderRadius = 13;
             this.txtsdt.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
-            this.txtsdt.Size = new System.Drawing.Size(177, 23);
+            this.txtsdt.Size = new System.Drawing.Size(221, 29);
             this.txtsdt.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtsdt.TabIndex = 65;
             this.txtsdt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -301,9 +310,10 @@ namespace UEH_Chacorner
             this.cbgioitinh.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.cbgioitinh.Location = new System.Drawing.Point(125, 238);
+            this.cbgioitinh.Location = new System.Drawing.Point(156, 298);
+            this.cbgioitinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbgioitinh.Name = "cbgioitinh";
-            this.cbgioitinh.Size = new System.Drawing.Size(178, 29);
+            this.cbgioitinh.Size = new System.Drawing.Size(222, 29);
             this.cbgioitinh.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.cbgioitinh.TabIndex = 64;
             this.cbgioitinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -314,7 +324,7 @@ namespace UEH_Chacorner
             this.datengaysinh.Animated = true;
             this.datengaysinh.AutoRoundedCorners = true;
             this.datengaysinh.BackColor = System.Drawing.Color.Transparent;
-            this.datengaysinh.BorderRadius = 10;
+            this.datengaysinh.BorderRadius = 13;
             this.datengaysinh.BorderThickness = 1;
             this.datengaysinh.Checked = true;
             this.datengaysinh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(67)))), ((int)(((byte)(53)))));
@@ -323,16 +333,16 @@ namespace UEH_Chacorner
             this.datengaysinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.datengaysinh.HoverState.ForeColor = System.Drawing.Color.Black;
             this.datengaysinh.IndicateFocus = true;
-            this.datengaysinh.Location = new System.Drawing.Point(125, 161);
+            this.datengaysinh.Location = new System.Drawing.Point(156, 201);
             this.datengaysinh.Margin = new System.Windows.Forms.Padding(2);
             this.datengaysinh.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.datengaysinh.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.datengaysinh.Name = "datengaysinh";
-            this.datengaysinh.Padding = new System.Windows.Forms.Padding(3);
+            this.datengaysinh.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.datengaysinh.ShadowDecoration.BorderRadius = 12;
             this.datengaysinh.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(49)))), ((int)(((byte)(46)))));
             this.datengaysinh.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 10, 10);
-            this.datengaysinh.Size = new System.Drawing.Size(177, 23);
+            this.datengaysinh.Size = new System.Drawing.Size(221, 29);
             this.datengaysinh.TabIndex = 63;
             this.datengaysinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.datengaysinh.UseTransparentBackground = true;
@@ -344,7 +354,7 @@ namespace UEH_Chacorner
             this.txthovaten.Animated = true;
             this.txthovaten.AutoRoundedCorners = true;
             this.txthovaten.BorderColor = System.Drawing.Color.Transparent;
-            this.txthovaten.BorderRadius = 10;
+            this.txthovaten.BorderRadius = 13;
             this.txthovaten.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txthovaten.DefaultText = "";
             this.txthovaten.DisabledState.BorderColor = System.Drawing.Color.Transparent;
@@ -356,15 +366,15 @@ namespace UEH_Chacorner
             this.txthovaten.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txthovaten.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(151)))), ((int)(((byte)(59)))));
             this.txthovaten.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(151)))), ((int)(((byte)(59)))));
-            this.txthovaten.Location = new System.Drawing.Point(125, 122);
-            this.txthovaten.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txthovaten.Location = new System.Drawing.Point(156, 152);
+            this.txthovaten.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txthovaten.Name = "txthovaten";
             this.txthovaten.PasswordChar = '\0';
             this.txthovaten.PlaceholderText = "";
             this.txthovaten.SelectedText = "";
             this.txthovaten.ShadowDecoration.BorderRadius = 13;
             this.txthovaten.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
-            this.txthovaten.Size = new System.Drawing.Size(177, 23);
+            this.txthovaten.Size = new System.Drawing.Size(221, 29);
             this.txthovaten.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txthovaten.TabIndex = 62;
             this.txthovaten.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -375,7 +385,7 @@ namespace UEH_Chacorner
             this.txtmatkhau.Animated = true;
             this.txtmatkhau.AutoRoundedCorners = true;
             this.txtmatkhau.BorderColor = System.Drawing.Color.Transparent;
-            this.txtmatkhau.BorderRadius = 10;
+            this.txtmatkhau.BorderRadius = 13;
             this.txtmatkhau.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtmatkhau.DefaultText = "";
             this.txtmatkhau.DisabledState.BorderColor = System.Drawing.Color.Transparent;
@@ -387,15 +397,15 @@ namespace UEH_Chacorner
             this.txtmatkhau.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtmatkhau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(151)))), ((int)(((byte)(59)))));
             this.txtmatkhau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(151)))), ((int)(((byte)(59)))));
-            this.txtmatkhau.Location = new System.Drawing.Point(125, 84);
-            this.txtmatkhau.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtmatkhau.Location = new System.Drawing.Point(156, 105);
+            this.txtmatkhau.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtmatkhau.Name = "txtmatkhau";
             this.txtmatkhau.PasswordChar = '\0';
             this.txtmatkhau.PlaceholderText = "";
             this.txtmatkhau.SelectedText = "";
             this.txtmatkhau.ShadowDecoration.BorderRadius = 13;
             this.txtmatkhau.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
-            this.txtmatkhau.Size = new System.Drawing.Size(177, 23);
+            this.txtmatkhau.Size = new System.Drawing.Size(221, 29);
             this.txtmatkhau.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtmatkhau.TabIndex = 62;
             this.txtmatkhau.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -406,7 +416,7 @@ namespace UEH_Chacorner
             this.txttentk.Animated = true;
             this.txttentk.AutoRoundedCorners = true;
             this.txttentk.BorderColor = System.Drawing.Color.Transparent;
-            this.txttentk.BorderRadius = 10;
+            this.txttentk.BorderRadius = 13;
             this.txttentk.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txttentk.DefaultText = "";
             this.txttentk.DisabledState.BorderColor = System.Drawing.Color.Transparent;
@@ -418,15 +428,15 @@ namespace UEH_Chacorner
             this.txttentk.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txttentk.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(151)))), ((int)(((byte)(59)))));
             this.txttentk.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(151)))), ((int)(((byte)(59)))));
-            this.txttentk.Location = new System.Drawing.Point(125, 46);
-            this.txttentk.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txttentk.Location = new System.Drawing.Point(156, 58);
+            this.txttentk.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txttentk.Name = "txttentk";
             this.txttentk.PasswordChar = '\0';
             this.txttentk.PlaceholderText = "";
             this.txttentk.SelectedText = "";
             this.txttentk.ShadowDecoration.BorderRadius = 13;
             this.txttentk.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
-            this.txttentk.Size = new System.Drawing.Size(177, 23);
+            this.txttentk.Size = new System.Drawing.Size(221, 29);
             this.txttentk.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txttentk.TabIndex = 61;
             this.txttentk.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -435,10 +445,10 @@ namespace UEH_Chacorner
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(151)))), ((int)(((byte)(59)))));
-            this.label5.Location = new System.Drawing.Point(25, 237);
+            this.label5.Location = new System.Drawing.Point(31, 296);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 23);
+            this.label5.Size = new System.Drawing.Size(118, 29);
             this.label5.TabIndex = 57;
             this.label5.Text = "Giới tính:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -447,10 +457,10 @@ namespace UEH_Chacorner
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(151)))), ((int)(((byte)(59)))));
-            this.label4.Location = new System.Drawing.Point(25, 198);
+            this.label4.Location = new System.Drawing.Point(31, 248);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 23);
+            this.label4.Size = new System.Drawing.Size(118, 29);
             this.label4.TabIndex = 57;
             this.label4.Text = "Số điện thoại:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -459,10 +469,10 @@ namespace UEH_Chacorner
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(151)))), ((int)(((byte)(59)))));
-            this.label3.Location = new System.Drawing.Point(25, 160);
+            this.label3.Location = new System.Drawing.Point(31, 200);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 23);
+            this.label3.Size = new System.Drawing.Size(118, 29);
             this.label3.TabIndex = 57;
             this.label3.Text = "Ngày sinh:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -471,10 +481,10 @@ namespace UEH_Chacorner
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(151)))), ((int)(((byte)(59)))));
-            this.label2.Location = new System.Drawing.Point(25, 122);
+            this.label2.Location = new System.Drawing.Point(31, 152);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 23);
+            this.label2.Size = new System.Drawing.Size(118, 29);
             this.label2.TabIndex = 57;
             this.label2.Text = "Họ và tên:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -483,10 +493,10 @@ namespace UEH_Chacorner
             // 
             this.lb2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(151)))), ((int)(((byte)(59)))));
-            this.lb2.Location = new System.Drawing.Point(25, 83);
+            this.lb2.Location = new System.Drawing.Point(31, 104);
             this.lb2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb2.Name = "lb2";
-            this.lb2.Size = new System.Drawing.Size(94, 23);
+            this.lb2.Size = new System.Drawing.Size(118, 29);
             this.lb2.TabIndex = 57;
             this.lb2.Text = "Mật khẩu:";
             this.lb2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -495,10 +505,10 @@ namespace UEH_Chacorner
             // 
             this.lb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(151)))), ((int)(((byte)(59)))));
-            this.lb1.Location = new System.Drawing.Point(25, 45);
+            this.lb1.Location = new System.Drawing.Point(14, 58);
             this.lb1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb1.Name = "lb1";
-            this.lb1.Size = new System.Drawing.Size(94, 23);
+            this.lb1.Size = new System.Drawing.Size(147, 29);
             this.lb1.TabIndex = 57;
             this.lb1.Text = "Tên tài khoản:";
             this.lb1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -515,7 +525,7 @@ namespace UEH_Chacorner
             this.panelControl.Location = new System.Drawing.Point(0, 0);
             this.panelControl.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl.Name = "panelControl";
-            this.panelControl.Size = new System.Drawing.Size(351, 28);
+            this.panelControl.Size = new System.Drawing.Size(439, 35);
             this.panelControl.TabIndex = 27;
             this.panelControl.UseTransparentBackground = true;
             // 
@@ -529,10 +539,11 @@ namespace UEH_Chacorner
             this.cBox2.FillColor = System.Drawing.Color.Transparent;
             this.cBox2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(49)))), ((int)(((byte)(46)))));
             this.cBox2.IconColor = System.Drawing.Color.White;
-            this.cBox2.Location = new System.Drawing.Point(286, 4);
+            this.cBox2.Location = new System.Drawing.Point(358, 5);
+            this.cBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cBox2.Name = "cBox2";
             this.cBox2.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(49)))), ((int)(((byte)(46)))));
-            this.cBox2.Size = new System.Drawing.Size(22, 19);
+            this.cBox2.Size = new System.Drawing.Size(28, 24);
             this.cBox2.TabIndex = 24;
             this.cBox2.UseTransparentBackground = true;
             // 
@@ -545,10 +556,11 @@ namespace UEH_Chacorner
             this.cBox1.FillColor = System.Drawing.Color.Transparent;
             this.cBox1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(49)))), ((int)(((byte)(46)))));
             this.cBox1.IconColor = System.Drawing.Color.White;
-            this.cBox1.Location = new System.Drawing.Point(315, 4);
+            this.cBox1.Location = new System.Drawing.Point(394, 5);
+            this.cBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cBox1.Name = "cBox1";
             this.cBox1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(49)))), ((int)(((byte)(46)))));
-            this.cBox1.Size = new System.Drawing.Size(22, 19);
+            this.cBox1.Size = new System.Drawing.Size(28, 24);
             this.cBox1.TabIndex = 23;
             this.cBox1.UseTransparentBackground = true;
             // 
@@ -572,14 +584,14 @@ namespace UEH_Chacorner
             // 
             // FRegister
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(351, 426);
+            this.ClientSize = new System.Drawing.Size(439, 532);
             this.Controls.Add(this.panelContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.MaximumSize = new System.Drawing.Size(351, 426);
-            this.MinimumSize = new System.Drawing.Size(351, 426);
+            this.MaximumSize = new System.Drawing.Size(439, 532);
+            this.MinimumSize = new System.Drawing.Size(439, 532);
             this.Name = "FRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRegister";

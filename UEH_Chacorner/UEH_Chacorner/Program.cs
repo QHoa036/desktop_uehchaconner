@@ -15,7 +15,7 @@ namespace UEH_Chaconner
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FHomepage());
+            Application.Run(new FLogin());
         }
     }
 }

@@ -59,7 +59,7 @@ namespace UEH_Chacorner
                     _tennv = tennv;
                     break;
 
-                case @"NHANVIEN":
+                case @"NhanVien":
                     btManage.Visible = true;
                     btExit.Visible = true;
                     lbquyen.Show();

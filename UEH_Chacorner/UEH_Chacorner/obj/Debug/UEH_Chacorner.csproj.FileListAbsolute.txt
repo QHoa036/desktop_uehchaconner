@@ -39,3 +39,6 @@ D:\Working\Bông\desktop_uehchaconner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_
 D:\Working\Bông\desktop_uehchaconner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.FHomepage.resources
 D:\Working\Bông\desktop_uehchaconner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.FAccount.resources
 D:\Working\Bông\desktop_uehchaconner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.FRegister.resources
+D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.FRegister.resources
+D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.FAccount.resources
+D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.FHomepage.resources
