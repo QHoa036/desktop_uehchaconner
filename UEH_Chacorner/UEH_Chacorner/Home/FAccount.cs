@@ -25,7 +25,7 @@ namespace UEH_Chacorner
 
         private void FAccount_Load(object sender, EventArgs e)
         {
-            lbName.Text = MaNV;
+            lbName.Text = TenNV;
             lbRole.Text = Quyen;
             lbId.Text = MaNV;
         }

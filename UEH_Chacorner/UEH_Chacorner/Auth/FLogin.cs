@@ -72,7 +72,7 @@ namespace UEH_Chacorner
 
                         var t = new Thread(splash);
                         t.Start();
-                        Thread.Sleep(5500);
+                        Thread.Sleep(5600);
                         t.Abort();
                         Close();
                         break;
@@ -82,6 +82,7 @@ namespace UEH_Chacorner
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            Close();
             var dk = new FRegister();
             dk.ShowDialog();
         }

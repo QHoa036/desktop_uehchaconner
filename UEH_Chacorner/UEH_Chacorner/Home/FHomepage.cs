@@ -10,7 +10,7 @@ namespace UEH_Chacorner
         private Form _activeForm;
 
         private bool _bbanan, _bmenu, _bnhanvien, _bthongke;
-        private string _manv = "", _quyenofnv = "", _tennv = "";
+        private string _manv = "", _quyennv = "", _tennv = "";
 
         public FHomepage()
         {
@@ -55,7 +55,7 @@ namespace UEH_Chacorner
                     lbquyen.Show();
                     lbquyen.Text = @"Admin: " + tennv;
                     _manv = idnv;
-                    _quyenofnv = quyennv;
+                    _quyennv = quyennv;
                     _tennv = tennv;
                     break;
 
@@ -65,7 +65,7 @@ namespace UEH_Chacorner
                     lbquyen.Show();
                     lbquyen.Text = @"Nhân viên: " + tennv;
                     _manv = idnv;
-                    _quyenofnv = quyennv;
+                    _quyennv = quyennv;
                     _tennv = tennv;
                     break;
             }
@@ -90,7 +90,7 @@ namespace UEH_Chacorner
 
         private void btAccount_Click(object sender, EventArgs e)
         {
-            var dn = new FAccount {TenNV = _tennv, Quyen = _quyenofnv, MaNV = _manv};
+            var dn = new FAccount {TenNV = _tennv, Quyen = _quyennv, MaNV = _manv};
             dn.FormClosing += dn.FAccount_FormClosing;
             dn.ShowDialog();
         }

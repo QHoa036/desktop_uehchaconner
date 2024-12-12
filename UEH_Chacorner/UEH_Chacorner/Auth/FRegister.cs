@@ -67,105 +67,102 @@ namespace UEH_Chacorner
 
         private void btdangky_Click(object sender, EventArgs e)
         {
+            if (!ValidateInputs())
+            {
+                var t = new Thread(Tatlbtrangthai) { IsBackground = false };
+                t.Start();
+                return;
+            }
+
+            try
+            {
+                Insertnhanvien();
+                Inserttaikhoan();
+                Close();
+            }
+            catch (SqlException loi)
+            {
+                if (loi.Message.Contains("Violation of PRIMARY KEY constraint 'PK_TENTK'"))
+                {
+                    MessageBox.Show(@"Tên tài khoản bị trùng.", @"Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    DeleteNhanVien_Loi();
+                }
+            }
+        }
+
+        private bool ValidateInputs()
+        {
             if (txttentk.TextLength == 0)
             {
-                MessageBox.Show(@"Chưa điền tên tài khoản.", @"Thông báo", MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-                var t = new Thread(Tatlbtrangthai) {IsBackground = false};
-                t.Start();
+                ShowWarning(@"Chưa điền tên tài khoản.");
+                return false;
             }
-            else if (txttentk.TextLength <= 3)
+            if (txttentk.TextLength <= 3)
             {
-                MessageBox.Show(@"Tên tài khoản quá ngắn.", @"Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                var t = new Thread(Tatlbtrangthai) {IsBackground = false};
-                t.Start();
+                ShowWarning(@"Tên tài khoản quá ngắn.");
+                return false;
             }
-            else if (txttentk.TextLength >= 50)
+            if (txttentk.TextLength >= 50)
             {
-                MessageBox.Show(@"Tên tài khoản quá dài.", @"Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                var t = new Thread(Tatlbtrangthai) {IsBackground = false};
-                t.Start();
+                ShowWarning(@"Tên tài khoản quá dài.");
+                return false;
             }
-            else if (txtmatkhau.TextLength == 0)
+            if (txtmatkhau.TextLength == 0)
             {
-                MessageBox.Show(@"Chưa điền mật khẩu.", @"Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                var t = new Thread(Tatlbtrangthai) {IsBackground = false};
-                t.Start();
+                ShowWarning(@"Chưa điền mật khẩu.");
+                return false;
             }
-            else if (txtmatkhau.TextLength <= 6)
+            if (txtmatkhau.TextLength <= 6)
             {
-                MessageBox.Show(@"Mật khẩu quá ngắn.", @"Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                var t = new Thread(Tatlbtrangthai) {IsBackground = false};
-                t.Start();
+                ShowWarning(@"Mật khẩu quá ngắn.");
+                return false;
             }
-            else if (txtmatkhau.TextLength >= 20)
+            if (txtmatkhau.TextLength >= 20)
             {
-                MessageBox.Show(@"Mật khẩu quá dài.", @"Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                var t = new Thread(Tatlbtrangthai) {IsBackground = false};
-                t.Start();
+                ShowWarning(@"Mật khẩu quá dài.");
+                return false;
             }
-            else if (txthovaten.TextLength == 0)
+            if (txthovaten.TextLength == 0)
             {
-                MessageBox.Show(@"Chưa điền họ và tên.", @"Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                var t = new Thread(Tatlbtrangthai) {IsBackground = false};
-                t.Start();
+                ShowWarning(@"Chưa điền họ và tên.");
+                return false;
             }
-            else if (txthovaten.TextLength >= 100)
+            if (txthovaten.TextLength >= 100)
             {
-                MessageBox.Show(@"Họ và tên quá dài.", @"Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                var t = new Thread(Tatlbtrangthai) {IsBackground = false};
-                t.Start();
+                ShowWarning(@"Họ và tên quá dài.");
+                return false;
             }
-            else if (datengaysinh.Value.Year == DateTime.Today.Year)
+            if (datengaysinh.Value.Year == DateTime.Today.Year)
             {
-                MessageBox.Show(@"Chưa chọn ngày sinh.", @"Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                var t = new Thread(Tatlbtrangthai) {IsBackground = false};
-                t.Start();
+                ShowWarning(@"Chưa chọn ngày sinh.");
+                return false;
             }
-            else if (txtsdt.TextLength == 0)
+            if (txtsdt.TextLength == 0)
             {
-                MessageBox.Show(@"Chưa điền số điện thoại.", @"Thông báo", MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-                var t = new Thread(Tatlbtrangthai) {IsBackground = false};
-                t.Start();
+                ShowWarning(@"Chưa điền số điện thoại.");
+                return false;
             }
-            else if (txtsdt.TextLength >= 12)
+            if (txtsdt.TextLength >= 12)
             {
-                MessageBox.Show(@"Số điện thoại quá dài.", @"Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                var t = new Thread(Tatlbtrangthai) {IsBackground = false};
-                t.Start();
+                ShowWarning(@"Số điện thoại quá dài.");
+                return false;
             }
-            else if (cbgioitinh.Text == "")
+            if (string.IsNullOrEmpty(cbgioitinh.Text))
             {
-                MessageBox.Show(@"Chưa chọn giới tính.", @"Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                var t = new Thread(Tatlbtrangthai) {IsBackground = false};
-                t.Start();
+                ShowWarning(@"Chưa chọn giới tính.");
+                return false;
             }
-            else if (rdadmin.Checked == false && rdnhanvien.Checked == false)
+            if (!rdadmin.Checked && !rdnhanvien.Checked)
             {
-                MessageBox.Show(@"Chưa chọn quyền của tài khoản.", @"Thông báo", MessageBoxButtons.OK,
-                    MessageBoxIcon.Warning);
-                var t = new Thread(Tatlbtrangthai) {IsBackground = false};
-                t.Start();
+                ShowWarning(@"Chưa chọn quyền của tài khoản.");
+                return false;
             }
-            else
-            {
-                try
-                {
-                    Insertnhanvien();
-                    Inserttaikhoan();
-                    Close();
-                }
-                catch (SqlException loi)
-                {
-                    if (loi.Message.Contains("Violation of PRIMARY KEY constraint 'PK_TENTK'"))
-                    {
-                        MessageBox.Show(@"Tên tài khoản bị trùng.", @"Thông báo", MessageBoxButtons.OK,
-                            MessageBoxIcon.Warning);
-                        DeleteNhanVien_Loi();
-                    }
-                }
-            }
+            return true;
+        }
+
+        private void ShowWarning(string message)
+        {
+            MessageBox.Show(message, @"Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void DeleteNhanVien_Loi()
@@ -192,7 +189,9 @@ namespace UEH_Chacorner
 
         private void btthoat_Click(object sender, EventArgs e)
         {
-            Close();
+            Hide();
+            var fLogin = new FLogin();
+            fLogin.Show();
         }
 
         #endregion

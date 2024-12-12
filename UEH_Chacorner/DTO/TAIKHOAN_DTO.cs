@@ -4,7 +4,6 @@ namespace DTO
 {
     public class TAIKHOAN_DTO
     {
-        [Key]
         [StringLength(50)]
         public string TenTK { get; set; } 
 
