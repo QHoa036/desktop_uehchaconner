@@ -61,3 +61,13 @@ Desktop.ini
 # Additional configurations
 *.env
 .env.*
+/UEH_Chacorner/.vs
+/UEH_Chacorner/BLL/bin
+/UEH_Chacorner/BLL/obj
+/UEH_Chacorner/DAL/bin
+/UEH_Chacorner/DAL/obj
+/UEH_Chacorner/DTO/bin
+/UEH_Chacorner/DTO/obj
+/UEH_Chacorner/UEH_Chacorner/.vs
+/UEH_Chacorner/UEH_Chacorner/bin
+/UEH_Chacorner/UEH_Chacorner/obj
