@@ -6,22 +6,22 @@ namespace DTO
     public class NHANVIEN_DTO
     {
         [Key]
-        [MaxLength(20)]
+        [StringLength(20)]
         public string MaNV { get; set; }
 
         [Required]
-        [MaxLength(100)]
+        [StringLength(100)]
         public string TenNV { get; set; }
 
         [Required]
-        public DateTime NgaySinh { get; set; }
+        public DateTimeOffset NgaySinh { get; set; }
 
         [Required]
-        [MaxLength(12)]
+        [StringLength(12)]
         public string SDT { get; set; }
 
         [Required]
-        [MaxLength(3)]
+        [StringLength(3)]
         public string GioiTinh { get; set; }
     }
 }
