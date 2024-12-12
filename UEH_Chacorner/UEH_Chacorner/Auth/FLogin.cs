@@ -72,7 +72,7 @@ namespace UEH_Chacorner
 
                         var t = new Thread(splash);
                         t.Start();
-                        Thread.Sleep(5600);
+                        Thread.Sleep(5800);
                         t.Abort();
                         Close();
                         break;
