@@ -74,7 +74,7 @@ namespace UEH_Chacorner
             this.panelSide.Location = new System.Drawing.Point(0, 0);
             this.panelSide.Margin = new System.Windows.Forms.Padding(2);
             this.panelSide.Name = "panelSide";
-            this.panelSide.Size = new System.Drawing.Size(96, 640);
+            this.panelSide.Size = new System.Drawing.Size(120, 800);
             this.panelSide.TabIndex = 23;
             // 
             // btExit
@@ -97,14 +97,15 @@ namespace UEH_Chacorner
             this.btExit.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
             this.btExit.Image = ((System.Drawing.Image)(resources.GetObject("btExit.Image")));
             this.btExit.ImageSize = new System.Drawing.Size(40, 40);
-            this.btExit.Location = new System.Drawing.Point(10, 534);
+            this.btExit.Location = new System.Drawing.Point(12, 668);
+            this.btExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btExit.Name = "btExit";
             this.btExit.PressedColor = System.Drawing.Color.White;
             this.btExit.ShadowDecoration.BorderRadius = 20;
             this.btExit.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.btExit.ShadowDecoration.Enabled = true;
             this.btExit.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(8, 0, 0, 8);
-            this.btExit.Size = new System.Drawing.Size(78, 96);
+            this.btExit.Size = new System.Drawing.Size(98, 120);
             this.btExit.TabIndex = 16;
             this.btExit.Text = "Đăng xuất";
             this.btExit.TextOffset = new System.Drawing.Point(0, 5);
@@ -131,14 +132,15 @@ namespace UEH_Chacorner
             this.btStatistic.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.btStatistic.Image = ((System.Drawing.Image)(resources.GetObject("btStatistic.Image")));
             this.btStatistic.ImageSize = new System.Drawing.Size(40, 40);
-            this.btStatistic.Location = new System.Drawing.Point(10, 318);
+            this.btStatistic.Location = new System.Drawing.Point(12, 398);
+            this.btStatistic.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btStatistic.Name = "btStatistic";
             this.btStatistic.PressedColor = System.Drawing.Color.White;
             this.btStatistic.ShadowDecoration.BorderRadius = 20;
             this.btStatistic.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.btStatistic.ShadowDecoration.Enabled = true;
             this.btStatistic.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(8, 0, 0, 8);
-            this.btStatistic.Size = new System.Drawing.Size(78, 96);
+            this.btStatistic.Size = new System.Drawing.Size(98, 120);
             this.btStatistic.TabIndex = 17;
             this.btStatistic.Text = "Doanh thu";
             this.btStatistic.TextOffset = new System.Drawing.Point(0, 5);
@@ -164,14 +166,15 @@ namespace UEH_Chacorner
             this.btMenu.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
             this.btMenu.Image = ((System.Drawing.Image)(resources.GetObject("btMenu.Image")));
             this.btMenu.ImageSize = new System.Drawing.Size(40, 40);
-            this.btMenu.Location = new System.Drawing.Point(10, 113);
+            this.btMenu.Location = new System.Drawing.Point(12, 141);
+            this.btMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btMenu.Name = "btMenu";
             this.btMenu.PressedColor = System.Drawing.Color.White;
             this.btMenu.ShadowDecoration.BorderRadius = 20;
             this.btMenu.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.btMenu.ShadowDecoration.Enabled = true;
             this.btMenu.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(8, 0, 0, 8);
-            this.btMenu.Size = new System.Drawing.Size(78, 96);
+            this.btMenu.Size = new System.Drawing.Size(98, 120);
             this.btMenu.TabIndex = 18;
             this.btMenu.Text = "Thực đơn";
             this.btMenu.TextOffset = new System.Drawing.Point(0, 5);
@@ -197,14 +200,15 @@ namespace UEH_Chacorner
             this.btManage.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
             this.btManage.Image = ((System.Drawing.Image)(resources.GetObject("btManage.Image")));
             this.btManage.ImageSize = new System.Drawing.Size(40, 40);
-            this.btManage.Location = new System.Drawing.Point(10, 10);
+            this.btManage.Location = new System.Drawing.Point(12, 12);
+            this.btManage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btManage.Name = "btManage";
             this.btManage.PressedColor = System.Drawing.Color.White;
             this.btManage.ShadowDecoration.BorderRadius = 20;
             this.btManage.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.btManage.ShadowDecoration.Enabled = true;
             this.btManage.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(8, 0, 0, 8);
-            this.btManage.Size = new System.Drawing.Size(78, 96);
+            this.btManage.Size = new System.Drawing.Size(98, 120);
             this.btManage.TabIndex = 19;
             this.btManage.Text = "Quản lý bàn";
             this.btManage.TextOffset = new System.Drawing.Point(0, 5);
@@ -231,14 +235,15 @@ namespace UEH_Chacorner
             this.btStaff.Image = ((System.Drawing.Image)(resources.GetObject("btStaff.Image")));
             this.btStaff.ImageOffset = new System.Drawing.Point(0, 5);
             this.btStaff.ImageSize = new System.Drawing.Size(40, 40);
-            this.btStaff.Location = new System.Drawing.Point(10, 215);
+            this.btStaff.Location = new System.Drawing.Point(12, 269);
+            this.btStaff.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btStaff.Name = "btStaff";
             this.btStaff.PressedColor = System.Drawing.Color.White;
             this.btStaff.ShadowDecoration.BorderRadius = 20;
             this.btStaff.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.btStaff.ShadowDecoration.Enabled = true;
             this.btStaff.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(8, 0, 0, 8);
-            this.btStaff.Size = new System.Drawing.Size(78, 96);
+            this.btStaff.Size = new System.Drawing.Size(98, 120);
             this.btStaff.TabIndex = 20;
             this.btStaff.Text = "Nhân sự";
             this.btStaff.TextOffset = new System.Drawing.Point(0, 5);
@@ -252,9 +257,9 @@ namespace UEH_Chacorner
             this.lbTitle.Location = new System.Drawing.Point(0, 0);
             this.lbTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(200, 30);
+            this.lbTitle.Size = new System.Drawing.Size(250, 38);
             this.lbTitle.TabIndex = 25;
-            this.lbTitle.Text = "DOGNUT CAFÉ";
+            this.lbTitle.Text = "UEH Cha Corner";
             this.lbTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DragControl2
@@ -275,10 +280,11 @@ namespace UEH_Chacorner
             this.cBox3.FillColor = System.Drawing.Color.Transparent;
             this.cBox3.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(49)))), ((int)(((byte)(46)))));
             this.cBox3.IconColor = System.Drawing.Color.White;
-            this.cBox3.Location = new System.Drawing.Point(1034, 3);
+            this.cBox3.Location = new System.Drawing.Point(1292, 4);
+            this.cBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cBox3.Name = "cBox3";
             this.cBox3.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(49)))), ((int)(((byte)(46)))));
-            this.cBox3.Size = new System.Drawing.Size(22, 19);
+            this.cBox3.Size = new System.Drawing.Size(28, 24);
             this.cBox3.TabIndex = 22;
             this.cBox3.UseTransparentBackground = true;
             // 
@@ -292,10 +298,11 @@ namespace UEH_Chacorner
             this.cBox2.FillColor = System.Drawing.Color.Transparent;
             this.cBox2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(49)))), ((int)(((byte)(46)))));
             this.cBox2.IconColor = System.Drawing.Color.White;
-            this.cBox2.Location = new System.Drawing.Point(1056, 3);
+            this.cBox2.Location = new System.Drawing.Point(1320, 4);
+            this.cBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cBox2.Name = "cBox2";
             this.cBox2.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(49)))), ((int)(((byte)(46)))));
-            this.cBox2.Size = new System.Drawing.Size(22, 19);
+            this.cBox2.Size = new System.Drawing.Size(28, 24);
             this.cBox2.TabIndex = 21;
             this.cBox2.UseTransparentBackground = true;
             // 
@@ -308,10 +315,11 @@ namespace UEH_Chacorner
             this.cBox1.FillColor = System.Drawing.Color.Transparent;
             this.cBox1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(49)))), ((int)(((byte)(46)))));
             this.cBox1.IconColor = System.Drawing.Color.White;
-            this.cBox1.Location = new System.Drawing.Point(1078, 3);
+            this.cBox1.Location = new System.Drawing.Point(1348, 4);
+            this.cBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cBox1.Name = "cBox1";
             this.cBox1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(49)))), ((int)(((byte)(46)))));
-            this.cBox1.Size = new System.Drawing.Size(22, 19);
+            this.cBox1.Size = new System.Drawing.Size(28, 24);
             this.cBox1.TabIndex = 20;
             this.cBox1.UseTransparentBackground = true;
             // 
@@ -331,10 +339,10 @@ namespace UEH_Chacorner
             this.panelControl.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.panelControl.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(233)))), ((int)(((byte)(239)))));
             this.panelControl.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
-            this.panelControl.Location = new System.Drawing.Point(96, 0);
+            this.panelControl.Location = new System.Drawing.Point(120, 0);
             this.panelControl.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl.Name = "panelControl";
-            this.panelControl.Size = new System.Drawing.Size(1104, 64);
+            this.panelControl.Size = new System.Drawing.Size(1380, 80);
             this.panelControl.TabIndex = 22;
             this.panelControl.UseTransparentBackground = true;
             // 
@@ -347,10 +355,10 @@ namespace UEH_Chacorner
             this.panelControl2.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelControl2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(233)))), ((int)(((byte)(239)))));
-            this.panelControl2.Location = new System.Drawing.Point(0, 30);
+            this.panelControl2.Location = new System.Drawing.Point(0, 38);
             this.panelControl2.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(1104, 34);
+            this.panelControl2.Size = new System.Drawing.Size(1380, 42);
             this.panelControl2.TabIndex = 26;
             this.panelControl2.UseTransparentBackground = true;
             // 
@@ -365,12 +373,12 @@ namespace UEH_Chacorner
             this.btAccount.ImageOffset = new System.Drawing.Point(0, 0);
             this.btAccount.ImageRotate = 0F;
             this.btAccount.ImageSize = new System.Drawing.Size(35, 35);
-            this.btAccount.Location = new System.Drawing.Point(15, 6);
+            this.btAccount.Location = new System.Drawing.Point(19, 8);
             this.btAccount.Margin = new System.Windows.Forms.Padding(2);
             this.btAccount.Name = "btAccount";
             this.btAccount.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
             this.btAccount.PressedState.ImageSize = new System.Drawing.Size(35, 35);
-            this.btAccount.Size = new System.Drawing.Size(22, 22);
+            this.btAccount.Size = new System.Drawing.Size(28, 28);
             this.btAccount.TabIndex = 13;
             this.btAccount.UseTransparentBackground = true;
             this.btAccount.Click += new System.EventHandler(this.btAccount_Click);
@@ -383,9 +391,10 @@ namespace UEH_Chacorner
             this.lbquyen.BackColor = System.Drawing.Color.Transparent;
             this.lbquyen.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold);
             this.lbquyen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
-            this.lbquyen.Location = new System.Drawing.Point(42, 5);
+            this.lbquyen.Location = new System.Drawing.Point(52, 6);
+            this.lbquyen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbquyen.Name = "lbquyen";
-            this.lbquyen.Size = new System.Drawing.Size(72, 24);
+            this.lbquyen.Size = new System.Drawing.Size(88, 29);
             this.lbquyen.TabIndex = 12;
             this.lbquyen.Text = "Quyền";
             // 
@@ -415,9 +424,10 @@ namespace UEH_Chacorner
             this.panelChildForm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(104)))), ((int)(((byte)(80)))));
             this.panelChildForm.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(78)))), ((int)(((byte)(55)))));
             this.panelChildForm.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.panelChildForm.Location = new System.Drawing.Point(96, 64);
+            this.panelChildForm.Location = new System.Drawing.Point(120, 80);
+            this.panelChildForm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1104, 576);
+            this.panelChildForm.Size = new System.Drawing.Size(1380, 720);
             this.panelChildForm.TabIndex = 24;
             this.panelChildForm.UseTransparentBackground = true;
             // 
@@ -429,7 +439,7 @@ namespace UEH_Chacorner
             this.guna2PictureBox2.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox2.Name = "guna2PictureBox2";
-            this.guna2PictureBox2.Size = new System.Drawing.Size(1104, 576);
+            this.guna2PictureBox2.Size = new System.Drawing.Size(1380, 720);
             this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox2.TabIndex = 1;
             this.guna2PictureBox2.TabStop = false;
@@ -442,7 +452,7 @@ namespace UEH_Chacorner
             this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
             this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(1104, 576);
+            this.guna2PictureBox1.Size = new System.Drawing.Size(1380, 720);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2PictureBox1.TabIndex = 0;
             this.guna2PictureBox1.TabStop = false;
@@ -450,9 +460,9 @@ namespace UEH_Chacorner
             // 
             // FHomepage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(1200, 640);
+            this.ClientSize = new System.Drawing.Size(1500, 800);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelControl);
             this.Controls.Add(this.panelSide);
