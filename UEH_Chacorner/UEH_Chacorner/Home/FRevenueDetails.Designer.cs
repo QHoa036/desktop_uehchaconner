@@ -37,6 +37,7 @@
             this.txtThanhTien = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblThanhTien = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.bindingSourceCTHD = new System.Windows.Forms.BindingSource(this.components);
+            this.btnExportToWord = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTHD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceCTHD)).BeginInit();
             this.SuspendLayout();
@@ -132,11 +133,27 @@
             this.lblThanhTien.TabIndex = 3;
             this.lblThanhTien.Text = "Tổng thành tiền:";
             // 
+            // btnExportToWord
+            // 
+            this.btnExportToWord.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnExportToWord.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnExportToWord.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnExportToWord.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnExportToWord.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnExportToWord.ForeColor = System.Drawing.Color.White;
+            this.btnExportToWord.Location = new System.Drawing.Point(567, 317);
+            this.btnExportToWord.Name = "btnExportToWord";
+            this.btnExportToWord.Size = new System.Drawing.Size(180, 45);
+            this.btnExportToWord.TabIndex = 4;
+            this.btnExportToWord.Text = "Xuất hóa đơn";
+            this.btnExportToWord.Click += new System.EventHandler(this.btnExportToWord_Click);
+            // 
             // FRevenueDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnExportToWord);
             this.Controls.Add(this.lblThanhTien);
             this.Controls.Add(this.txtThanhTien);
             this.Controls.Add(this.dgvCTHD);
@@ -158,5 +175,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtThanhTien;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblThanhTien;
         private System.Windows.Forms.BindingSource bindingSourceCTHD;
+        private Guna.UI2.WinForms.Guna2Button btnExportToWord;
     }
 }
