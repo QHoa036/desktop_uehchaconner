@@ -86,11 +86,16 @@ namespace UEH_Chacorner
             }
         }
 
+        private void ShowSplashScreen()
+        {
+            Application.Run(new FLoading());
+        }
+
         private Task ShowSplashScreenAsync()
         {
             return Task.Run(() =>
             {
-                var splashThread = new Thread(new FLoading);
+                var splashThread = new Thread(new ThreadStart(ShowSplashScreen));
                 splashThread.Start();
                 Thread.Sleep(5600);
                 splashThread.Join();

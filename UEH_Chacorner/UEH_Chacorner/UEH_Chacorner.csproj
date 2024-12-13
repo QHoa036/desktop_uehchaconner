@@ -71,6 +71,7 @@
     <Compile Include="Auth\FRegister.Designer.cs">
       <DependentUpon>FRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="Common\Utils.cs" />
     <Compile Include="Home\FAccount.cs">
       <SubType>Form</SubType>
     </Compile>
