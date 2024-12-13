@@ -34,3 +34,12 @@ D:\Working\Bông\desktop_uehchaconner\UEH_Chacorner\DAL\obj\Debug\DAL.csproj.Cor
 D:\Working\Bông\desktop_uehchaconner\UEH_Chacorner\DAL\obj\Debug\DAL.csproj.Up2Date
 D:\Working\Bông\desktop_uehchaconner\UEH_Chacorner\DAL\obj\Debug\DAL.dll
 D:\Working\Bông\desktop_uehchaconner\UEH_Chacorner\DAL\obj\Debug\DAL.pdb
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\DAL\bin\Debug\DAL.dll
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\DAL\bin\Debug\DAL.pdb
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\DAL\bin\Debug\DTO.dll
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\DAL\bin\Debug\DTO.pdb
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\DAL\obj\Debug\DAL.csproj.Up2Date
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\DAL\obj\Debug\DAL.dll
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\DAL\obj\Debug\DAL.pdb

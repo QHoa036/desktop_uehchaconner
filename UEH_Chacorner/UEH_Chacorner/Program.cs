@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 
 using UEH_Chacorner;
+using UEH_Chacorner.Home;
 
 namespace UEH_Chaconner
 {
@@ -15,7 +16,7 @@ namespace UEH_Chaconner
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FHomepage());
+            Application.Run(new FRevenue());
         }
     }
 }

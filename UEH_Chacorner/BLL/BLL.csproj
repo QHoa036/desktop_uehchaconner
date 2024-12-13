@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CTHD_BLL.cs" />
+    <Compile Include="HOADON_BLL.cs" />
     <Compile Include="NHANVIEN_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TAIKHOAN_BLL.cs" />

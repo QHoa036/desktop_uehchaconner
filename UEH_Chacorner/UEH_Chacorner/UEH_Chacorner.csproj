@@ -41,6 +41,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -82,6 +83,18 @@
     <Compile Include="Home\FHomepage.Designer.cs">
       <DependentUpon>FHomepage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home\FRevenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home\FRevenue.Designer.cs">
+      <DependentUpon>FRevenue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home\FRevenueDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home\FRevenueDetails.Designer.cs">
+      <DependentUpon>FRevenueDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Auth\FLoading.resx">
@@ -98,6 +111,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home\FHomepage.resx">
       <DependentUpon>FHomepage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home\FRevenue.resx">
+      <DependentUpon>FRevenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home\FRevenueDetails.resx">
+      <DependentUpon>FRevenueDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

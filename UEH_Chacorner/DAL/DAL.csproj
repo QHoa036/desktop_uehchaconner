@@ -42,7 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CTHD_DAL.cs" />
     <Compile Include="DBConnect.cs" />
+    <Compile Include="HOADON_DAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="NHANVIEN_DAL.cs" />
     <Compile Include="TAIKHOAN_DAL.cs" />

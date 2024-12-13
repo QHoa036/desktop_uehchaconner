@@ -16,3 +16,9 @@ D:\Working\Bông\desktop_uehchaconner\UEH_Chacorner\DTO\obj\Debug\DTO.csproj.Ass
 D:\Working\Bông\desktop_uehchaconner\UEH_Chacorner\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
 D:\Working\Bông\desktop_uehchaconner\UEH_Chacorner\DTO\obj\Debug\DTO.dll
 D:\Working\Bông\desktop_uehchaconner\UEH_Chacorner\DTO\obj\Debug\DTO.pdb
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\DTO\bin\Debug\DTO.dll
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\DTO\bin\Debug\DTO.pdb
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\DTO\obj\Debug\DTO.dll
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\DTO\obj\Debug\DTO.pdb

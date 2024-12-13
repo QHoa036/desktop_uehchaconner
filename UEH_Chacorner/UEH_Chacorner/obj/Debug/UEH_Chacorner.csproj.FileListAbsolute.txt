@@ -42,3 +42,27 @@ D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chac
 D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.FAccount.resources
 D:\DesktopCK\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.FHomepage.resources
 D:\Working\Bông\desktop_uehchaconner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_ChaC.1C2EBC03.Up2Date
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\bin\Debug\UEH_Chacorner.exe.config
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\bin\Debug\UEH_Chacorner.exe
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\bin\Debug\UEH_Chacorner.pdb
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\bin\Debug\BLL.dll
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\bin\Debug\DTO.dll
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\bin\Debug\Guna.UI2.dll
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\bin\Debug\DAL.dll
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\bin\Debug\BLL.pdb
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\bin\Debug\DTO.pdb
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\bin\Debug\DAL.pdb
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_ChaCorner.csproj.AssemblyReference.cache
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.FLoading.resources
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.FLogin.resources
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.FRegister.resources
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.FAccount.resources
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.FHomepage.resources
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.Home.FRevenue.resources
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.Home.FRevenueDetails.resources
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.Properties.Resources.resources
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_ChaCorner.csproj.GenerateResource.cache
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_ChaCorner.csproj.CoreCompileInputs.cache
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_ChaC.1C2EBC03.Up2Date
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.exe
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.pdb

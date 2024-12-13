@@ -42,3 +42,14 @@ D:\Working\Bông\desktop_uehchaconner\UEH_Chacorner\BLL\obj\Debug\BLL.csproj.Cor
 D:\Working\Bông\desktop_uehchaconner\UEH_Chacorner\BLL\obj\Debug\BLL.csproj.Up2Date
 D:\Working\Bông\desktop_uehchaconner\UEH_Chacorner\BLL\obj\Debug\BLL.dll
 D:\Working\Bông\desktop_uehchaconner\UEH_Chacorner\BLL\obj\Debug\BLL.pdb
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\BLL\bin\Debug\BLL.dll
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\BLL\bin\Debug\BLL.pdb
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\BLL\bin\Debug\DAL.dll
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\BLL\bin\Debug\DTO.dll
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\BLL\bin\Debug\DAL.pdb
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\BLL\bin\Debug\DTO.pdb
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\BLL\obj\Debug\BLL.csproj.Up2Date
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\BLL\obj\Debug\BLL.dll
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\BLL\obj\Debug\BLL.pdb
