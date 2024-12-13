@@ -64,3 +64,14 @@ D:\Working\Bông\desktop_uehchacorner\UEH_Chacorner\BLL\obj\Debug\BLL.csproj.Cor
 D:\Working\Bông\desktop_uehchacorner\UEH_Chacorner\BLL\obj\Debug\BLL.csproj.Up2Date
 D:\Working\Bông\desktop_uehchacorner\UEH_Chacorner\BLL\obj\Debug\BLL.dll
 D:\Working\Bông\desktop_uehchacorner\UEH_Chacorner\BLL\obj\Debug\BLL.pdb
+D:\duyen\desktop_uehchacorner\UEH_Chacorner\BLL\bin\Debug\BLL.dll
+D:\duyen\desktop_uehchacorner\UEH_Chacorner\BLL\bin\Debug\BLL.pdb
+D:\duyen\desktop_uehchacorner\UEH_Chacorner\BLL\bin\Debug\DAL.dll
+D:\duyen\desktop_uehchacorner\UEH_Chacorner\BLL\bin\Debug\DTO.dll
+D:\duyen\desktop_uehchacorner\UEH_Chacorner\BLL\bin\Debug\DAL.pdb
+D:\duyen\desktop_uehchacorner\UEH_Chacorner\BLL\bin\Debug\DTO.pdb
+D:\duyen\desktop_uehchacorner\UEH_Chacorner\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\duyen\desktop_uehchacorner\UEH_Chacorner\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\duyen\desktop_uehchacorner\UEH_Chacorner\BLL\obj\Debug\BLL.csproj.Up2Date
+D:\duyen\desktop_uehchacorner\UEH_Chacorner\BLL\obj\Debug\BLL.dll
+D:\duyen\desktop_uehchacorner\UEH_Chacorner\BLL\obj\Debug\BLL.pdb

@@ -43,3 +43,12 @@ E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\DAL\obj\Debug\DA
 E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\DAL\obj\Debug\DAL.csproj.Up2Date
 E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\DAL\obj\Debug\DAL.dll
 E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\DAL\obj\Debug\DAL.pdb
+D:\duyen\desktop_uehchacorner\UEH_Chacorner\DAL\bin\Debug\DAL.dll
+D:\duyen\desktop_uehchacorner\UEH_Chacorner\DAL\bin\Debug\DAL.pdb
+D:\duyen\desktop_uehchacorner\UEH_Chacorner\DAL\bin\Debug\DTO.dll
+D:\duyen\desktop_uehchacorner\UEH_Chacorner\DAL\bin\Debug\DTO.pdb
+D:\duyen\desktop_uehchacorner\UEH_Chacorner\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\duyen\desktop_uehchacorner\UEH_Chacorner\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\duyen\desktop_uehchacorner\UEH_Chacorner\DAL\obj\Debug\DAL.csproj.Up2Date
+D:\duyen\desktop_uehchacorner\UEH_Chacorner\DAL\obj\Debug\DAL.dll
+D:\duyen\desktop_uehchacorner\UEH_Chacorner\DAL\obj\Debug\DAL.pdb
