@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 
-using UEH_Chacorner;
 using UEH_Chacorner.Home;
 
 namespace UEH_Chaconner

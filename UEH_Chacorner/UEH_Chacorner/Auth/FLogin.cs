@@ -1,31 +1,23 @@
 ﻿using System;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using BLL;
 using DTO;
 
+using UEH_Chacorner.Common;
+
 namespace UEH_Chacorner
 {
     public partial class FLogin : Form
     {
-        private const int CpNocloseButton = 0x200;
         private readonly TAIKHOAN_BLL _accountBll = new TAIKHOAN_BLL();
         private string _quyen = "", _ten = "", _manv = "";
 
         public FLogin()
         {
             InitializeComponent();
-        }
-
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                var myCp = base.CreateParams;
-                myCp.ClassStyle |= CpNocloseButton;
-                return myCp;
-            }
         }
 
         private void FLogin_Load(object sender, EventArgs e)
@@ -51,33 +43,58 @@ namespace UEH_Chacorner
             txtUsername.Focus();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private async void btnLogin_Click(object sender, EventArgs e)
         {
-            var accountPublic = new TAIKHOAN_DTO { TenTK = txtUsername.Text, MatKhau = txtPassword.Text };
-            var checkPass = _accountBll.check_taikhoan(accountPublic);
-            switch (checkPass)
+            var account = new TAIKHOAN_DTO
             {
-                default:
-                    {
-                        MessageBox.Show(@"Sai tên tài khoản hoặc mật khẩu.", @"Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        txtUsername.Focus();
-                        break;
-                    }
-                case 1:
-                    {
-                        var dgvRoleAndName = _accountBll.get_tenvaquyen_taikhoan(accountPublic);
-                        _quyen = dgvRoleAndName.Rows[0][0].ToString().Trim();
-                        _ten = dgvRoleAndName.Rows[0][1].ToString().Trim();
-                        _manv = dgvRoleAndName.Rows[0][2].ToString().Trim();
+                TenTK = txtUsername.Text.Trim(),
+                MatKhau = txtPassword.Text.Trim()
+            };
 
-                        var t = new Thread(splash);
-                        t.Start();
-                        Thread.Sleep(5600);
-                        t.Abort();
+            try
+            {
+                // Kiểm tra tài khoản
+                int checkPass = _accountBll.check_taikhoan(account);
+                if (checkPass == 1)
+                {
+                    var roleAndName = _accountBll.get_tenvaquyen_taikhoan(account);
+                    if (roleAndName.Rows.Count > 0)
+                    {
+                        // Lấy thông tin tài khoản
+                        _quyen = roleAndName.Rows[0]["Role"].ToString().Trim();
+                        _ten = roleAndName.Rows[0]["Name"].ToString().Trim();
+                        _manv = roleAndName.Rows[0]["EmployeeID"].ToString().Trim();
+
+                        // Chuyển sang trang Loading
+                        await ShowSplashScreenAsync();
                         Close();
-                        break;
                     }
+                    else
+                    {
+                        Utils.ShowError("Unable to retrieve account details.");
+                    }
+                }
+                else
+                {
+                    Utils.ShowError("Incorrect username or password.");
+                    txtUsername.Focus();
+                }
             }
+            catch (Exception ex)
+            {
+                Utils.ShowError($"An error occurred: {ex.Message}");
+            }
+        }
+
+        private Task ShowSplashScreenAsync()
+        {
+            return Task.Run(() =>
+            {
+                var splashThread = new Thread(new FLoading);
+                splashThread.Start();
+                Thread.Sleep(5600);
+                splashThread.Join();
+            });
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -85,11 +102,6 @@ namespace UEH_Chacorner
             Close();
             var dk = new FRegister();
             dk.ShowDialog();
-        }
-
-        private void splash()
-        {
-            Application.Run(new FLoading());
         }
     }
 }
