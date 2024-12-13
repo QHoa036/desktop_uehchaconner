@@ -82,7 +82,7 @@ namespace DAL
             var name = new string[parameter];
             var values = new object[parameter];
 
-            name[0] = "@TenNV";
+            name[0] = "@Ten";
             values[0] = nhanvienPublic.TenNV;
 
             var sql = "TIM_TenNV";

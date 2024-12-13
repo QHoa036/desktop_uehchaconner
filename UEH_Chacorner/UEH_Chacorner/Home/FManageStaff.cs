@@ -45,14 +45,14 @@ namespace UEH_Chacorner.Home
             dgvStaff.Columns["NgaySinh"].Visible = true;
             dgvStaff.Columns["SDT"].Visible = true;
             dgvStaff.Columns["GioiTinh"].Visible = true;
-            dgvStaff.Columns["TenTK"].Visible = true;
+          
 
             // Hide other columns if they exist
             if (dgvStaff.Columns.Contains("MatKhau"))
                 dgvStaff.Columns["MatKhau"].Visible = false;
 
-            //if (dgvStaff.Columns.Contains("TenTK"))
-            //    dgvStaff.Columns["TenTK"].Visible = false;
+            if (dgvStaff.Columns.Contains("TenTK"))
+                dgvStaff.Columns["TenTK"].Visible = false;
 
             if (dgvStaff.Columns.Contains("Quyen"))
                 dgvStaff.Columns["Quyen"].Visible = false;
