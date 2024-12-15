@@ -85,7 +85,7 @@ namespace UEH_Chacorner.Home
             {
                 string maNV = dgvStaff.SelectedRows[0].Cells["MaNV"].Value.ToString();
                 var employee = new NHANVIEN_DTO { MaNV = maNV };
-                var account = new TAIKHOAN_DTO { MaNV = maNV };
+                var account = new TAIKHOAN_DTO { MaNV = maNV }; // Tính chuyển procedure thành xóa trên Mã 
 
                 // First, delete the related account in TaiKhoan
                 int result2 = _taikhoanBll.delete_taikhoan(account);

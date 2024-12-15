@@ -73,8 +73,9 @@ namespace DAL
             var name = new string[parameter];
             var values = new object[parameter];
 
-            name[0] = "@TenTK";
-            values[0] = account.TenTK;
+            name[0] = "@MaNV"; 
+            values[0] = account.MaNV;
+
             var sql = "DELETE_TaiKhoan";
 
             return _conn.ExecuteData(sql, name, values, parameter);
