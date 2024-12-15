@@ -28,9 +28,7 @@ namespace UEH_Chacorner.Home
         private void FManageStaff_Load(object sender, EventArgs e)
         {
             LoadStaffList();
-            // Adding values to the ComboBox
-            cmbGioiTinh.Items.Add("Nam");
-            cmbGioiTinh.Items.Add("Nữ");
+            
 
         }
         // Method to load the staff list into DataGridView
@@ -45,7 +43,8 @@ namespace UEH_Chacorner.Home
             dgvStaff.Columns["NgaySinh"].Visible = true;
             dgvStaff.Columns["SDT"].Visible = true;
             dgvStaff.Columns["GioiTinh"].Visible = true;
-          
+            dgvStaff.Columns["Quyen"].Visible = true;
+
 
             // Hide other columns if they exist
             if (dgvStaff.Columns.Contains("MatKhau"))
@@ -54,8 +53,6 @@ namespace UEH_Chacorner.Home
             if (dgvStaff.Columns.Contains("TenTK"))
                 dgvStaff.Columns["TenTK"].Visible = false;
 
-            if (dgvStaff.Columns.Contains("Quyen"))
-                dgvStaff.Columns["Quyen"].Visible = false;
         }
         #region Event
         // Method to handle the search functionality
@@ -73,6 +70,14 @@ namespace UEH_Chacorner.Home
             }
 
         }
+        private void txtTenNV_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSearch.PerformClick(); // Giả lập việc nhấn nút tìm
+            }
+        }
+
         // Method to handle deleting an employee
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -115,7 +120,7 @@ namespace UEH_Chacorner.Home
                 // Kiểm tra các trường dữ liệu
                 if (string.IsNullOrWhiteSpace(txtTenNV.Text) ||
                     string.IsNullOrWhiteSpace(txtSDT.Text) ||
-                    cmbGioiTinh.SelectedItem == null)
+                    string.IsNullOrWhiteSpace(txtGioiTinh.Text) )
                 {
                     MessageBox.Show("Vui lòng nhập đầy đủ thông tin trước khi chỉnh sửa.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -127,7 +132,8 @@ namespace UEH_Chacorner.Home
                     TenNV = txtTenNV.Text,
                     NgaySinh = dtpNgaySinh.Value,
                     SDT = txtSDT.Text,
-                    GioiTinh = cmbGioiTinh.SelectedItem.ToString()
+                    GioiTinh = txtGioiTinh.Text
+                   
                 };
 
                 int result = _nhanvienBll.update_nhanvien(employee);
@@ -148,7 +154,7 @@ namespace UEH_Chacorner.Home
 
         }
 
-        private void dgvStaff_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvStaff_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
@@ -157,7 +163,10 @@ namespace UEH_Chacorner.Home
                 txtTenNV.Text = row.Cells["TenNV"].Value.ToString();
                 dtpNgaySinh.Value = Convert.ToDateTime(row.Cells["NgaySinh"].Value);
                 txtSDT.Text = row.Cells["SDT"].Value.ToString();
-                cmbGioiTinh.SelectedItem = row.Cells["GioiTinh"].Value.ToString();
+                txtGioiTinh.Text = row.Cells["GioiTinh"].Value.ToString();
+
+               
+
             }
 
         }
