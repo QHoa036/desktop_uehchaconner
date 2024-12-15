@@ -115,3 +115,4 @@ D:\duyen\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_ChaCorne
 D:\duyen\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_ChaC.1C2EBC03.Up2Date
 D:\duyen\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.exe
 D:\duyen\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.pdb
+E:\UEH\PTUDDesktop\ĐỒ ÁN\desktop_uehchacorner\UEH_Chacorner\UEH_Chacorner\obj\Debug\UEH_Chacorner.Home.FManageStaff.resources

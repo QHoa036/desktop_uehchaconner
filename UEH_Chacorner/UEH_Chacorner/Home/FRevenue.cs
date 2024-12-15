@@ -45,6 +45,14 @@ namespace UEH_Chacorner.Home
 
         private void FilterDataGridByNgayLap(DateTime date)
         {
+            // Kiểm tra ngày trong tương lai
+            if (date.Date > DateTime.Now.Date)
+            {
+                MessageBox.Show("Ngày đã chọn chưa diễn ra. Vui lòng chọn ngày hợp lệ.",
+                                "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             // Giả sử `load_hoadon()` trả về danh sách hóa đơn
             DataTable dt = _hoadonBll.load_hoadon();
 
@@ -59,7 +67,8 @@ namespace UEH_Chacorner.Home
 
             if (dv.Count == 0)
             {
-                MessageBox.Show("Không có hóa đơn nào trong ngày đã chọn.");
+                MessageBox.Show("Không có hóa đơn nào trong ngày đã chọn.",
+                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -81,7 +90,8 @@ namespace UEH_Chacorner.Home
             // Kiểm tra xem có kết quả lọc hay không
             if (dv.Count == 0)
             {
-                MessageBox.Show("Không có hóa đơn nào cho nhân viên này.");
+                MessageBox.Show("Không có hóa đơn nào cho nhân viên này.",
+                    "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -169,7 +179,7 @@ namespace UEH_Chacorner.Home
             }
             else
             {
-                MessageBox.Show("Không có hóa đơn nào.");
+                MessageBox.Show("Không có hóa đơn nào.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             LoadChartRevenue(); // Tải dữ liệu vào chart
@@ -180,7 +190,7 @@ namespace UEH_Chacorner.Home
             // Kiểm tra xem có dòng nào được chọn không
             if (dgvHoaDon.CurrentRow == null)
             {
-                MessageBox.Show("Vui lòng chọn một hóa đơn!");
+                MessageBox.Show("Vui lòng chọn một hóa đơn!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -209,7 +219,7 @@ namespace UEH_Chacorner.Home
             }
             else
             {
-                MessageBox.Show("Không có hóa đơn nào.");
+                MessageBox.Show("Không có hóa đơn nào.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -219,7 +229,7 @@ namespace UEH_Chacorner.Home
 
             if (string.IsNullOrEmpty(tenNV))
             {
-                MessageBox.Show("Vui lòng nhập tên nhân viên.");
+                MessageBox.Show("Vui lòng nhập tên nhân viên.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 

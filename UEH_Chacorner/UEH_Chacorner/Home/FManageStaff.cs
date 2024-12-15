@@ -29,9 +29,8 @@ namespace UEH_Chacorner.Home
         private void FManageStaff_Load(object sender, EventArgs e)
         {
             LoadStaffList();
-            
-
         }
+
         // Tải danh sách nhân viên vào DataGridView
         private void LoadStaffList()
         {
@@ -54,7 +53,9 @@ namespace UEH_Chacorner.Home
                 dgvStaff.Columns["TenTK"].Visible = false;
 
         }
+
         #region Event
+
         // Nút tìm kiếm
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -165,8 +166,6 @@ namespace UEH_Chacorner.Home
                 dtpNgaySinh.Value = Convert.ToDateTime(row.Cells["NgaySinh"].Value);
                 txtSDT.Text = row.Cells["SDT"].Value.ToString();
                 txtGioiTinh.Text = row.Cells["GioiTinh"].Value.ToString();
-
-              
             }
 
         }
