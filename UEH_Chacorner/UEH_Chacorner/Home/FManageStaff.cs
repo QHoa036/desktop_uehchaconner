@@ -15,6 +15,7 @@ namespace UEH_Chacorner.Home
 {
     public partial class FManageStaff : Form
     {
+        // Khai báo các đối tượng BLL 
         private readonly NHANVIEN_BLL _nhanvienBll = new NHANVIEN_BLL();
         private readonly TAIKHOAN_BLL _taikhoanBll = new TAIKHOAN_BLL();
 
@@ -31,13 +32,13 @@ namespace UEH_Chacorner.Home
             
 
         }
-        // Method to load the staff list into DataGridView
+        // Tải danh sách nhân viên vào DataGridView
         private void LoadStaffList()
         {
-            _staffData = _nhanvienBll.load_nhanvien(); // Get staff data from the BLL
-            dgvStaff.DataSource = _staffData; // Set data source for DataGridView
+            _staffData = _nhanvienBll.load_nhanvien(); 
+            dgvStaff.DataSource = _staffData; 
 
-            // Hide unwanted columns
+            // Hiển thị các cột 
             dgvStaff.Columns["MaNV"].Visible = true;
             dgvStaff.Columns["TenNV"].Visible = true;
             dgvStaff.Columns["NgaySinh"].Visible = true;
@@ -45,8 +46,7 @@ namespace UEH_Chacorner.Home
             dgvStaff.Columns["GioiTinh"].Visible = true;
             dgvStaff.Columns["Quyen"].Visible = true;
 
-
-            // Hide other columns if they exist
+            // Ẩn cột
             if (dgvStaff.Columns.Contains("MatKhau"))
                 dgvStaff.Columns["MatKhau"].Visible = false;
 
@@ -55,7 +55,7 @@ namespace UEH_Chacorner.Home
 
         }
         #region Event
-        // Method to handle the search functionality
+        // Nút tìm kiếm
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string searchTerm = txtSearch.Text.Trim();
@@ -70,6 +70,7 @@ namespace UEH_Chacorner.Home
             }
 
         }
+        // Keydown trong tìm kiếm
         private void txtTenNV_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -78,7 +79,7 @@ namespace UEH_Chacorner.Home
             }
         }
 
-        // Method to handle deleting an employee
+        // Xóa nhân viên
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (dgvStaff.SelectedRows.Count > 0)
@@ -87,10 +88,10 @@ namespace UEH_Chacorner.Home
                 var employee = new NHANVIEN_DTO { MaNV = maNV };
                 var account = new TAIKHOAN_DTO { MaNV = maNV }; // Tính chuyển procedure thành xóa trên Mã 
 
-                // First, delete the related account in TaiKhoan
+                // Xóa tài khoản liên kết trong bảng TàiKhoan
                 int result2 = _taikhoanBll.delete_taikhoan(account);
 
-                // Then, delete the employee record in NhanVien
+                // Xóa nhân viên trong bảng NhanVien
                 int result1 = _nhanvienBll.delete_nhanvien(employee);
 
                 if (result1 > 0 && result2 > 0)
@@ -109,7 +110,7 @@ namespace UEH_Chacorner.Home
             }
 
         }
-        // Method to handle editing employee details
+        // Sửa thông tin
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
@@ -153,7 +154,7 @@ namespace UEH_Chacorner.Home
             }
 
         }
-
+        // CellClick DataGridView 
         private void dgvStaff_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -165,8 +166,7 @@ namespace UEH_Chacorner.Home
                 txtSDT.Text = row.Cells["SDT"].Value.ToString();
                 txtGioiTinh.Text = row.Cells["GioiTinh"].Value.ToString();
 
-               
-
+              
             }
 
         }
