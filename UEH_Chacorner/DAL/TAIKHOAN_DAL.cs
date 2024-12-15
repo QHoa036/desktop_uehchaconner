@@ -73,8 +73,8 @@ namespace DAL
             var name = new string[parameter];
             var values = new object[parameter];
 
-            name[0] = "@MaNV"; 
-            values[0] = account.MaNV;
+            name[0] = "@TenTK"; 
+            values[0] = account.TenTK;
 
             var sql = "DELETE_TaiKhoan";
 
@@ -95,5 +95,20 @@ namespace DAL
             var sql = "GET_TenVAQuyen_TaiKhoan";
             return _conn.LoadDataWithParameter(sql, name, values, parameter);
         }
+
+        public int DELETE_TaiKhoanwithMaNV(TAIKHOAN_DTO account)
+        {
+            var parameter = 1;
+            var name = new string[parameter];
+            var values = new object[parameter];
+
+            name[0] = "@MaNV";
+            values[0] = account.MaNV;
+
+            var sql = "DELETE_TaiKhoanwithMaNV";
+
+            return _conn.ExecuteData(sql, name, values, parameter);
+        }
+
     }
 }

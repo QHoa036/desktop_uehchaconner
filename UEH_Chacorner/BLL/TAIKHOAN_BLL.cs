@@ -36,6 +36,10 @@ namespace BLL
         public DataTable get_tenvaquyen_taikhoan(TAIKHOAN_DTO account)
         {
             return _nhanvienDal.get_tenvaquyen_taikhoan(account);
-        }   
+        }
+        public int DELETE_TaiKhoanwithMaNV(TAIKHOAN_DTO account)
+        {
+            return _nhanvienDal.DELETE_TaiKhoanwithMaNV(account);
+        }
     }
 }

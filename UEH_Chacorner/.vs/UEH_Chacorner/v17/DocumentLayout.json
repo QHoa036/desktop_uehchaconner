@@ -1,26 +1,62 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\UEH\\PTUDDesktop\\\u0110\u1ED2 \u00C1N\\desktop_uehchacorner\\UEH_Chacorner\\",
+  "WorkspaceRootPath": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{928D3BA7-F73A-4699-80B6-AC9BD9BFE0C2}|UEH_Chacorner\\UEH_ChaCorner.csproj|E:\\UEH\\PTUDDesktop\\\u0110\u1ED2 \u00C1N\\desktop_uehchacorner\\UEH_Chacorner\\ueh_chacorner\\home\\frevenue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{928D3BA7-F73A-4699-80B6-AC9BD9BFE0C2}|UEH_Chacorner\\UEH_ChaCorner.csproj|solutionrelative:ueh_chacorner\\home\\frevenue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{928D3BA7-F73A-4699-80B6-AC9BD9BFE0C2}|UEH_Chacorner\\UEH_ChaCorner.csproj|e:\\ueh\\ptuddesktop\\\u0111\u1ED3 \u00E1n\\desktop_uehchacorner\\ueh_chacorner\\ueh_chacorner\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{928D3BA7-F73A-4699-80B6-AC9BD9BFE0C2}|UEH_Chacorner\\UEH_ChaCorner.csproj|solutionrelative:ueh_chacorner\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{928D3BA7-F73A-4699-80B6-AC9BD9BFE0C2}|UEH_Chacorner\\UEH_ChaCorner.csproj|e:\\ueh\\ptuddesktop\\\u0111\u1ED3 \u00E1n\\desktop_uehchacorner\\ueh_chacorner\\ueh_chacorner\\home\\frevenue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{928D3BA7-F73A-4699-80B6-AC9BD9BFE0C2}|UEH_Chacorner\\UEH_ChaCorner.csproj|solutionrelative:ueh_chacorner\\home\\frevenue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{928D3BA7-F73A-4699-80B6-AC9BD9BFE0C2}|UEH_Chacorner\\UEH_ChaCorner.csproj|E:\\UEH\\PTUDDesktop\\\u0110\u1ED2 \u00C1N\\desktop_uehchacorner\\UEH_Chacorner\\ueh_chacorner\\home\\fmanagestaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{928D3BA7-F73A-4699-80B6-AC9BD9BFE0C2}|UEH_Chacorner\\UEH_ChaCorner.csproj|d:\\duyen\\desktop_uehchacorner\\ueh_chacorner\\ueh_chacorner\\home\\fmanagestaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{928D3BA7-F73A-4699-80B6-AC9BD9BFE0C2}|UEH_Chacorner\\UEH_ChaCorner.csproj|solutionrelative:ueh_chacorner\\home\\fmanagestaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{928D3BA7-F73A-4699-80B6-AC9BD9BFE0C2}|UEH_Chacorner\\UEH_ChaCorner.csproj|E:\\UEH\\PTUDDesktop\\\u0110\u1ED2 \u00C1N\\desktop_uehchacorner\\UEH_Chacorner\\ueh_chacorner\\home\\fmanagestaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{928D3BA7-F73A-4699-80B6-AC9BD9BFE0C2}|UEH_Chacorner\\UEH_ChaCorner.csproj|D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\ueh_chacorner\\home\\fmanagestaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{928D3BA7-F73A-4699-80B6-AC9BD9BFE0C2}|UEH_Chacorner\\UEH_ChaCorner.csproj|solutionrelative:ueh_chacorner\\home\\fmanagestaff.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{928D3BA7-F73A-4699-80B6-AC9BD9BFE0C2}|UEH_Chacorner\\UEH_ChaCorner.csproj|d:\\duyen\\desktop_uehchacorner\\ueh_chacorner\\ueh_chacorner\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{928D3BA7-F73A-4699-80B6-AC9BD9BFE0C2}|UEH_Chacorner\\UEH_ChaCorner.csproj|solutionrelative:ueh_chacorner\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{928D3BA7-F73A-4699-80B6-AC9BD9BFE0C2}|UEH_Chacorner\\UEH_ChaCorner.csproj|d:\\duyen\\desktop_uehchacorner\\ueh_chacorner\\ueh_chacorner\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{928D3BA7-F73A-4699-80B6-AC9BD9BFE0C2}|UEH_Chacorner\\UEH_ChaCorner.csproj|solutionrelative:ueh_chacorner\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A6F7E07-8615-4AC4-8705-BE3A423474F4}|BLL\\BLL.csproj|d:\\duyen\\desktop_uehchacorner\\ueh_chacorner\\bll\\nhanvien_bll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A6F7E07-8615-4AC4-8705-BE3A423474F4}|BLL\\BLL.csproj|solutionrelative:bll\\nhanvien_bll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39DF1C1D-5891-4205-8048-82C1AEDA144E}|DAL\\DAL.csproj|d:\\duyen\\desktop_uehchacorner\\ueh_chacorner\\dal\\nhanvien_dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39DF1C1D-5891-4205-8048-82C1AEDA144E}|DAL\\DAL.csproj|solutionrelative:dal\\nhanvien_dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A6F7E07-8615-4AC4-8705-BE3A423474F4}|BLL\\BLL.csproj|d:\\duyen\\desktop_uehchacorner\\ueh_chacorner\\bll\\taikhoan_bll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A6F7E07-8615-4AC4-8705-BE3A423474F4}|BLL\\BLL.csproj|solutionrelative:bll\\taikhoan_bll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39DF1C1D-5891-4205-8048-82C1AEDA144E}|DAL\\DAL.csproj|d:\\duyen\\desktop_uehchacorner\\ueh_chacorner\\dal\\taikhoan_dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39DF1C1D-5891-4205-8048-82C1AEDA144E}|DAL\\DAL.csproj|solutionrelative:dal\\taikhoan_dal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{591DC693-9731-470F-AD57-5D4069B7A62C}|DTO\\DTO.csproj|d:\\duyen\\desktop_uehchacorner\\ueh_chacorner\\dto\\nhanvien_dto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{591DC693-9731-470F-AD57-5D4069B7A62C}|DTO\\DTO.csproj|solutionrelative:dto\\nhanvien_dto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{591DC693-9731-470F-AD57-5D4069B7A62C}|DTO\\DTO.csproj|d:\\duyen\\desktop_uehchacorner\\ueh_chacorner\\dto\\taikhoan_dto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{591DC693-9731-470F-AD57-5D4069B7A62C}|DTO\\DTO.csproj|solutionrelative:dto\\taikhoan_dto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{928D3BA7-F73A-4699-80B6-AC9BD9BFE0C2}|UEH_Chacorner\\UEH_ChaCorner.csproj|d:\\duyen\\desktop_uehchacorner\\ueh_chacorner\\ueh_chacorner\\home\\fmanagestaff.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{928D3BA7-F73A-4699-80B6-AC9BD9BFE0C2}|UEH_Chacorner\\UEH_ChaCorner.csproj|solutionrelative:ueh_chacorner\\home\\fmanagestaff.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{928D3BA7-F73A-4699-80B6-AC9BD9BFE0C2}|UEH_Chacorner\\UEH_ChaCorner.csproj|d:\\duyen\\desktop_uehchacorner\\ueh_chacorner\\ueh_chacorner\\home\\frevenue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{928D3BA7-F73A-4699-80B6-AC9BD9BFE0C2}|UEH_Chacorner\\UEH_ChaCorner.csproj|solutionrelative:ueh_chacorner\\home\\frevenue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{928D3BA7-F73A-4699-80B6-AC9BD9BFE0C2}|UEH_Chacorner\\UEH_ChaCorner.csproj|d:\\duyen\\desktop_uehchacorner\\ueh_chacorner\\ueh_chacorner\\home\\frevenue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{928D3BA7-F73A-4699-80B6-AC9BD9BFE0C2}|UEH_Chacorner\\UEH_ChaCorner.csproj|solutionrelative:ueh_chacorner\\home\\frevenue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{928D3BA7-F73A-4699-80B6-AC9BD9BFE0C2}|UEH_Chacorner\\UEH_ChaCorner.csproj|D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\ueh_chacorner\\home\\frevenuedetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{928D3BA7-F73A-4699-80B6-AC9BD9BFE0C2}|UEH_Chacorner\\UEH_ChaCorner.csproj|solutionrelative:ueh_chacorner\\home\\frevenuedetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,53 +66,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\UEH\\PTUDDesktop\\\u0110\u1ED2 \u00C1N\\desktop_uehchacorner\\UEH_Chacorner\\UEH_Chacorner\\Program.cs",
-              "RelativeDocumentMoniker": "UEH_Chacorner\\Program.cs",
-              "ToolTip": "E:\\UEH\\PTUDDesktop\\\u0110\u1ED2 \u00C1N\\desktop_uehchacorner\\UEH_Chacorner\\UEH_Chacorner\\Program.cs",
-              "RelativeToolTip": "UEH_Chacorner\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T15:09:03.573Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FRevenue.cs",
-              "DocumentMoniker": "E:\\UEH\\PTUDDesktop\\\u0110\u1ED2 \u00C1N\\desktop_uehchacorner\\UEH_Chacorner\\UEH_Chacorner\\Home\\FRevenue.cs",
-              "RelativeDocumentMoniker": "UEH_Chacorner\\Home\\FRevenue.cs",
-              "ToolTip": "E:\\UEH\\PTUDDesktop\\\u0110\u1ED2 \u00C1N\\desktop_uehchacorner\\UEH_Chacorner\\UEH_Chacorner\\Home\\FRevenue.cs",
-              "RelativeToolTip": "UEH_Chacorner\\Home\\FRevenue.cs",
-              "ViewState": "AgIAAOMAAAAAAAAAAAAIwOcAAABzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T12:21:18.499Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FRevenue.cs [Design]",
-              "DocumentMoniker": "E:\\UEH\\PTUDDesktop\\\u0110\u1ED2 \u00C1N\\desktop_uehchacorner\\UEH_Chacorner\\UEH_Chacorner\\Home\\FRevenue.cs",
-              "RelativeDocumentMoniker": "UEH_Chacorner\\Home\\FRevenue.cs",
-              "ToolTip": "E:\\UEH\\PTUDDesktop\\\u0110\u1ED2 \u00C1N\\desktop_uehchacorner\\UEH_Chacorner\\UEH_Chacorner\\Home\\FRevenue.cs [Design]",
-              "RelativeToolTip": "UEH_Chacorner\\Home\\FRevenue.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T15:08:06.857Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "FManageStaff.cs [Design]",
-              "DocumentMoniker": "E:\\UEH\\PTUDDesktop\\\u0110\u1ED2 \u00C1N\\desktop_uehchacorner\\UEH_Chacorner\\UEH_Chacorner\\Home\\FManageStaff.cs",
+              "DocumentMoniker": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\UEH_Chacorner\\Home\\FManageStaff.cs",
               "RelativeDocumentMoniker": "UEH_Chacorner\\Home\\FManageStaff.cs",
-              "ToolTip": "E:\\UEH\\PTUDDesktop\\\u0110\u1ED2 \u00C1N\\desktop_uehchacorner\\UEH_Chacorner\\UEH_Chacorner\\Home\\FManageStaff.cs [Design]",
+              "ToolTip": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\UEH_Chacorner\\Home\\FManageStaff.cs [Design]",
               "RelativeToolTip": "UEH_Chacorner\\Home\\FManageStaff.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-13T17:07:51.741Z",
@@ -84,16 +90,179 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "FManageStaff.cs",
-              "DocumentMoniker": "E:\\UEH\\PTUDDesktop\\\u0110\u1ED2 \u00C1N\\desktop_uehchacorner\\UEH_Chacorner\\UEH_Chacorner\\Home\\FManageStaff.cs",
+              "DocumentMoniker": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\UEH_Chacorner\\Home\\FManageStaff.cs",
               "RelativeDocumentMoniker": "UEH_Chacorner\\Home\\FManageStaff.cs",
-              "ToolTip": "E:\\UEH\\PTUDDesktop\\\u0110\u1ED2 \u00C1N\\desktop_uehchacorner\\UEH_Chacorner\\UEH_Chacorner\\Home\\FManageStaff.cs",
+              "ToolTip": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\UEH_Chacorner\\Home\\FManageStaff.cs",
               "RelativeToolTip": "UEH_Chacorner\\Home\\FManageStaff.cs",
-              "ViewState": "AgIAAHQAAAAAAAAAAAAAAFgAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAACIAAAAAAAAAAAAAAHgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-13T17:09:04.278Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.config",
+              "DocumentMoniker": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\UEH_Chacorner\\App.config",
+              "RelativeDocumentMoniker": "UEH_Chacorner\\App.config",
+              "ToolTip": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\UEH_Chacorner\\App.config",
+              "RelativeToolTip": "UEH_Chacorner\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAACTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-12-15T15:59:34.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\UEH_Chacorner\\Program.cs",
+              "RelativeDocumentMoniker": "UEH_Chacorner\\Program.cs",
+              "ToolTip": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\UEH_Chacorner\\Program.cs",
+              "RelativeToolTip": "UEH_Chacorner\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T16:20:27.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NHANVIEN_BLL.cs",
+              "DocumentMoniker": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\BLL\\NHANVIEN_BLL.cs",
+              "RelativeDocumentMoniker": "BLL\\NHANVIEN_BLL.cs",
+              "ToolTip": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\BLL\\NHANVIEN_BLL.cs",
+              "RelativeToolTip": "BLL\\NHANVIEN_BLL.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAiwCsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T16:16:50.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NHANVIEN_DAL.cs",
+              "DocumentMoniker": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\DAL\\NHANVIEN_DAL.cs",
+              "RelativeDocumentMoniker": "DAL\\NHANVIEN_DAL.cs",
+              "ToolTip": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\DAL\\NHANVIEN_DAL.cs",
+              "RelativeToolTip": "DAL\\NHANVIEN_DAL.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAswHQAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T15:40:30.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TAIKHOAN_BLL.cs",
+              "DocumentMoniker": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\BLL\\TAIKHOAN_BLL.cs",
+              "RelativeDocumentMoniker": "BLL\\TAIKHOAN_BLL.cs",
+              "ToolTip": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\BLL\\TAIKHOAN_BLL.cs",
+              "RelativeToolTip": "BLL\\TAIKHOAN_BLL.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAcwCsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T16:11:26.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TAIKHOAN_DAL.cs",
+              "DocumentMoniker": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\DAL\\TAIKHOAN_DAL.cs",
+              "RelativeDocumentMoniker": "DAL\\TAIKHOAN_DAL.cs",
+              "ToolTip": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\DAL\\TAIKHOAN_DAL.cs",
+              "RelativeToolTip": "DAL\\TAIKHOAN_DAL.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAUwGIAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T16:03:47.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "NHANVIEN_DTO.cs",
+              "DocumentMoniker": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\DTO\\NHANVIEN_DTO.cs",
+              "RelativeDocumentMoniker": "DTO\\NHANVIEN_DTO.cs",
+              "ToolTip": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\DTO\\NHANVIEN_DTO.cs",
+              "RelativeToolTip": "DTO\\NHANVIEN_DTO.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T15:40:22.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TAIKHOAN_DTO.cs",
+              "DocumentMoniker": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\DTO\\TAIKHOAN_DTO.cs",
+              "RelativeDocumentMoniker": "DTO\\TAIKHOAN_DTO.cs",
+              "ToolTip": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\DTO\\TAIKHOAN_DTO.cs",
+              "RelativeToolTip": "DTO\\TAIKHOAN_DTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T15:40:17.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FManageStaff.Designer.cs",
+              "DocumentMoniker": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\UEH_Chacorner\\Home\\FManageStaff.Designer.cs",
+              "RelativeDocumentMoniker": "UEH_Chacorner\\Home\\FManageStaff.Designer.cs",
+              "ToolTip": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\UEH_Chacorner\\Home\\FManageStaff.Designer.cs",
+              "RelativeToolTip": "UEH_Chacorner\\Home\\FManageStaff.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T15:56:40.979Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FRevenue.cs",
+              "DocumentMoniker": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\UEH_Chacorner\\Home\\FRevenue.cs",
+              "RelativeDocumentMoniker": "UEH_Chacorner\\Home\\FRevenue.cs",
+              "ToolTip": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\UEH_Chacorner\\Home\\FRevenue.cs",
+              "RelativeToolTip": "UEH_Chacorner\\Home\\FRevenue.cs",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAAALIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T14:47:59.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FRevenue.cs [Design]",
+              "DocumentMoniker": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\UEH_Chacorner\\Home\\FRevenue.cs",
+              "RelativeDocumentMoniker": "UEH_Chacorner\\Home\\FRevenue.cs",
+              "ToolTip": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\UEH_Chacorner\\Home\\FRevenue.cs [Design]",
+              "RelativeToolTip": "UEH_Chacorner\\Home\\FRevenue.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T14:23:59.223Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FRevenueDetails.cs [Design]",
+              "DocumentMoniker": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\UEH_Chacorner\\Home\\FRevenueDetails.cs",
+              "RelativeDocumentMoniker": "UEH_Chacorner\\Home\\FRevenueDetails.cs",
+              "ToolTip": "D:\\duyen\\desktop_uehchacorner\\UEH_Chacorner\\UEH_Chacorner\\Home\\FRevenueDetails.cs [Design]",
+              "RelativeToolTip": "UEH_Chacorner\\Home\\FRevenueDetails.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-13T16:07:48.23Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 71,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             }
           ]
         }

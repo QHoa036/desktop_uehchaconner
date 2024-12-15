@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -26,35 +27,58 @@ namespace UEH_Chacorner.Home
             InitializeComponent();
         }
 
-        private void FManageStaff_Load(object sender, EventArgs e)
-        {
-            LoadStaffList();
-        }
 
         // Tải danh sách nhân viên vào DataGridView
         private void LoadStaffList()
         {
-            _staffData = _nhanvienBll.load_nhanvien(); 
-            dgvStaff.DataSource = _staffData; 
+            _staffData = _nhanvienBll.load_nhanvien();
+            DataView activeEmployees = _staffData.DefaultView;
+            activeEmployees.RowFilter = "TrangThai = 1";
+            dgvStaff.DataSource = activeEmployees.ToTable();
 
-            // Hiển thị các cột 
-            dgvStaff.Columns["MaNV"].Visible = true;
-            dgvStaff.Columns["TenNV"].Visible = true;
-            dgvStaff.Columns["NgaySinh"].Visible = true;
-            dgvStaff.Columns["SDT"].Visible = true;
-            dgvStaff.Columns["GioiTinh"].Visible = true;
-            dgvStaff.Columns["Quyen"].Visible = true;
+            // Đặt lại tiêu đề cột
+            if (dgvStaff.Columns.Contains("MaNV"))
+                dgvStaff.Columns["MaNV"].HeaderText = @"Mã nhân viên";
 
-            // Ẩn cột
+            if (dgvStaff.Columns.Contains("TenNV"))
+                dgvStaff.Columns["TenNV"].HeaderText = @"Tên nhân viên";
+
+            if (dgvStaff.Columns.Contains("NgaySinh"))
+            {
+                dgvStaff.Columns["NgaySinh"].HeaderText = @"Ngày sinh";
+                dgvStaff.Columns["NgaySinh"].DefaultCellStyle.Format = "dd/MM/yyyy";
+            }
+
+            if (dgvStaff.Columns.Contains("SDT"))
+                dgvStaff.Columns["SDT"].HeaderText = @"Số điện thoại";
+
+            if (dgvStaff.Columns.Contains("GioiTinh"))
+                dgvStaff.Columns["GioiTinh"].HeaderText = @"Giới tính";
+
+            if (dgvStaff.Columns.Contains("Quyen"))
+                dgvStaff.Columns["Quyen"].HeaderText = @"Quyền";
+
+
+            // Ẩn các cột không cần thiết
             if (dgvStaff.Columns.Contains("MatKhau"))
                 dgvStaff.Columns["MatKhau"].Visible = false;
 
             if (dgvStaff.Columns.Contains("TenTK"))
                 dgvStaff.Columns["TenTK"].Visible = false;
 
+            if (dgvStaff.Columns.Contains("TrangThai"))
+                dgvStaff.Columns["TrangThai"].Visible = false;
+
         }
 
         #region Event
+        // Load form
+        private void FManageStaff_Load(object sender, EventArgs e)
+        {
+            LoadStaffList();
+
+        }
+
 
         // Nút tìm kiếm
         private void btnSearch_Click(object sender, EventArgs e)
@@ -62,7 +86,7 @@ namespace UEH_Chacorner.Home
             string searchTerm = txtSearch.Text.Trim();
             if (!string.IsNullOrEmpty(searchTerm))
             {
-                DataTable searchResults = _nhanvienBll.Tim_nv(new NHANVIEN_DTO { TenNV = searchTerm });
+                DataTable searchResults = _nhanvienBll.TIM_TenNV_hoatdong(new NHANVIEN_DTO { TenNV = searchTerm });
                 dgvStaff.DataSource = searchResults;
             }
             else
@@ -87,13 +111,13 @@ namespace UEH_Chacorner.Home
             {
                 string maNV = dgvStaff.SelectedRows[0].Cells["MaNV"].Value.ToString();
                 var employee = new NHANVIEN_DTO { MaNV = maNV };
-                var account = new TAIKHOAN_DTO { MaNV = maNV }; // Tính chuyển procedure thành xóa trên Mã 
+                var account = new TAIKHOAN_DTO { MaNV = maNV };  
 
                 // Xóa tài khoản liên kết trong bảng TàiKhoan
-                int result2 = _taikhoanBll.delete_taikhoan(account);
+                int result2 = _taikhoanBll.DELETE_TaiKhoanwithMaNV(account);
 
                 // Xóa nhân viên trong bảng NhanVien
-                int result1 = _nhanvienBll.delete_nhanvien(employee);
+                int result1 = _nhanvienBll.DELETE_NhanVien_TrangThai(employee);
 
                 if (result1 > 0 && result2 > 0)
                 {
@@ -119,10 +143,11 @@ namespace UEH_Chacorner.Home
             {
                 string maNV = dgvStaff.SelectedRows[0].Cells["MaNV"].Value.ToString();
 
+
                 // Kiểm tra các trường dữ liệu
                 if (string.IsNullOrWhiteSpace(txtTenNV.Text) ||
                     string.IsNullOrWhiteSpace(txtSDT.Text) ||
-                    string.IsNullOrWhiteSpace(txtGioiTinh.Text) )
+                    string.IsNullOrWhiteSpace(txtGioiTinh.Text))
                 {
                     MessageBox.Show("Vui lòng nhập đầy đủ thông tin trước khi chỉnh sửa.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
@@ -135,7 +160,7 @@ namespace UEH_Chacorner.Home
                     NgaySinh = dtpNgaySinh.Value,
                     SDT = txtSDT.Text,
                     GioiTinh = txtGioiTinh.Text
-                   
+
                 };
 
                 int result = _nhanvienBll.update_nhanvien(employee);
@@ -153,6 +178,7 @@ namespace UEH_Chacorner.Home
             {
                 MessageBox.Show("Chọn nhân viên cần chỉnh sửa.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            LoadStaffList();
 
         }
         // CellClick DataGridView 
@@ -166,6 +192,7 @@ namespace UEH_Chacorner.Home
                 dtpNgaySinh.Value = Convert.ToDateTime(row.Cells["NgaySinh"].Value);
                 txtSDT.Text = row.Cells["SDT"].Value.ToString();
                 txtGioiTinh.Text = row.Cells["GioiTinh"].Value.ToString();
+
             }
 
         }
@@ -173,5 +200,7 @@ namespace UEH_Chacorner.Home
 
     }
 }
+
+
 
 
