@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace UEH_Chacorner.Common
+namespace UEH_ChaCorner.Common
 {
     public static class Utils
     {

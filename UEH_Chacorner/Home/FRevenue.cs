@@ -11,7 +11,7 @@ using System.Globalization;
 using BLL;
 using DTO;
 
-namespace UEH_Chacorner.Home
+namespace UEH_ChaCorner.Home
 {
     public partial class FRevenue : Form
     {

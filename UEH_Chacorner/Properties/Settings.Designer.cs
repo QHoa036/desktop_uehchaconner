@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace UEH_Chacorner.Properties {
+namespace UEH_ChaCorner.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

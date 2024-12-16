@@ -13,7 +13,7 @@ using BLL;
 using DTO;
 using System.IO;
 
-namespace UEH_Chacorner.Home
+namespace UEH_ChaCorner.Home
 {
     public partial class FRevenueDetails : Form
     {

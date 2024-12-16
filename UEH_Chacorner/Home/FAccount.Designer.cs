@@ -1,5 +1,5 @@
 ﻿
-namespace UEH_Chacorner
+namespace UEH_ChaCorner
 {
     partial class FAccount
     {

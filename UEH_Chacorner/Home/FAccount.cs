@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace UEH_Chacorner
+namespace UEH_ChaCorner
 {
     public partial class FAccount : Form
     {

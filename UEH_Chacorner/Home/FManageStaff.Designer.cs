@@ -1,4 +1,4 @@
-﻿namespace UEH_Chacorner.Home
+﻿namespace UEH_ChaCorner.Home
 {
     partial class FManageStaff
     {

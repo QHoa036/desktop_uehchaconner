@@ -6,7 +6,7 @@ using System.Windows.Forms;
 using BLL;
 using DTO;
 
-namespace UEH_Chacorner
+namespace UEH_ChaCorner
 {
     public partial class FRegister : Form
     {

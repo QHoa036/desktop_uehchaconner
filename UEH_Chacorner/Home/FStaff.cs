@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace UEH_Chacorner.Home
+namespace UEH_ChaCorner.Home
 {
     public partial class FStaff : Form
     {

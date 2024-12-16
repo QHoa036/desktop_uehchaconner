@@ -6,9 +6,9 @@ using System.Windows.Forms;
 using BLL;
 using DTO;
 
-using UEH_Chacorner.Common;
+using UEH_ChaCorner.Common;
 
-namespace UEH_Chacorner
+namespace UEH_ChaCorner
 {
     public partial class FLogin : Form
     {
