@@ -96,6 +96,12 @@
     <Compile Include="Home\FRevenueDetails.Designer.cs">
       <DependentUpon>FRevenueDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home\FStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home\FStaff.Designer.cs">
+      <DependentUpon>FStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Auth\FLoading.resx">
@@ -118,6 +124,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home\FRevenueDetails.resx">
       <DependentUpon>FRevenueDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home\FStaff.resx">
+      <DependentUpon>FStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
