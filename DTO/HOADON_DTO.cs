@@ -12,7 +12,7 @@ namespace DTO
         public int MaBan { get; set; }
 
         [Required]
-        [MaxLength(20)]
+        [StringLength(20)]
         public string MaNV { get; set; }
 
         [Required]
