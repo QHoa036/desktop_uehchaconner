@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using UEH_ChaCorner;
 using UEH_ChaCorner.Home;
 
-namespace UEH_Chaconner
+namespace UEH_ChaConner
 {
     internal static class Program
     {
