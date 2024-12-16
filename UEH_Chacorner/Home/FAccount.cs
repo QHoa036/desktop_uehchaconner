@@ -7,11 +7,8 @@ namespace UEH_ChaCorner
     {
         public FAccount()
         {
-            CheckForIllegalCrossThreadCalls = false;
             InitializeComponent();
         }
-
-        #region Method
 
         public string MaNV { get; set; }
 
@@ -19,20 +16,15 @@ namespace UEH_ChaCorner
 
         public string Quyen { get; set; }
 
-        #endregion
-
-        #region Event
-
         private void FAccount_Load(object sender, EventArgs e)
         {
             lbName.Text = TenNV;
             lbRole.Text = Quyen;
-            lbId.Text = MaNV;
         }
 
         public void FAccount_FormClosing(object sender, FormClosingEventArgs e)
         {
-            FHomepage.Mainmenu.EnableQuyen(Quyen, TenNV, MaNV);
+            FHomepage.MainMenu.setVisible(Quyen, TenNV, MaNV);
         }
 
         private void btBack_Click(object sender, EventArgs e)
@@ -40,6 +32,19 @@ namespace UEH_ChaCorner
             Close();
         }
 
-        #endregion
+        private void btMinimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btChangePassword_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

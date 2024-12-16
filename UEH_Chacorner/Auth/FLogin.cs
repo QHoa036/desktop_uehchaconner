@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -28,7 +27,7 @@ namespace UEH_ChaCorner
 
         public void FLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            FHomepage.Mainmenu.EnableQuyen(_quyen, _ten, _manv);
+            FHomepage.MainMenu.setVisible(_quyen, _ten, _manv);
         }
 
         private void ControlBox1_Click(object sender, EventArgs e)
@@ -65,9 +64,11 @@ namespace UEH_ChaCorner
                         _ten = roleAndName.Rows[0]["TenNV"].ToString().Trim();
                         _manv = roleAndName.Rows[0]["MaNV"].ToString().Trim();
 
+                        // Tắt form đăng nhập 
+                        Close();
+
                         // Chuyển sang trang Loading
                         //await ShowSplashScreenAsync();
-                        Close();
                     }
                     else
                     {
@@ -86,19 +87,14 @@ namespace UEH_ChaCorner
             }
         }
 
-        private void ShowSplashScreen()
-        {
-            Application.Run(new FLoading());
-        }
-
         private Task ShowSplashScreenAsync()
         {
             return Task.Run(() =>
             {
-                var splashThread = new Thread(new ThreadStart(ShowSplashScreen));
-                splashThread.Start();
-                Thread.Sleep(5600);
-                splashThread.Join();
+                using (var splashScreen = new FLoading())
+                {
+                    splashScreen.ShowDialog();
+                }
             });
         }
 

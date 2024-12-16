@@ -54,7 +54,7 @@ namespace UEH_ChaCorner
             // 
             // mainElipse
             // 
-            this.mainElipse.BorderRadius = 20;
+            this.mainElipse.BorderRadius = 90;
             this.mainElipse.TargetControl = this;
             // 
             // DragControl
@@ -267,7 +267,7 @@ namespace UEH_ChaCorner
             this.guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.Red;
             this.guna2ControlBox1.HoverState.IconColor = System.Drawing.Color.White;
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(1157, 13);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1136, 20);
             this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
@@ -288,7 +288,7 @@ namespace UEH_ChaCorner
             this.guna2ControlBox2.HoverState.FillColor = System.Drawing.SystemColors.ActiveCaption;
             this.guna2ControlBox2.HoverState.IconColor = System.Drawing.Color.Black;
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(1119, 13);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(1098, 20);
             this.guna2ControlBox2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));

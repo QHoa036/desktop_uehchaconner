@@ -12,14 +12,15 @@ namespace UEH_ChaCorner
 
         private void FLoading_Load(object sender, EventArgs e)
         {
-            timer.Start();
+            Timer.Start();
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            if (ProgressBar.Value == 100)
+            if (ProgressBar.Value >= ProgressBar.Maximum)
             {
-                timer.Stop();
+                Timer.Stop();
+                Close();
             }
             else
             {
