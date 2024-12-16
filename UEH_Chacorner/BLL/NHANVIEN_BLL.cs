@@ -37,5 +37,15 @@ namespace BLL
         {
             return _nhanvienDal.Tim_nv(nhanvienPublic);
         }
+        public DataTable TIM_TenNV_hoatdong(NHANVIEN_DTO nhanvienPublic)
+        {
+            return _nhanvienDal.TIM_TenNV_hoatdong(nhanvienPublic);
+        }
+        public int DELETE_NhanVien_TrangThai(NHANVIEN_DTO nhanvienPublic)
+        {
+            return _nhanvienDal.DELETE_NhanVien_TrangThai(nhanvienPublic);
+        }
     }   
 }
+
+

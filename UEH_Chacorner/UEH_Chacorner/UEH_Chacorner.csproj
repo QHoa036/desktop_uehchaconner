@@ -36,6 +36,10 @@
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net48\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1004\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -96,11 +100,11 @@
     <Compile Include="Home\FRevenueDetails.Designer.cs">
       <DependentUpon>FRevenueDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home\FStaff.cs">
+    <Compile Include="Home\FManageStaff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home\FStaff.Designer.cs">
-      <DependentUpon>FStaff.cs</DependentUpon>
+    <Compile Include="Home\FManageStaff.Designer.cs">
+      <DependentUpon>FManageStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -125,8 +129,8 @@
     <EmbeddedResource Include="Home\FRevenueDetails.resx">
       <DependentUpon>FRevenueDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home\FStaff.resx">
-      <DependentUpon>FStaff.cs</DependentUpon>
+    <EmbeddedResource Include="Home\FManageStaff.resx">
+      <DependentUpon>FManageStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

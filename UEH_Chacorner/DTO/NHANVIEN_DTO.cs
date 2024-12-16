@@ -23,5 +23,8 @@ namespace DTO
         [Required]
         [StringLength(3)]
         public string GioiTinh { get; set; }
+
+        [Required]
+        public bool TrangThai { get; set; }
     }
 }
