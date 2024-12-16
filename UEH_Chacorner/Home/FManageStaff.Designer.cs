@@ -93,6 +93,7 @@
             this.txtSDT.SelectedText = "";
             this.txtSDT.Size = new System.Drawing.Size(229, 48);
             this.txtSDT.TabIndex = 14;
+            this.txtSDT.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSDT_KeyDown);
             // 
             // txtTenNV
             // 
@@ -113,6 +114,7 @@
             this.txtTenNV.SelectedText = "";
             this.txtTenNV.Size = new System.Drawing.Size(380, 48);
             this.txtTenNV.TabIndex = 13;
+            this.txtTenNV.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTenNV_KeyDown);
             // 
             // btnDelete
             // 
@@ -217,7 +219,7 @@
             this.txtSearch.SelectedText = "";
             this.txtSearch.Size = new System.Drawing.Size(324, 48);
             this.txtSearch.TabIndex = 9;
-            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTenNV_KeyDown);
+            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
             // guna2HtmlLabel1
             // 
@@ -248,6 +250,7 @@
             this.txtGioiTinh.SelectedText = "";
             this.txtGioiTinh.Size = new System.Drawing.Size(185, 48);
             this.txtGioiTinh.TabIndex = 19;
+            this.txtGioiTinh.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtGioiTinh_KeyDown);
             // 
             // guna2HtmlLabel2
             // 

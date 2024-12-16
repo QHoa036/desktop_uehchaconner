@@ -6,6 +6,7 @@ using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -26,7 +27,13 @@ namespace UEH_ChaCorner.Home
         {
             InitializeComponent();
         }
-
+        #region Method
+        private bool KiemTraTenHopLe(string ten)
+        {
+            // Tên chỉ chứa chữ cái 
+            var regex = new Regex(@"^[\p{L}\s]+$");
+            return regex.IsMatch(ten.Trim());
+        }
 
         // Tải danh sách nhân viên vào DataGridView
         private void LoadStaffList()
@@ -68,17 +75,91 @@ namespace UEH_ChaCorner.Home
 
             if (dgvStaff.Columns.Contains("TrangThai"))
                 dgvStaff.Columns["TrangThai"].Visible = false;
-
         }
+
+        private void EditEmployee()
+        {
+            if (dgvStaff.SelectedRows.Count > 0)
+            {
+                string maNV = dgvStaff.SelectedRows[0].Cells["MaNV"].Value.ToString();
+                string tenNV = txtTenNV.Text;
+                string gioiTinh = txtGioiTinh.Text.Trim().ToLower();
+                gioiTinh = char.ToUpper(gioiTinh[0]) + gioiTinh.Substring(1); // Viết hoa chữ đầu
+
+                // Kiểm tra các trường dữ liệu
+                if (string.IsNullOrWhiteSpace(txtTenNV.Text) ||
+                    string.IsNullOrWhiteSpace(txtSDT.Text) ||
+                    string.IsNullOrWhiteSpace(txtGioiTinh.Text))
+                {
+                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin trước khi chỉnh sửa.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Kiểm tra tên nhân viên chỉ chứa chữ cái
+                if (!KiemTraTenHopLe(tenNV))
+                {
+                    MessageBox.Show("Tên nhân viên chỉ được chứa chữ cái.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Kiểm tra typing giới tính
+                if (gioiTinh != "Nam" && gioiTinh != "Nữ")
+                {
+                    MessageBox.Show("Giới tính chỉ được nhập là 'Nam' hoặc 'Nữ'.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Kiểm tra ngày sinh không vượt quá ngày hiện tại
+                if (dtpNgaySinh.Value.Date > DateTime.Now.Date)
+                {
+                    MessageBox.Show("Ngày sinh không được lớn hơn ngày hiện tại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Kiểm tra số điện thoại chỉ chứa số
+                if (!long.TryParse(txtSDT.Text, out _) || txtSDT.Text.Length < 9 || txtSDT.Text.Length > 12)
+                {
+                    MessageBox.Show("Số điện thoại phải đủ 10 ký tự là số.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Tạo đối tượng nhân viên
+                var employee = new NHANVIEN_DTO
+                {
+                    MaNV = maNV,
+                    TenNV = txtTenNV.Text,
+                    NgaySinh = dtpNgaySinh.Value,
+                    SDT = txtSDT.Text,
+                    GioiTinh = gioiTinh
+                };
+
+                // Gọi phương thức cập nhật
+                int result = _nhanvienBll.update_nhanvien(employee);
+                if (result > 0)
+                {
+                    MessageBox.Show("Thông tin nhân viên đã được cập nhật.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadStaffList();
+                }
+                else
+                {
+                    MessageBox.Show("Không thể cập nhật thông tin nhân viên.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Chọn nhân viên cần chỉnh sửa.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            LoadStaffList();
+        }
+
+        #endregion
 
         #region Event
         // Load form
         private void FManageStaff_Load(object sender, EventArgs e)
         {
             LoadStaffList();
-
         }
-
 
         // Nút tìm kiếm
         private void btnSearch_Click(object sender, EventArgs e)
@@ -95,8 +176,9 @@ namespace UEH_ChaCorner.Home
             }
 
         }
+
         // Keydown trong tìm kiếm
-        private void txtTenNV_KeyDown(object sender, KeyEventArgs e)
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -104,14 +186,14 @@ namespace UEH_ChaCorner.Home
             }
         }
 
-        // Xóa nhân viên
+        // Nút xóa nhân viên
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (dgvStaff.SelectedRows.Count > 0)
             {
                 string maNV = dgvStaff.SelectedRows[0].Cells["MaNV"].Value.ToString();
                 var employee = new NHANVIEN_DTO { MaNV = maNV };
-                var account = new TAIKHOAN_DTO { MaNV = maNV };  
+                var account = new TAIKHOAN_DTO { MaNV = maNV };
 
                 // Xóa tài khoản liên kết trong bảng TàiKhoan
                 int result2 = _taikhoanBll.DELETE_TaiKhoanwithMaNV(account);
@@ -135,52 +217,36 @@ namespace UEH_ChaCorner.Home
             }
 
         }
-        // Sửa thông tin
 
+        // Nút sửa thông tin
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (dgvStaff.SelectedRows.Count > 0)
-            {
-                string maNV = dgvStaff.SelectedRows[0].Cells["MaNV"].Value.ToString();
-
-
-                // Kiểm tra các trường dữ liệu
-                if (string.IsNullOrWhiteSpace(txtTenNV.Text) ||
-                    string.IsNullOrWhiteSpace(txtSDT.Text) ||
-                    string.IsNullOrWhiteSpace(txtGioiTinh.Text))
-                {
-                    MessageBox.Show("Vui lòng nhập đầy đủ thông tin trước khi chỉnh sửa.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-
-                var employee = new NHANVIEN_DTO
-                {
-                    MaNV = maNV,
-                    TenNV = txtTenNV.Text,
-                    NgaySinh = dtpNgaySinh.Value,
-                    SDT = txtSDT.Text,
-                    GioiTinh = txtGioiTinh.Text
-
-                };
-
-                int result = _nhanvienBll.update_nhanvien(employee);
-                if (result > 0)
-                {
-                    MessageBox.Show("Thông tin nhân viên đã được cập nhật.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadStaffList();
-                }
-                else
-                {
-                    MessageBox.Show("Không thể cập nhật thông tin nhân viên.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Chọn nhân viên cần chỉnh sửa.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            LoadStaffList();
-
+            EditEmployee();
         }
+
+        // Keydown trong Sửa
+        private void txtTenNV_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnEdit.PerformClick();
+            }
+        }
+        private void txtSDT_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnEdit.PerformClick();
+            }
+        }
+        private void txtGioiTinh_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnEdit.PerformClick();
+            }
+        }
+
         // CellClick DataGridView 
         private void dgvStaff_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -192,11 +258,12 @@ namespace UEH_ChaCorner.Home
                 dtpNgaySinh.Value = Convert.ToDateTime(row.Cells["NgaySinh"].Value);
                 txtSDT.Text = row.Cells["SDT"].Value.ToString();
                 txtGioiTinh.Text = row.Cells["GioiTinh"].Value.ToString();
-
             }
-
+            txtTenNV.Focus();
         }
+
         #endregion
+
 
     }
 }
