@@ -61,28 +61,28 @@ namespace UEH_ChaCorner
                     if (roleAndName.Rows.Count > 0)
                     {
                         // Lấy thông tin tài khoản
-                        _quyen = roleAndName.Rows[0]["Role"].ToString().Trim();
-                        _ten = roleAndName.Rows[0]["Name"].ToString().Trim();
-                        _manv = roleAndName.Rows[0]["EmployeeID"].ToString().Trim();
+                        _quyen = roleAndName.Rows[0]["Quyen"].ToString().Trim();
+                        _ten = roleAndName.Rows[0]["TenNV"].ToString().Trim();
+                        _manv = roleAndName.Rows[0]["MaNV"].ToString().Trim();
 
                         // Chuyển sang trang Loading
-                        await ShowSplashScreenAsync();
+                        //await ShowSplashScreenAsync();
                         Close();
                     }
                     else
                     {
-                        Utils.ShowError("Unable to retrieve account details.");
+                        Utils.ShowError("Không tìm thấy tài khoản.");
                     }
                 }
                 else
                 {
-                    Utils.ShowError("Incorrect username or password.");
+                    Utils.ShowError("Sai tài khoản hay mật khẩu.");
                     txtUsername.Focus();
                 }
             }
             catch (Exception ex)
             {
-                Utils.ShowError($"An error occurred: {ex.Message}");
+                Utils.ShowError($"Có lỗi xảy ra: {ex.Message}");
             }
         }
 
