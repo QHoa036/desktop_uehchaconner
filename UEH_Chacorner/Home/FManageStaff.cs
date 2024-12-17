@@ -104,6 +104,22 @@ namespace UEH_ChaCorner.Home
                 string gioiTinh = txtGioiTinh.Text.Trim().ToLower();
                 gioiTinh = char.ToUpper(gioiTinh[0]) + gioiTinh.Substring(1); // Viết hoa chữ đầu
 
+                // Lấy thông tin hiện tại của nhân viên từ DataGridView
+                string oldTenNV = dgvStaff.SelectedRows[0].Cells["TenNV"].Value.ToString().Trim();
+                DateTime oldNgaySinh = DateTime.Parse(dgvStaff.SelectedRows[0].Cells["NgaySinh"].Value.ToString());
+                string oldSDT = dgvStaff.SelectedRows[0].Cells["SDT"].Value.ToString().Trim();
+                string oldGioiTinh = dgvStaff.SelectedRows[0].Cells["GioiTinh"].Value.ToString().Trim();
+
+                // So sánh thông tin cũ và mới
+                if (oldTenNV == tenNV &&
+                    oldNgaySinh.Date == dtpNgaySinh.Value.Date &&
+                    oldSDT == txtSDT.Text.Trim() &&
+                    oldGioiTinh == gioiTinh)
+                {
+                    MessageBox.Show("Bạn chưa thay đổi thông tin gì.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
                 // Kiểm tra các trường dữ liệu
                 if (string.IsNullOrWhiteSpace(txtTenNV.Text) ||
                     string.IsNullOrWhiteSpace(txtSDT.Text) ||
