@@ -77,6 +77,24 @@ namespace UEH_ChaCorner.Home
                 dgvStaff.Columns["TrangThai"].Visible = false;
         }
 
+        public bool KiemTraSoDienThoai(string sdt, string maNV)
+        {   
+            DataTable dtNhanVien = _nhanvienBll.load_nhanvien();
+            // Kiểm tra số điện thoại trùng (ngoại trừ nhân viên đang chỉnh sửa)
+            foreach (DataRow row in dtNhanVien.Rows)
+            {
+                string sdtRow = row["SDT"].ToString().Trim();
+                string maNVRow = row["MaNV"].ToString().Trim();
+
+                if (sdtRow == sdt.Trim() && maNVRow != maNV.Trim())
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+
         private void EditEmployee()
         {
             if (dgvStaff.SelectedRows.Count > 0)
@@ -122,6 +140,17 @@ namespace UEH_ChaCorner.Home
                     MessageBox.Show("Số điện thoại phải đủ 10 ký tự là số.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
+
+                string sdtInput = txtSDT.Text.Trim();
+                string maNVInput = maNV.Trim();
+                // Kiểm tra số điện thoại có bị trùng không
+                bool isPhoneDuplicate = KiemTraSoDienThoai(sdtInput, maNVInput);
+                if (isPhoneDuplicate)
+                {
+                    MessageBox.Show("Số điện thoại này đã được sử dụng bởi nhân viên khác.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
 
                 // Tạo đối tượng nhân viên
                 var employee = new NHANVIEN_DTO
