@@ -17,19 +17,17 @@ namespace DAL
         // Thêm sản phẩm
         public int Insert_SanPham(SANPHAM_DTO sanPhamPublic)
         {
-            var parameter = 4; // Số lượng tham số
+            var parameter = 3; // Số lượng tham số
             var name = new string[parameter];
             var values = new object[parameter];
 
-            name[0] = "@MaSP";
-            name[1] = "@TenSP";
-            name[2] = "@DonGia";
-            name[3] = "@MaDMSP";
+            name[0] = "@TenSanPham";
+            name[1] = "@DonGia";
+            name[2] = "@MaDMSP";
 
-            values[0] = sanPhamPublic.MaSP;
-            values[1] = sanPhamPublic.TenSanPham;
-            values[2] = sanPhamPublic.DonGia;
-            values[3] = sanPhamPublic.MaDMSP;
+            values[0] = sanPhamPublic.TenSanPham;
+            values[1] = sanPhamPublic.DonGia;
+            values[2] = sanPhamPublic.MaDMSP;
 
             var sql = "INSERT_SanPham";
             return _conn.ExecuteData(sql, name, values, parameter);
@@ -103,7 +101,7 @@ namespace DAL
             var name = new string[parameter];
             var values = new object[parameter];
 
-            name[0] = "@TenSP";
+            name[0] = "@Ten";
             values[0] = sanPhamPublic.TenSanPham;
 
             var sql = "TIM_TenSanPham";
