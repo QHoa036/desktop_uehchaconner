@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 
 using BLL;
 using DTO;
+
 
 namespace UEH_ChaCorner
 {
@@ -14,7 +16,7 @@ namespace UEH_ChaCorner
         private readonly TAIKHOAN_BLL _tkBll = new TAIKHOAN_BLL();
 
         private int _manv;
-        private string _quyen = "";
+        private string _quyen = @"NHANVIEN";
 
         public FRegister()
         {
@@ -22,12 +24,14 @@ namespace UEH_ChaCorner
             InitializeComponent();
         }
 
-        #region Method
-
         private void Tatlbtrangthai()
         {
             Thread.Sleep(2000);
-            lbtrangthai.Text = "";
+        }
+
+        private void FRegister_Load(object sender, EventArgs e)
+        {
+            txtGender.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void Insertnhanvien()
@@ -36,10 +40,10 @@ namespace UEH_ChaCorner
             _manv = _nvBll.count_nhanvien();
 
             nvPublic.MaNV = "NV" + _manv;
-            nvPublic.TenNV = txthovaten.Text;
-            nvPublic.NgaySinh = DateTime.Parse(datengaysinh.Text);
-            nvPublic.SDT = txtsdt.Text;
-            nvPublic.GioiTinh = cbgioitinh.Text;
+            nvPublic.TenNV = txtFullname.Text;
+            nvPublic.NgaySinh = DateTime.Parse(txtDOB.Text);
+            nvPublic.SDT = txtPhone.Text;
+            nvPublic.GioiTinh = txtGender.Text;
 
             _nvBll.insert_nhanvien(nvPublic);
         }
@@ -48,24 +52,22 @@ namespace UEH_ChaCorner
         {
             var tkPublic = new TAIKHOAN_DTO
             {
-                TenTK = txttentk.Text,
-                MatKhau = txtmatkhau.Text,
+                TenTK = txtUsername.Text,
+                MatKhau = txtPassword.Text,
                 Quyen = _quyen,
                 MaNV = "NV" + _manv
-            };
+            }; 
             _tkBll.insert_taikhoan(tkPublic);
         }
 
-        #endregion
-
-        #region Event
-
-        private void FRegister_Load(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-            cbgioitinh.DropDownStyle = ComboBoxStyle.DropDownList;
+            Hide();
+            var fLogin = new FLogin();
+            fLogin.ShowDialog();
         }
 
-        private void btdangky_Click(object sender, EventArgs e)
+        private void btnRegister_Click(object sender, EventArgs e)
         {
             if (!ValidateInputs())
             {
@@ -73,15 +75,24 @@ namespace UEH_ChaCorner
                 t.Start();
                 return;
             }
-
             try
             {
+                // Thêm nhân viên và tài khoản
                 Insertnhanvien();
                 Inserttaikhoan();
-                Close();
+
+                // Thông báo thành công
+                MessageBox.Show(@"Đăng ký thành công.", @"Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Chuyển về trang đăng nhập
+                Hide();
+                var fLogin = new FLogin();
+                fLogin.Show();
+
             }
             catch (SqlException loi)
             {
+                // Xóa nhân viên nếu tạo tài khoản thất bại
                 if (loi.Message.Contains("Violation of PRIMARY KEY constraint 'PK_TENTK'"))
                 {
                     MessageBox.Show(@"Tên tài khoản bị trùng.", @"Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -92,69 +103,69 @@ namespace UEH_ChaCorner
 
         private bool ValidateInputs()
         {
-            if (txttentk.TextLength == 0)
+            if (txtUsername.TextLength == 0)
             {
                 ShowWarning(@"Chưa điền tên tài khoản.");
                 return false;
             }
-            if (txttentk.TextLength <= 3)
+            if (txtUsername.TextLength <= 3)
             {
                 ShowWarning(@"Tên tài khoản quá ngắn.");
                 return false;
             }
-            if (txttentk.TextLength >= 50)
+            if (txtUsername.TextLength >= 50)
             {
                 ShowWarning(@"Tên tài khoản quá dài.");
                 return false;
             }
-            if (txtmatkhau.TextLength == 0)
+            if (txtPassword.TextLength == 0)
             {
                 ShowWarning(@"Chưa điền mật khẩu.");
                 return false;
             }
-            if (txtmatkhau.TextLength <= 6)
+            if (txtPassword.TextLength <= 6)
             {
                 ShowWarning(@"Mật khẩu quá ngắn.");
                 return false;
             }
-            if (txtmatkhau.TextLength >= 20)
+            if (txtPassword.TextLength >= 20)
             {
                 ShowWarning(@"Mật khẩu quá dài.");
                 return false;
             }
-            if (txthovaten.TextLength == 0)
+            if (txtFullname.TextLength == 0)
             {
                 ShowWarning(@"Chưa điền họ và tên.");
                 return false;
             }
-            if (txthovaten.TextLength >= 100)
+            if (txtFullname.TextLength >= 100)
             {
                 ShowWarning(@"Họ và tên quá dài.");
                 return false;
             }
-            if (datengaysinh.Value.Year == DateTime.Today.Year)
+            if (txtDOB.Value.Year == DateTime.Today.Year)
             {
                 ShowWarning(@"Chưa chọn ngày sinh.");
                 return false;
             }
-            if (txtsdt.TextLength == 0)
+            if (txtPhone.TextLength == 0)
             {
                 ShowWarning(@"Chưa điền số điện thoại.");
                 return false;
             }
-            if (txtsdt.TextLength >= 12)
+            if (txtPhone.TextLength != txtPhone.Text.Where(char.IsDigit).Count())
+            {
+                ShowWarning(@"Số điện thoại không hợp lệ.");
+                return false;
+            }
+            if (txtPhone.TextLength >= 12)
             {
                 ShowWarning(@"Số điện thoại quá dài.");
                 return false;
             }
-            if (string.IsNullOrEmpty(cbgioitinh.Text))
+            if (string.IsNullOrEmpty(txtDOB.Text))
             {
                 ShowWarning(@"Chưa chọn giới tính.");
-                return false;
-            }
-            if (!rdadmin.Checked && !rdnhanvien.Checked)
-            {
-                ShowWarning(@"Chưa chọn quyền của tài khoản.");
                 return false;
             }
             return true;
@@ -167,33 +178,8 @@ namespace UEH_ChaCorner
 
         private void DeleteNhanVien_Loi()
         {
-            var nhanvienPublic = new NHANVIEN_DTO {MaNV = "NV" + _manv};
+            var nhanvienPublic = new NHANVIEN_DTO { MaNV = "NV" + _manv };
             _nvBll.delete_nhanvien(nhanvienPublic);
         }
-
-        private void rdadmin_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rdadmin.Checked) _quyen = @"ADMIN";
-        }
-
-        private void rdnhanvien_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rdnhanvien.Checked) _quyen = @"NHANVIEN";
-        }
-
-        private void txtsdt_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.') e.Handled = true;
-            if (e.KeyChar == '.' && ((TextBox) sender).Text.IndexOf('.') > -1) e.Handled = true;
-        }
-
-        private void btthoat_Click(object sender, EventArgs e)
-        {
-            Hide();
-            var fLogin = new FLogin();
-            fLogin.Show();
-        }
-
-        #endregion
     }
 }

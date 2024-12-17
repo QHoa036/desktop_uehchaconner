@@ -11,8 +11,10 @@ namespace UEH_ChaCorner
 {
     public partial class FLogin : Form
     {
+        public static FHomepage MainMenu = new FHomepage();
+
         private readonly TAIKHOAN_BLL _accountBll = new TAIKHOAN_BLL();
-        private string _quyen = "", _ten = "", _manv = "";
+        private string _quyennv = "", _tennv = "", _manv = "";
 
         public FLogin()
         {
@@ -24,25 +26,20 @@ namespace UEH_ChaCorner
             txtUsername.Focus();
             AcceptButton = btnLogin;
         }
-
-        public void FLogin_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            FHomepage.MainMenu.setVisible(_quyen, _ten, _manv);
-        }
-
-        private void ControlBox1_Click(object sender, EventArgs e)
+        
+        private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void lbClearFields_Click(object sender, EventArgs e)
         {
             txtUsername.Clear();
             txtPassword.Clear();
             txtUsername.Focus();
         }
 
-        private async void btnLogin_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             var account = new TAIKHOAN_DTO
             {
@@ -60,15 +57,20 @@ namespace UEH_ChaCorner
                     if (roleAndName.Rows.Count > 0)
                     {
                         // Lấy thông tin tài khoản
-                        _quyen = roleAndName.Rows[0]["Quyen"].ToString().Trim();
-                        _ten = roleAndName.Rows[0]["TenNV"].ToString().Trim();
+                        _quyennv = roleAndName.Rows[0]["Quyen"].ToString().Trim();
+                        _tennv = roleAndName.Rows[0]["TenNV"].ToString().Trim();
                         _manv = roleAndName.Rows[0]["MaNV"].ToString().Trim();
 
                         // Tắt form đăng nhập 
-                        Close();
+                        Hide();
 
                         // Chuyển sang trang Loading
                         //await ShowSplashScreenAsync();
+
+                        // Mở form chính
+                        MainMenu.setVisible(_quyennv, _tennv, _manv);
+                        MainMenu.ShowDialog();
+
                     }
                     else
                     {
@@ -83,7 +85,7 @@ namespace UEH_ChaCorner
             }
             catch (Exception ex)
             {
-                Utils.ShowError($"Có lỗi xảy ra: {ex.Message}");
+                Utils.ShowError($"{ex.Message}");
             }
         }
 
@@ -100,9 +102,9 @@ namespace UEH_ChaCorner
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            Close();
-            var dk = new FRegister();
-            dk.ShowDialog();
+            Hide();
+            var fRegister = new FRegister();
+            fRegister.ShowDialog();
         }
     }
 }

@@ -10,23 +10,21 @@ namespace UEH_ChaCorner
 
         private readonly FRevenue _thongke = new FRevenue();
         private readonly FManageStaff _nhanvien = new FManageStaff();
+        private readonly FAccount _taikhoan = new FAccount();
 
         private Form _activeForm;
-        private bool _bbanan, _bmenu, _bnhanvien, _bthongke, _bhomepage;
         private string _manv = "", _quyennv = "", _tennv = "";
+        private bool _isProfile = false;
+        private bool _isStaff = false;
+        private bool _isChart = false;
+        private bool _isMenu = false;
+        private bool _isTable = false;
+        private bool _isHome = true;
 
         public FHomepage()
         {
             InitializeComponent();
             MainMenu = this;
-        }
-
-        private void FMainMenu_Load(object sender, EventArgs e)
-        {
-            initialVisible();
-            var dn = new FLogin();
-            dn.FormClosing += dn.FLogin_FormClosing;
-            dn.ShowDialog();
         }
 
         private void FMainMenu_FormClosing(object sender, FormClosingEventArgs e)
@@ -47,19 +45,10 @@ namespace UEH_ChaCorner
             childForm.Show();
         }
 
-        private void initialVisible()
-        {
-            btStaff.Visible = false;
-            btStatistic.Visible = false;
-            btMenu.Visible = false;
-            btManage.Visible = false;
-            btExit.Visible = false;
-        }
-
-        internal void setVisible(string quyennv, string tennv, string idnv)
+        internal void setVisible(string quyennv, string tennv, string manv)
         {
             // Lấy thông tin tài khoản
-            _manv = idnv;
+            _manv = manv;
             _quyennv = quyennv;
             _tennv = lbUsername.Text = tennv;
 
@@ -81,96 +70,170 @@ namespace UEH_ChaCorner
             }
         }
 
-        private void btAccount_Click(object sender, EventArgs e)
-        {
-            var dn = new FAccount { TenNV = _tennv, Quyen = _quyennv, MaNV = _manv };
-            dn.FormClosing += dn.FAccount_FormClosing;
-            dn.ShowDialog();
-        }
-
         private void btHome_Click(object sender, EventArgs e)
         {
-            // trở về trang chủ
-            if (_bnhanvien)
+            if (_isHome) return;
+            if (_isProfile)
             {
-                _bnhanvien = false;
+                _isProfile = false;
+                _isHome = true;
+                _taikhoan.Hide();
+            }
+            if (_isTable)
+            {
+                _isTable = false;
+                _isHome = true;
+                //_table.Hide();
+            }
+            if (_isMenu)
+            {
+                _isMenu = false;
+                _isHome = true;
+                //_menu.Hide();
+            }
+            if (_isStaff)
+            {
+                _isStaff = false;
+                _isHome = true;
                 _nhanvien.Hide();
-                _bhomepage = true;
             }
-            else if (_bthongke)
+            if (_isChart)
             {
-                _bthongke = false;
+                _isChart = false;
+                _isHome = true;
                 _thongke.Hide();
-                _bhomepage = true;
             }
-            else if (_bmenu)
+        }
+
+        private void btAccount_Click(object sender, EventArgs e)
+        {
+            if (_isProfile) return;
+            if (_isHome)
             {
-                _bmenu = false;
-                _bhomepage = true;
+                _isHome = false;
+                _isProfile = true;
+                _taikhoan.TenNV = _tennv;
+                _taikhoan.Quyen = _quyennv;
+                _taikhoan.MaNV = _manv;
+                OpenChildForm(_taikhoan);
             }
-            else if (_bbanan)
+            if (_isTable)
             {
-                _bbanan = false;
-                _bhomepage = true;
+                _isTable = false;
+                _isProfile = true;
+                //_table.Hide();
+                _taikhoan.TenNV = _tennv;
+                _taikhoan.Quyen = _quyennv;
+                _taikhoan.MaNV = _manv;
+                OpenChildForm(_taikhoan);
             }
-            else
+            if (_isMenu)
             {
-                _bhomepage = true;
+                _isMenu = false;
+                _isProfile = true;
+                //_menu.Hide();
+                _taikhoan.TenNV = _tennv;
+                _taikhoan.Quyen = _quyennv;
+                _taikhoan.MaNV = _manv;
+                OpenChildForm(_taikhoan);
+            }
+            if (_isStaff)
+            {
+                _isStaff = false;
+                _isProfile = true;
+                _nhanvien.Hide();
+                _taikhoan.TenNV = _tennv;
+                _taikhoan.Quyen = _quyennv;
+                _taikhoan.MaNV = _manv;
+                OpenChildForm(_taikhoan);
+            }
+            if (_isChart)
+            {
+                _isChart = false;
+                _isProfile = true;
+                _thongke.Hide();
+                _taikhoan.TenNV = _tennv;
+                _taikhoan.Quyen = _quyennv;
+                _taikhoan.MaNV = _manv;
+                OpenChildForm(_taikhoan);
             }
         }
 
         private void btStaff_Click(object sender, EventArgs e)
         {
-            if (_bmenu)
+            if (_isStaff) return;
+            if (_isHome)
             {
-                _bmenu = false;
-                _bnhanvien = true;
+                _isHome = false;
+                _isStaff = true;
                 OpenChildForm(_nhanvien);
             }
-            else if (_bbanan)
+            if (_isProfile)
             {
-                _bbanan = false;
-                _bnhanvien = true;
+                _isProfile = false;
+                _isStaff = true;
+                _taikhoan.Hide();
                 OpenChildForm(_nhanvien);
             }
-            else if (_bthongke)
+            if (_isTable)
             {
-                _bthongke = false;
+                _isTable = false;
+                _isStaff = true;
+                //_table.Hide();
+                OpenChildForm(_nhanvien);
+            }
+            if (_isMenu)
+            {
+                _isMenu = false;
+                _isStaff = true;
+                //_menu.Hide();
+                OpenChildForm(_nhanvien);
+            }
+            if (_isChart)
+            {
+                _isChart = false;
+                _isStaff = true;
                 _thongke.Hide();
-                _bnhanvien = true;
-                OpenChildForm(_nhanvien);
-            }
-            else
-            {
-                _bnhanvien = true;
                 OpenChildForm(_nhanvien);
             }
         }
 
         private void btStatistic_Click(object sender, EventArgs e)
         {
-            if (_bbanan)
+            if (_isChart) return;
+            if (_isHome)
             {
-                _bbanan = false;
-                _bthongke = true;
+                _isHome = false;
+                _isChart = true;
+                _thongke.Hide();
                 OpenChildForm(_thongke);
             }
-            else if (_bmenu)
+            if (_isProfile)
             {
-                _bmenu = false;
-                _bthongke = true;
+                _isProfile = false;
+                _isChart = true;
+                _taikhoan.Hide();
                 OpenChildForm(_thongke);
             }
-            else if (_bnhanvien)
+            if (_isTable)
             {
-                _bnhanvien = false;
-                _nhanvien.Hide();
-                _bthongke = true;
+                _isTable = false;
+                _isChart = true;
+                //_table.Hide();
                 OpenChildForm(_thongke);
             }
-            else
+            if (_isMenu)
             {
-                _bthongke = true;
+                _isMenu = false;
+                _isChart = true;
+                //_menu.Hide();
+                OpenChildForm(_thongke);
+            }
+            if (_isStaff)
+            {
+                _isStaff = false;
+                _isChart = true;
+                _thongke.Hide();
                 OpenChildForm(_thongke);
             }
         }
@@ -178,9 +241,8 @@ namespace UEH_ChaCorner
         private void btExit_Click(object sender, EventArgs e)
         {
             Hide();
-            var h = new FHomepage();
-            h.ShowDialog();
-            Application.Exit();
+            var fLogin = new FLogin();
+            fLogin.ShowDialog();
         }
     }
 }
