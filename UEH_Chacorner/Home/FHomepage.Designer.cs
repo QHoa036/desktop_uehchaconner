@@ -34,6 +34,10 @@ namespace UEH_ChaCorner
             this.mainElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panelChildForm = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.panelSideRight = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.panelControl = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.lbUsername = new System.Windows.Forms.Label();
+            this.btAccount = new Guna.UI2.WinForms.Guna2GradientTileButton();
+            this.lbTitle = new System.Windows.Forms.Label();
             this.panelSideLeft = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.btHome = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btStaff = new Guna.UI2.WinForms.Guna2GradientTileButton();
@@ -43,14 +47,10 @@ namespace UEH_ChaCorner
             this.btExit = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.lbTitle = new System.Windows.Forms.Label();
-            this.btAccount = new Guna.UI2.WinForms.Guna2GradientTileButton();
-            this.lbUsername = new System.Windows.Forms.Label();
-            this.panelControl = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.panelChildForm.SuspendLayout();
             this.panelSideRight.SuspendLayout();
-            this.panelSideLeft.SuspendLayout();
             this.panelControl.SuspendLayout();
+            this.panelSideLeft.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainElipse
@@ -89,6 +89,79 @@ namespace UEH_ChaCorner
             this.panelSideRight.Size = new System.Drawing.Size(1140, 650);
             this.panelSideRight.TabIndex = 28;
             this.panelSideRight.UseTransparentBackground = true;
+            // 
+            // panelControl
+            // 
+            this.panelControl.BackColor = System.Drawing.Color.Transparent;
+            this.panelControl.BorderColor = System.Drawing.Color.Transparent;
+            this.panelControl.Controls.Add(this.lbUsername);
+            this.panelControl.Controls.Add(this.btAccount);
+            this.panelControl.Controls.Add(this.lbTitle);
+            this.panelControl.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
+            this.panelControl.CustomizableEdges.TopLeft = false;
+            this.panelControl.CustomizableEdges.TopRight = false;
+            this.panelControl.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelControl.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
+            this.panelControl.Location = new System.Drawing.Point(0, 0);
+            this.panelControl.Margin = new System.Windows.Forms.Padding(2);
+            this.panelControl.Name = "panelControl";
+            this.panelControl.Size = new System.Drawing.Size(1140, 50);
+            this.panelControl.TabIndex = 23;
+            this.panelControl.UseTransparentBackground = true;
+            // 
+            // lbUsername
+            // 
+            this.lbUsername.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbUsername.BackColor = System.Drawing.Color.Transparent;
+            this.lbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
+            this.lbUsername.Location = new System.Drawing.Point(642, 17);
+            this.lbUsername.Name = "lbUsername";
+            this.lbUsername.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbUsername.Size = new System.Drawing.Size(421, 20);
+            this.lbUsername.TabIndex = 33;
+            this.lbUsername.Text = "Tên";
+            this.lbUsername.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btAccount
+            // 
+            this.btAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.btAccount.Animated = true;
+            this.btAccount.AutoRoundedCorners = true;
+            this.btAccount.BackColor = System.Drawing.Color.Transparent;
+            this.btAccount.BorderColor = System.Drawing.Color.Empty;
+            this.btAccount.BorderRadius = 19;
+            this.btAccount.FillColor = System.Drawing.Color.Empty;
+            this.btAccount.FillColor2 = System.Drawing.Color.Empty;
+            this.btAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
+            this.btAccount.ForeColor = System.Drawing.Color.White;
+            this.btAccount.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.btAccount.HoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btAccount.HoverState.Image = global::UEH_ChaCorner.Properties.Resources.user___hover;
+            this.btAccount.Image = global::UEH_ChaCorner.Properties.Resources.user;
+            this.btAccount.ImageSize = new System.Drawing.Size(32, 32);
+            this.btAccount.Location = new System.Drawing.Point(1069, 5);
+            this.btAccount.Name = "btAccount";
+            this.btAccount.PressedColor = System.Drawing.Color.White;
+            this.btAccount.Size = new System.Drawing.Size(40, 40);
+            this.btAccount.TabIndex = 32;
+            this.btAccount.UseTransparentBackground = true;
+            this.btAccount.Click += new System.EventHandler(this.btAccount_Click);
+            // 
+            // lbTitle
+            // 
+            this.lbTitle.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
+            this.lbTitle.Location = new System.Drawing.Point(0, 0);
+            this.lbTitle.Margin = new System.Windows.Forms.Padding(16, 0, 2, 0);
+            this.lbTitle.Name = "lbTitle";
+            this.lbTitle.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
+            this.lbTitle.Size = new System.Drawing.Size(254, 50);
+            this.lbTitle.TabIndex = 31;
+            this.lbTitle.Text = "UEH Cha Corner";
+            this.lbTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panelSideLeft
             // 
@@ -263,86 +336,15 @@ namespace UEH_ChaCorner
             // 
             this.DragControl2.DockForm = true;
             this.DragControl2.DockIndicatorTransparencyValue = 0.6D;
+            this.DragControl2.TargetControl = this.panelSideLeft;
             this.DragControl2.UseTransparentDrag = true;
             // 
             // DragControl1
             // 
             this.DragControl1.DockForm = true;
             this.DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.DragControl1.TargetControl = this;
             this.DragControl1.UseTransparentDrag = true;
-            // 
-            // lbTitle
-            // 
-            this.lbTitle.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
-            this.lbTitle.Location = new System.Drawing.Point(0, 0);
-            this.lbTitle.Margin = new System.Windows.Forms.Padding(16, 0, 2, 0);
-            this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.lbTitle.Size = new System.Drawing.Size(254, 50);
-            this.lbTitle.TabIndex = 31;
-            this.lbTitle.Text = "UEH Cha Corner";
-            this.lbTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btAccount
-            // 
-            this.btAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btAccount.Animated = true;
-            this.btAccount.AutoRoundedCorners = true;
-            this.btAccount.BackColor = System.Drawing.Color.Transparent;
-            this.btAccount.BorderColor = System.Drawing.Color.Empty;
-            this.btAccount.BorderRadius = 19;
-            this.btAccount.FillColor = System.Drawing.Color.Empty;
-            this.btAccount.FillColor2 = System.Drawing.Color.Empty;
-            this.btAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.btAccount.ForeColor = System.Drawing.Color.White;
-            this.btAccount.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.btAccount.HoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btAccount.HoverState.Image = global::UEH_ChaCorner.Properties.Resources.user___hover;
-            this.btAccount.Image = global::UEH_ChaCorner.Properties.Resources.user;
-            this.btAccount.ImageSize = new System.Drawing.Size(32, 32);
-            this.btAccount.Location = new System.Drawing.Point(1069, 5);
-            this.btAccount.Name = "btAccount";
-            this.btAccount.PressedColor = System.Drawing.Color.White;
-            this.btAccount.Size = new System.Drawing.Size(40, 40);
-            this.btAccount.TabIndex = 32;
-            this.btAccount.UseTransparentBackground = true;
-            this.btAccount.Click += new System.EventHandler(this.btAccount_Click);
-            // 
-            // lbUsername
-            // 
-            this.lbUsername.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbUsername.BackColor = System.Drawing.Color.Transparent;
-            this.lbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
-            this.lbUsername.Location = new System.Drawing.Point(642, 17);
-            this.lbUsername.Name = "lbUsername";
-            this.lbUsername.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lbUsername.Size = new System.Drawing.Size(421, 20);
-            this.lbUsername.TabIndex = 33;
-            this.lbUsername.Text = "Tên";
-            this.lbUsername.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panelControl
-            // 
-            this.panelControl.BackColor = System.Drawing.Color.Transparent;
-            this.panelControl.BorderColor = System.Drawing.Color.Transparent;
-            this.panelControl.Controls.Add(this.lbUsername);
-            this.panelControl.Controls.Add(this.btAccount);
-            this.panelControl.Controls.Add(this.lbTitle);
-            this.panelControl.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.panelControl.CustomizableEdges.TopLeft = false;
-            this.panelControl.CustomizableEdges.TopRight = false;
-            this.panelControl.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelControl.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.BackwardDiagonal;
-            this.panelControl.Location = new System.Drawing.Point(0, 0);
-            this.panelControl.Margin = new System.Windows.Forms.Padding(2);
-            this.panelControl.Name = "panelControl";
-            this.panelControl.Size = new System.Drawing.Size(1140, 50);
-            this.panelControl.TabIndex = 23;
-            this.panelControl.UseTransparentBackground = true;
             // 
             // FHomepage
             // 
@@ -358,8 +360,8 @@ namespace UEH_ChaCorner
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FMainMenu_FormClosing);
             this.panelChildForm.ResumeLayout(false);
             this.panelSideRight.ResumeLayout(false);
-            this.panelSideLeft.ResumeLayout(false);
             this.panelControl.ResumeLayout(false);
+            this.panelSideLeft.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

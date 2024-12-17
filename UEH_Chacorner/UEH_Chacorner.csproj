@@ -253,5 +253,20 @@
   <ItemGroup>
     <None Include="Resources\profile.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit - hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete - hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

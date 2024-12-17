@@ -15,7 +15,7 @@ using DTO;
 
 namespace UEH_ChaCorner.Home
 {
-    public partial class FManageStaff : Form
+    public partial class FStaff : Form
     {
         // Khai báo các đối tượng BLL 
         private readonly NHANVIEN_BLL _nhanvienBll = new NHANVIEN_BLL();
@@ -23,11 +23,10 @@ namespace UEH_ChaCorner.Home
 
         private DataTable _staffData;
 
-        public FManageStaff()
+        public FStaff()
         {
             InitializeComponent();
         }
-        #region Method
         private bool KiemTraTenHopLe(string ten)
         {
             // Tên chỉ chứa chữ cái 
@@ -45,25 +44,25 @@ namespace UEH_ChaCorner.Home
 
             // Đặt lại tiêu đề cột
             if (dgvStaff.Columns.Contains("MaNV"))
-                dgvStaff.Columns["MaNV"].HeaderText = @"Mã nhân viên";
+                dgvStaff.Columns["MaNV"].HeaderText = @"Mã";
 
             if (dgvStaff.Columns.Contains("TenNV"))
-                dgvStaff.Columns["TenNV"].HeaderText = @"Tên nhân viên";
+                dgvStaff.Columns["TenNV"].HeaderText = @"Họ tên";
 
             if (dgvStaff.Columns.Contains("NgaySinh"))
             {
-                dgvStaff.Columns["NgaySinh"].HeaderText = @"Ngày sinh";
+                dgvStaff.Columns["NgaySinh"].HeaderText = @"DOB";
                 dgvStaff.Columns["NgaySinh"].DefaultCellStyle.Format = "dd/MM/yyyy";
             }
 
             if (dgvStaff.Columns.Contains("SDT"))
-                dgvStaff.Columns["SDT"].HeaderText = @"Số điện thoại";
+                dgvStaff.Columns["SDT"].HeaderText = @"SĐT";
 
             if (dgvStaff.Columns.Contains("GioiTinh"))
                 dgvStaff.Columns["GioiTinh"].HeaderText = @"Giới tính";
 
             if (dgvStaff.Columns.Contains("Quyen"))
-                dgvStaff.Columns["Quyen"].HeaderText = @"Quyền";
+                dgvStaff.Columns["Quyen"].HeaderText = @"Chức vụ";
 
 
             // Ẩn các cột không cần thiết
@@ -197,9 +196,6 @@ namespace UEH_ChaCorner.Home
             LoadStaffList();
         }
 
-        #endregion
-
-        #region Event
         // Load form
         private void FManageStaff_Load(object sender, EventArgs e)
         {
@@ -207,7 +203,7 @@ namespace UEH_ChaCorner.Home
         }
 
         // Nút tìm kiếm
-        private void btnSearch_Click(object sender, EventArgs e)
+        private void btnSearch_TextChanged(object sender, EventArgs e)
         {
             string searchTerm = txtSearch.Text.Trim();
             if (!string.IsNullOrEmpty(searchTerm))
@@ -220,15 +216,6 @@ namespace UEH_ChaCorner.Home
                 LoadStaffList();
             }
 
-        }
-
-        // Keydown trong tìm kiếm
-        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btnSearch.PerformClick(); // Giả lập việc nhấn nút tìm
-            }
         }
 
         // Nút xóa nhân viên
@@ -269,29 +256,6 @@ namespace UEH_ChaCorner.Home
             EditEmployee();
         }
 
-        // Keydown trong Sửa
-        private void txtTenNV_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btnEdit.PerformClick();
-            }
-        }
-        private void txtSDT_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btnEdit.PerformClick();
-            }
-        }
-        private void txtGioiTinh_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                btnEdit.PerformClick();
-            }
-        }
-
         // CellClick DataGridView 
         private void dgvStaff_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -302,14 +266,31 @@ namespace UEH_ChaCorner.Home
                 txtTenNV.Text = row.Cells["TenNV"].Value.ToString();
                 dtpNgaySinh.Value = Convert.ToDateTime(row.Cells["NgaySinh"].Value);
                 txtSDT.Text = row.Cells["SDT"].Value.ToString();
-                txtGioiTinh.Text = row.Cells["GioiTinh"].Value.ToString();
+
+                string gioiTinh = row.Cells["GioiTinh"].Value.ToString();
+                if (!string.IsNullOrEmpty(gioiTinh))
+                {
+                    // Check if the ComboBox contains the value
+                    if (string.Equals(gioiTinh, "Nam", StringComparison.OrdinalIgnoreCase))
+                    {
+                        txtGioiTinh.SelectedItem = gioiTinh;
+                        txtGioiTinh.Text = gioiTinh;
+                        txtGioiTinh.SelectedIndex = 0;
+                    }
+                    else if (gioiTinh == "Nữ ")
+                    {
+                        txtGioiTinh.SelectedItem = gioiTinh;
+                        txtGioiTinh.Text = gioiTinh;
+                        txtGioiTinh.SelectedIndex = 1;
+                    }
+                    else
+                    {
+                        txtGioiTinh.SelectedIndex = -1; 
+                    }
+                }
             }
             txtTenNV.Focus();
         }
-
-        #endregion
-
-
     }
 }
 

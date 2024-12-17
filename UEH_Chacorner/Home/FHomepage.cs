@@ -9,7 +9,7 @@ namespace UEH_ChaCorner
         public static FHomepage MainMenu;
 
         private readonly FRevenue _thongke = new FRevenue();
-        private readonly FManageStaff _nhanvien = new FManageStaff();
+        private readonly FStaff _nhanvien = new FStaff();
         private readonly FAccount _taikhoan = new FAccount();
 
         private Form _activeForm;

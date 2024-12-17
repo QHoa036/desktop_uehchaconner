@@ -29,16 +29,11 @@ namespace UEH_ChaCorner
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FAccount));
-            this.DragControl = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.mainElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.ShadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.lbName = new System.Windows.Forms.Label();
             this.lbRole = new System.Windows.Forms.Label();
             this.panelUser = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.imgAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panelChangePwd = new Guna.UI2.WinForms.Guna2Panel();
             this.imgLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panelDivider = new System.Windows.Forms.Panel();
@@ -48,28 +43,10 @@ namespace UEH_ChaCorner
             this.txtOldPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtConfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.panelUser.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAvatar)).BeginInit();
             this.panelChangePwd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // DragControl
-            // 
-            this.DragControl.ContainerControl = this;
-            this.DragControl.DockIndicatorTransparencyValue = 0.6D;
-            this.DragControl.UseTransparentDrag = true;
-            // 
-            // mainElipse
-            // 
-            this.mainElipse.BorderRadius = 0;
-            this.mainElipse.TargetControl = this;
-            // 
-            // ShadowForm
-            // 
-            this.ShadowForm.BorderRadius = 30;
-            this.ShadowForm.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.ShadowForm.TargetForm = this;
             // 
             // lbName
             // 
@@ -108,7 +85,7 @@ namespace UEH_ChaCorner
             this.panelUser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.panelUser.BorderRadius = 140;
             this.panelUser.BorderThickness = 1;
-            this.panelUser.Controls.Add(this.guna2CirclePictureBox1);
+            this.panelUser.Controls.Add(this.imgAvatar);
             this.panelUser.Controls.Add(this.lbRole);
             this.panelUser.Controls.Add(this.lbName);
             this.panelUser.CustomizableEdges.BottomLeft = false;
@@ -126,17 +103,17 @@ namespace UEH_ChaCorner
             this.panelUser.Size = new System.Drawing.Size(359, 650);
             this.panelUser.TabIndex = 9;
             // 
-            // guna2CirclePictureBox1
+            // imgAvatar
             // 
-            this.guna2CirclePictureBox1.Image = global::UEH_ChaCorner.Properties.Resources.profile;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(98, 86);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(160, 160);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 5;
-            this.guna2CirclePictureBox1.TabStop = false;
+            this.imgAvatar.Image = global::UEH_ChaCorner.Properties.Resources.profile;
+            this.imgAvatar.ImageRotate = 0F;
+            this.imgAvatar.Location = new System.Drawing.Point(98, 86);
+            this.imgAvatar.Name = "imgAvatar";
+            this.imgAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.imgAvatar.Size = new System.Drawing.Size(160, 160);
+            this.imgAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgAvatar.TabIndex = 5;
+            this.imgAvatar.TabStop = false;
             // 
             // panelChangePwd
             // 
@@ -328,8 +305,7 @@ namespace UEH_ChaCorner
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FAccount_FormClosing);
             this.Load += new System.EventHandler(this.FAccount_Load);
             this.panelUser.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgAvatar)).EndInit();
             this.panelChangePwd.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).EndInit();
             this.ResumeLayout(false);
@@ -337,14 +313,10 @@ namespace UEH_ChaCorner
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2DragControl DragControl;
-        private Guna.UI2.WinForms.Guna2Elipse mainElipse;
-        private Guna.UI2.WinForms.Guna2ShadowForm ShadowForm;
-        private System.Windows.Forms.BindingSource bindingSource1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel panelUser;
         private System.Windows.Forms.Label lbRole;
         private System.Windows.Forms.Label lbName;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox imgAvatar;
         private Guna.UI2.WinForms.Guna2Panel panelChangePwd;
         private System.Windows.Forms.Panel panelDivider;
         private Guna.UI2.WinForms.Guna2GradientTileButton btChangePassword;
