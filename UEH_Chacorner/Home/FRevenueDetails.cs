@@ -45,12 +45,13 @@ namespace UEH_ChaCorner.Home
         {
             dgvCTHD.ReadOnly = true;
             dgvCTHD.Columns[0].HeaderText = @"Mã CTHD";
-            dgvCTHD.Columns[1].HeaderText = @"Tên sản phẩm";
-            dgvCTHD.Columns[2].HeaderText = @"Số lượng";
-            dgvCTHD.Columns[3].HeaderText = @"Đơn giá";
-            dgvCTHD.Columns[3].DefaultCellStyle.Format = "N0";
-            dgvCTHD.Columns[4].HeaderText = @"Thành tiền";
+            dgvCTHD.Columns[1].HeaderText = @"Mã sản phẩm";
+            dgvCTHD.Columns[2].HeaderText = @"Tên sản phẩm";
+            dgvCTHD.Columns[3].HeaderText = @"Số lượng";
+            dgvCTHD.Columns[4].HeaderText = @"Đơn giá";
             dgvCTHD.Columns[4].DefaultCellStyle.Format = "N0";
+            dgvCTHD.Columns[5].HeaderText = @"Thành tiền";
+            dgvCTHD.Columns[5].DefaultCellStyle.Format = "N0";
         }
 
         private void TinhTongTien()
@@ -61,7 +62,7 @@ namespace UEH_ChaCorner.Home
             {
 
                 // Lấy giá trị thành tiền từ cột "Thành tiền"
-                decimal ThanhTien = Convert.ToDecimal(row.Cells[4].Value);
+                decimal ThanhTien = Convert.ToDecimal(row.Cells["ThanhTien"].Value);
                 TongTien += ThanhTien;
 
             }

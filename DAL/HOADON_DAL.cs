@@ -32,15 +32,15 @@ namespace DAL
             var name = new string[parameter];
             var values = new object[parameter];
 
-            name[0] = "@MaHD";
-            name[1] = "@MaBan";
-            name[2] = "@MaNV";
-            name[3] = "@NgayLap";
+            name[0] = "@MaBan";
+            name[1] = "@MaNV";
+            name[2] = "@NgayLap";
+            name[3] = "@TrangThai";
 
-            values[0] = hoadonPublic.MaHD;
-            values[1] = hoadonPublic.MaBan;
-            values[2] = hoadonPublic.MaNV;
-            values[3] = hoadonPublic.NgayLap;
+            values[0] = hoadonPublic.MaBan;
+            values[1] = hoadonPublic.MaNV;
+            values[2] = hoadonPublic.NgayLap;
+            values[3] = hoadonPublic.TrangThai;
 
             var sql = "INSERT_HoaDon";
             return _conn.ExecuteData(sql, name, values, parameter);
@@ -120,5 +120,19 @@ namespace DAL
             var sql = "DELETE_HoaDon_with_MaBan";
             return _conn.ExecuteData(sql, name, values, parameter);
         }
+
+        public int load_hoadon_new(HOADON_DTO hoadonPublic)
+        {
+            var parameter = 1;
+            var name = new string[parameter];
+            var values = new object[parameter];
+
+            name[0] = "@MaBan";
+            values[0] = hoadonPublic.MaBan;
+
+            var sql = "Get_MaHD_New";
+            return _conn.ReturnValueIntWithParameter(sql, name, values, parameter);
+        }
+
     }
 }

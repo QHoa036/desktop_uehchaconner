@@ -37,6 +37,11 @@ namespace BLL
             return _banDal.update_trangthaiban(banPublic);
         }
 
+        public int delete_ban_daxoa(BAN_DTO banPublic)
+        {
+            return _banDal.delete_ban_daxoa(banPublic);
+        }
+
         public int delete_ban(BAN_DTO banPublic)
         {
             return _banDal.delete_ban(banPublic);

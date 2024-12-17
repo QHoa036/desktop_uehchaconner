@@ -47,5 +47,11 @@ namespace BLL
         {
             return _hoadonDal.update_hoadon_doiban(HOADON_DTO);
         }
+
+        public int load_hoadon_new(HOADON_DTO hd_public)
+        {
+            return _hoadonDal.load_hoadon_new(hd_public);
+        }
+
     }
 }

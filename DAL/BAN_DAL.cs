@@ -45,23 +45,35 @@ namespace DAL
 
         public int update_ban(BAN_DTO ban_public)
         {
-            var parameter = 4; 
+            var parameter = 3; 
             var name = new string[parameter];
             var values = new object[parameter];
 
             name[0] = "@MaBan";       
             name[1] = "@Ten";
             name[2] = "@TrangThai";
-            name[3] = "@ThuTu";
 
             values[0] = ban_public.MaBan;  
             values[1] = ban_public.Ten;
             values[2] = ban_public.TrangThai;
-            values[3] = ban_public.ThuTu;
 
             var sql = "UPDATE_BAN";
             return _conn.ExecuteData(sql, name, values, parameter);
         }
+
+        public int delete_ban_daxoa(BAN_DTO ban_public)
+        {
+            var parameter = 1;
+            var name = new string[parameter];
+            var values = new object[parameter];
+
+            name[0] = "@MaBan";
+            values[0] = ban_public.MaBan;
+
+            var sql = "DELETE_Ban_DaXoa";
+            return _conn.ExecuteData(sql, name, values, parameter);
+        }
+
 
         public int delete_ban(BAN_DTO ban_public)
         {

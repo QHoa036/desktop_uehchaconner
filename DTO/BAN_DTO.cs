@@ -18,6 +18,9 @@ namespace DTO
         
         [Required]       
         public int ThuTu { get; set; }
+
+        [Required]
+        public bool DaXoa { get; set; }
         
     } 
 
