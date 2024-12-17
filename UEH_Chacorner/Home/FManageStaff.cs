@@ -27,6 +27,7 @@ namespace UEH_ChaCorner.Home
         {
             InitializeComponent();
         }
+        #region Method
         private bool KiemTraTenHopLe(string ten)
         {
             // Tên chỉ chứa chữ cái 
@@ -195,7 +196,9 @@ namespace UEH_ChaCorner.Home
             }
             LoadStaffList();
         }
+        #endregion
 
+        #region Event
         // Load form
         private void FManageStaff_Load(object sender, EventArgs e)
         {
@@ -291,6 +294,7 @@ namespace UEH_ChaCorner.Home
             }
             txtTenNV.Focus();
         }
+        #endregion
     }
 }
 

@@ -103,6 +103,12 @@
     <Compile Include="Home\FHomepage.Designer.cs">
       <DependentUpon>FHomepage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home\FMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home\FMenu.Designer.cs">
+      <DependentUpon>FMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home\FRevenue.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,13 +127,9 @@
     <Compile Include="Home\FManageStaff.Designer.cs">
       <DependentUpon>FManageStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home\FTable.cs">
+    <Compile Include="Home\FTransferTable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home\FTable.Designer.cs">
-      <DependentUpon>FTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Home\FTransferTable.cs" />
     <Compile Include="Home\FTransferTable.Designer.cs">
       <DependentUpon>FTransferTable.cs</DependentUpon>
     </Compile>
@@ -148,6 +150,9 @@
     <EmbeddedResource Include="Home\FHomepage.resx">
       <DependentUpon>FHomepage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Home\FMenu.resx">
+      <DependentUpon>FMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home\FRevenue.resx">
       <DependentUpon>FRevenue.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,9 +161,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home\FManageStaff.resx">
       <DependentUpon>FManageStaff.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Home\FTable.resx">
-      <DependentUpon>FTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home\FTransferTable.resx">
       <DependentUpon>FTransferTable.cs</DependentUpon>
