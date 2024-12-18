@@ -16,5 +16,8 @@ namespace DTO
 
         [Required]
         public double DonGia { get; set; }
+
+        [Required]
+        public bool TrangThai { get; set; }
     }
 }

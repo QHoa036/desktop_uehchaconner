@@ -121,6 +121,7 @@
             this.btnEdit.Size = new System.Drawing.Size(104, 46);
             this.btnEdit.TabIndex = 41;
             this.btnEdit.Text = "Sửa";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // dgvsanpham
             // 

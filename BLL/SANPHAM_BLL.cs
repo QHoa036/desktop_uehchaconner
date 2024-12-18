@@ -49,5 +49,14 @@ namespace BLL
             return _sanphamDal.Tim_SanPham(sanPhamPublic);
         }
 
+        public DataTable TIM_TenSanPham_active(SANPHAM_DTO sanPhamPublic)
+        {
+            return _sanphamDal.TIM_TenSanPham_active(sanPhamPublic);
+        }
+        public int DELETE_SanPham_TrangThai(SANPHAM_DTO sanPhamPublic)
+        {
+            return _sanphamDal.DELETE_SanPham_TrangThai(sanPhamPublic);
+        }
+
     }
 }

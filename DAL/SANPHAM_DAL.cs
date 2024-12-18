@@ -17,17 +17,20 @@ namespace DAL
         // Thêm sản phẩm
         public int Insert_SanPham(SANPHAM_DTO sanPhamPublic)
         {
-            var parameter = 3; // Số lượng tham số
+            var parameter = 4; 
             var name = new string[parameter];
             var values = new object[parameter];
 
             name[0] = "@TenSanPham";
             name[1] = "@DonGia";
             name[2] = "@MaDMSP";
+            name[3] = "@TrangThai";
+
 
             values[0] = sanPhamPublic.TenSanPham;
             values[1] = sanPhamPublic.DonGia;
             values[2] = sanPhamPublic.MaDMSP;
+            values[3] = sanPhamPublic.TrangThai;
 
             var sql = "INSERT_SanPham";
             return _conn.ExecuteData(sql, name, values, parameter);
@@ -36,19 +39,21 @@ namespace DAL
         // Cập nhật sản phẩm
         public int Update_SanPham(SANPHAM_DTO sanPhamPublic)
         {
-            var parameter = 4;
+            var parameter = 5;
             var name = new string[parameter];
             var values = new object[parameter];
 
             name[0] = "@MaSP";
-            name[1] = "@TenSP";
+            name[1] = "@TenSanPham";
             name[2] = "@DonGia";
             name[3] = "@MaDMSP";
+            name[4] = "@TrangThai";
 
             values[0] = sanPhamPublic.MaSP;
             values[1] = sanPhamPublic.TenSanPham;
             values[2] = sanPhamPublic.DonGia;
             values[3] = sanPhamPublic.MaDMSP;
+            values[4] = sanPhamPublic.TrangThai;
 
             var sql = "UPDATE_SanPham";
             return _conn.ExecuteData(sql, name, values, parameter);
@@ -107,6 +112,32 @@ namespace DAL
             var sql = "TIM_TenSanPham";
             return _conn.LoadDataWithParameter(sql, name, values, parameter);
         }
+
+        public int DELETE_SanPham_TrangThai(SANPHAM_DTO sanPhamPublic)
+        {
+            var parameter = 1;
+            var name = new string[parameter];
+            var values = new object[parameter];
+
+            name[0] = "@MaSP";
+            values[0] = sanPhamPublic.MaSP;
+
+            var sql = "DELETE_SanPham_TrangThai";
+            return _conn.ExecuteData(sql, name, values, parameter);
+        }
+        public DataTable TIM_TenSanPham_active(SANPHAM_DTO sanPhamPublic)
+        {
+            var parameter = 1;
+            var name = new string[parameter];
+            var values = new object[parameter];
+
+            name[0] = "@Ten";
+            values[0] = sanPhamPublic.TenSanPham;
+
+            var sql = "TIM_TenSanPham_active";
+            return _conn.LoadDataWithParameter(sql, name, values, parameter);
+        }
+
     }
 
 }
