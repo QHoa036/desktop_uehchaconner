@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using UEH_Chacorner.Home;
 using UEH_ChaCorner.Home;
 
 namespace UEH_ChaCorner
@@ -11,6 +12,8 @@ namespace UEH_ChaCorner
         private readonly FRevenue _thongke = new FRevenue();
         private readonly FStaff _nhanvien = new FStaff();
         private readonly FAccount _taikhoan = new FAccount();
+        private readonly FMenu _menu = new FMenu();
+        private readonly FTable _table = new FTable();
 
         private Form _activeForm;
         private string _manv = "", _quyennv = "", _tennv = "", _tentk = "";
@@ -91,13 +94,13 @@ namespace UEH_ChaCorner
             {
                 _isTable = false;
                 _isHome = true;
-                //_table.Hide();
+                _table.Hide();
             }
             if (_isMenu)
             {
                 _isMenu = false;
                 _isHome = true;
-                //_menu.Hide();
+                _menu.Hide();
             }
             if (_isStaff)
             {
@@ -130,7 +133,7 @@ namespace UEH_ChaCorner
             {
                 _isTable = false;
                 _isProfile = true;
-                //_table.Hide();
+                _table.Hide();
                 _taikhoan.TenNV = _tennv;
                 _taikhoan.Quyen = _quyennv;
                 _taikhoan.MaNV = _manv;
@@ -141,7 +144,7 @@ namespace UEH_ChaCorner
             {
                 _isMenu = false;
                 _isProfile = true;
-                //_menu.Hide();
+                _menu.Hide();
                 _taikhoan.TenNV = _tennv;
                 _taikhoan.Quyen = _quyennv;
                 _taikhoan.MaNV = _manv;
@@ -172,6 +175,85 @@ namespace UEH_ChaCorner
             }
         }
 
+        private void btManage_Click(object sender, EventArgs e)
+        {
+            if (_isTable) return;
+            if (_isHome)
+            {
+                _isHome = false;
+                _isTable = true;
+                OpenChildForm(_table);
+            }
+            if (_isProfile)
+            {
+                _isProfile = false;
+                _isTable = true;
+                _taikhoan.Hide();
+                OpenChildForm(_table);
+            }
+            if (_isStaff)
+            {
+                _isStaff = false;
+                _isTable = true;
+                _nhanvien.Hide();
+                OpenChildForm(_table);
+            }
+            if (_isMenu)
+            {
+                _isMenu = false;
+                _isTable = true;
+                _menu.Hide();
+                OpenChildForm(_table);
+            }
+            if (_isChart)
+            {
+                _isChart = false;
+                _isTable = true;
+                _thongke.Hide();
+                OpenChildForm(_table);
+            }
+
+        }
+
+        private void btMenu_Click(object sender, EventArgs e)
+        {
+            if (_isMenu) return;
+            if (_isHome)
+            {
+                _isHome = false;
+                _isMenu = true;
+                OpenChildForm(_menu);
+            }
+            if (_isProfile)
+            {
+                _isProfile = false;
+                _isMenu = true;
+                _taikhoan.Hide();
+                OpenChildForm(_menu);
+            }
+            if (_isStaff)
+            {
+                _isStaff = false;
+                _isMenu = true;
+                _nhanvien.Hide();
+                OpenChildForm(_menu);
+            }
+            if (_isTable)
+            {
+                _isTable = false;
+                _isMenu = true;
+                _table.Hide();
+                OpenChildForm(_menu);
+            }
+            if (_isChart)
+            {
+                _isChart = false;
+                _isMenu = true;
+                _thongke.Hide();
+                OpenChildForm(_menu);
+            }
+        }
+
         private void btStaff_Click(object sender, EventArgs e)
         {
             if (_isStaff) return;
@@ -192,14 +274,14 @@ namespace UEH_ChaCorner
             {
                 _isTable = false;
                 _isStaff = true;
-                //_table.Hide();
+                _table.Hide();
                 OpenChildForm(_nhanvien);
             }
             if (_isMenu)
             {
                 _isMenu = false;
                 _isStaff = true;
-                //_menu.Hide();
+                _menu.Hide();
                 OpenChildForm(_nhanvien);
             }
             if (_isChart)
@@ -232,14 +314,14 @@ namespace UEH_ChaCorner
             {
                 _isTable = false;
                 _isChart = true;
-                //_table.Hide();
+                _table.Hide();
                 OpenChildForm(_thongke);
             }
             if (_isMenu)
             {
                 _isMenu = false;
                 _isChart = true;
-                //_menu.Hide();
+                _menu.Hide();
                 OpenChildForm(_thongke);
             }
             if (_isStaff)

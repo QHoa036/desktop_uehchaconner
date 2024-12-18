@@ -60,11 +60,11 @@ namespace UEH_ChaCorner
             this.lbName.BackColor = System.Drawing.Color.Transparent;
             this.lbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbName.ForeColor = System.Drawing.Color.White;
-            this.lbName.Location = new System.Drawing.Point(0, 322);
+            this.lbName.Location = new System.Drawing.Point(2, 346);
             this.lbName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbName.Name = "lbName";
-            this.lbName.Padding = new System.Windows.Forms.Padding(16, 0, 16, 0);
-            this.lbName.Size = new System.Drawing.Size(175, 97);
+            this.lbName.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.lbName.Size = new System.Drawing.Size(219, 121);
             this.lbName.TabIndex = 1;
             this.lbName.Text = "Họ tên";
             this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -76,10 +76,10 @@ namespace UEH_ChaCorner
             this.lbRole.BackColor = System.Drawing.Color.Transparent;
             this.lbRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbRole.ForeColor = System.Drawing.Color.White;
-            this.lbRole.Location = new System.Drawing.Point(-2, 453);
+            this.lbRole.Location = new System.Drawing.Point(-2, 566);
             this.lbRole.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbRole.Name = "lbRole";
-            this.lbRole.Size = new System.Drawing.Size(180, 42);
+            this.lbRole.Size = new System.Drawing.Size(225, 52);
             this.lbRole.TabIndex = 2;
             this.lbRole.Text = "Quyền";
             this.lbRole.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -102,10 +102,10 @@ namespace UEH_ChaCorner
             this.panelUser.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.panelUser.ForeColor = System.Drawing.Color.Black;
             this.panelUser.Location = new System.Drawing.Point(0, 0);
-            this.panelUser.Margin = new System.Windows.Forms.Padding(4);
+            this.panelUser.Margin = new System.Windows.Forms.Padding(5);
             this.panelUser.Name = "panelUser";
             this.panelUser.Quality = 1;
-            this.panelUser.Size = new System.Drawing.Size(180, 650);
+            this.panelUser.Size = new System.Drawing.Size(225, 812);
             this.panelUser.TabIndex = 9;
             // 
             // imgLogo
@@ -113,12 +113,13 @@ namespace UEH_ChaCorner
             this.imgLogo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.imgLogo.AutoRoundedCorners = true;
             this.imgLogo.BackColor = System.Drawing.Color.Transparent;
-            this.imgLogo.BorderRadius = 112;
+            this.imgLogo.BorderRadius = 140;
             this.imgLogo.Image = ((System.Drawing.Image)(resources.GetObject("imgLogo.Image")));
             this.imgLogo.ImageRotate = 0F;
-            this.imgLogo.Location = new System.Drawing.Point(-37, 93);
+            this.imgLogo.Location = new System.Drawing.Point(-46, 18);
+            this.imgLogo.Margin = new System.Windows.Forms.Padding(4);
             this.imgLogo.Name = "imgLogo";
-            this.imgLogo.Size = new System.Drawing.Size(241, 226);
+            this.imgLogo.Size = new System.Drawing.Size(301, 282);
             this.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgLogo.TabIndex = 81;
             this.imgLogo.TabStop = false;
@@ -129,9 +130,10 @@ namespace UEH_ChaCorner
             this.panelChangePwd.Controls.Add(this.grChangePwd);
             this.panelChangePwd.Controls.Add(this.grAccountSetting);
             this.panelChangePwd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChangePwd.Location = new System.Drawing.Point(180, 0);
+            this.panelChangePwd.Location = new System.Drawing.Point(225, 0);
+            this.panelChangePwd.Margin = new System.Windows.Forms.Padding(4);
             this.panelChangePwd.Name = "panelChangePwd";
-            this.panelChangePwd.Size = new System.Drawing.Size(960, 650);
+            this.panelChangePwd.Size = new System.Drawing.Size(1200, 812);
             this.panelChangePwd.TabIndex = 12;
             // 
             // grChangePwd
@@ -147,9 +149,10 @@ namespace UEH_ChaCorner
             this.grChangePwd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(233)))), ((int)(((byte)(239)))));
             this.grChangePwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grChangePwd.ForeColor = System.Drawing.Color.White;
-            this.grChangePwd.Location = new System.Drawing.Point(35, 348);
+            this.grChangePwd.Location = new System.Drawing.Point(35, 435);
+            this.grChangePwd.Margin = new System.Windows.Forms.Padding(4);
             this.grChangePwd.Name = "grChangePwd";
-            this.grChangePwd.Size = new System.Drawing.Size(895, 280);
+            this.grChangePwd.Size = new System.Drawing.Size(1119, 350);
             this.grChangePwd.TabIndex = 38;
             this.grChangePwd.Text = "Thay đổi mật khẩu";
             // 
@@ -170,15 +173,15 @@ namespace UEH_ChaCorner
             this.btnChangePassword.HoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChangePassword.HoverState.ForeColor = System.Drawing.Color.Black;
             this.btnChangePassword.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnChangePassword.Location = new System.Drawing.Point(29, 208);
-            this.btnChangePassword.Margin = new System.Windows.Forms.Padding(4);
+            this.btnChangePassword.Location = new System.Drawing.Point(36, 260);
+            this.btnChangePassword.Margin = new System.Windows.Forms.Padding(5);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.ShadowDecoration.BorderRadius = 20;
             this.btnChangePassword.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.btnChangePassword.ShadowDecoration.Depth = 8;
             this.btnChangePassword.ShadowDecoration.Enabled = true;
             this.btnChangePassword.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 10, 10);
-            this.btnChangePassword.Size = new System.Drawing.Size(185, 50);
+            this.btnChangePassword.Size = new System.Drawing.Size(231, 62);
             this.btnChangePassword.TabIndex = 6;
             this.btnChangePassword.Text = "Đổi mật khẩu";
             this.btnChangePassword.UseTransparentBackground = true;
@@ -202,15 +205,15 @@ namespace UEH_ChaCorner
             this.txtOldPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtOldPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.txtOldPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOldPassword.Location = new System.Drawing.Point(29, 62);
-            this.txtOldPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtOldPassword.Location = new System.Drawing.Point(36, 78);
+            this.txtOldPassword.Margin = new System.Windows.Forms.Padding(5);
             this.txtOldPassword.Name = "txtOldPassword";
             this.txtOldPassword.Padding = new System.Windows.Forms.Padding(2);
             this.txtOldPassword.PasswordChar = '●';
             this.txtOldPassword.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.txtOldPassword.PlaceholderText = "Mật khẩu cũ";
             this.txtOldPassword.SelectedText = "";
-            this.txtOldPassword.Size = new System.Drawing.Size(837, 50);
+            this.txtOldPassword.Size = new System.Drawing.Size(1046, 62);
             this.txtOldPassword.TabIndex = 13;
             this.txtOldPassword.UseSystemPasswordChar = true;
             // 
@@ -232,15 +235,15 @@ namespace UEH_ChaCorner
             this.txtConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtConfirmPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.txtConfirmPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtConfirmPassword.Location = new System.Drawing.Point(461, 139);
-            this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(576, 174);
+            this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(5);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Padding = new System.Windows.Forms.Padding(2);
             this.txtConfirmPassword.PasswordChar = '●';
             this.txtConfirmPassword.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.txtConfirmPassword.PlaceholderText = "Nhập lại mật khẩu";
             this.txtConfirmPassword.SelectedText = "";
-            this.txtConfirmPassword.Size = new System.Drawing.Size(405, 50);
+            this.txtConfirmPassword.Size = new System.Drawing.Size(506, 62);
             this.txtConfirmPassword.TabIndex = 13;
             this.txtConfirmPassword.UseSystemPasswordChar = true;
             // 
@@ -262,15 +265,15 @@ namespace UEH_ChaCorner
             this.txtNewPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.txtNewPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.txtNewPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNewPassword.Location = new System.Drawing.Point(29, 139);
-            this.txtNewPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNewPassword.Location = new System.Drawing.Point(36, 174);
+            this.txtNewPassword.Margin = new System.Windows.Forms.Padding(5);
             this.txtNewPassword.Name = "txtNewPassword";
             this.txtNewPassword.Padding = new System.Windows.Forms.Padding(2);
             this.txtNewPassword.PasswordChar = '●';
             this.txtNewPassword.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.txtNewPassword.PlaceholderText = "Mật khẩu mới";
             this.txtNewPassword.SelectedText = "";
-            this.txtNewPassword.Size = new System.Drawing.Size(405, 50);
+            this.txtNewPassword.Size = new System.Drawing.Size(506, 62);
             this.txtNewPassword.TabIndex = 14;
             this.txtNewPassword.UseSystemPasswordChar = true;
             // 
@@ -289,9 +292,10 @@ namespace UEH_ChaCorner
             this.grAccountSetting.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(233)))), ((int)(((byte)(239)))));
             this.grAccountSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grAccountSetting.ForeColor = System.Drawing.Color.White;
-            this.grAccountSetting.Location = new System.Drawing.Point(35, 39);
+            this.grAccountSetting.Location = new System.Drawing.Point(35, 49);
+            this.grAccountSetting.Margin = new System.Windows.Forms.Padding(4);
             this.grAccountSetting.Name = "grAccountSetting";
-            this.grAccountSetting.Size = new System.Drawing.Size(895, 280);
+            this.grAccountSetting.Size = new System.Drawing.Size(1119, 350);
             this.grAccountSetting.TabIndex = 36;
             this.grAccountSetting.Text = "Cài đặt tài khoản";
             // 
@@ -316,17 +320,17 @@ namespace UEH_ChaCorner
             this.txtPhone.IconLeft = global::UEH_ChaCorner.Properties.Resources.telephone;
             this.txtPhone.IconLeftOffset = new System.Drawing.Point(4, 0);
             this.txtPhone.IconLeftSize = new System.Drawing.Size(14, 14);
-            this.txtPhone.Location = new System.Drawing.Point(29, 140);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtPhone.Location = new System.Drawing.Point(36, 175);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Padding = new System.Windows.Forms.Padding(4);
+            this.txtPhone.Padding = new System.Windows.Forms.Padding(5);
             this.txtPhone.PasswordChar = '\0';
             this.txtPhone.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.txtPhone.PlaceholderText = "Số điện thoại";
             this.txtPhone.SelectedText = "";
             this.txtPhone.ShadowDecoration.BorderRadius = 13;
             this.txtPhone.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
-            this.txtPhone.Size = new System.Drawing.Size(405, 50);
+            this.txtPhone.Size = new System.Drawing.Size(506, 62);
             this.txtPhone.TabIndex = 89;
             // 
             // txtGender
@@ -346,14 +350,14 @@ namespace UEH_ChaCorner
             this.txtGender.FormattingEnabled = true;
             this.txtGender.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(151)))), ((int)(((byte)(59)))));
             this.txtGender.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtGender.ItemHeight = 44;
+            this.txtGender.ItemHeight = 56;
             this.txtGender.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.txtGender.Location = new System.Drawing.Point(461, 140);
-            this.txtGender.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGender.Location = new System.Drawing.Point(577, 175);
+            this.txtGender.Margin = new System.Windows.Forms.Padding(5);
             this.txtGender.Name = "txtGender";
-            this.txtGender.Size = new System.Drawing.Size(405, 50);
+            this.txtGender.Size = new System.Drawing.Size(505, 62);
             this.txtGender.StartIndex = 0;
             this.txtGender.TabIndex = 88;
             this.txtGender.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -372,16 +376,16 @@ namespace UEH_ChaCorner
             this.txtDOB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.txtDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtDOB.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.txtDOB.Location = new System.Drawing.Point(461, 67);
-            this.txtDOB.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDOB.Location = new System.Drawing.Point(576, 84);
+            this.txtDOB.Margin = new System.Windows.Forms.Padding(5);
             this.txtDOB.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.txtDOB.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.txtDOB.Name = "txtDOB";
-            this.txtDOB.Padding = new System.Windows.Forms.Padding(4);
+            this.txtDOB.Padding = new System.Windows.Forms.Padding(5);
             this.txtDOB.ShadowDecoration.BorderRadius = 12;
             this.txtDOB.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(49)))), ((int)(((byte)(46)))));
             this.txtDOB.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 10, 10);
-            this.txtDOB.Size = new System.Drawing.Size(405, 50);
+            this.txtDOB.Size = new System.Drawing.Size(506, 62);
             this.txtDOB.TabIndex = 86;
             this.txtDOB.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtDOB.UseTransparentBackground = true;
@@ -408,15 +412,15 @@ namespace UEH_ChaCorner
             this.txtFullname.IconLeft = global::UEH_ChaCorner.Properties.Resources.user1;
             this.txtFullname.IconLeftOffset = new System.Drawing.Point(4, 0);
             this.txtFullname.IconLeftSize = new System.Drawing.Size(14, 14);
-            this.txtFullname.Location = new System.Drawing.Point(29, 67);
-            this.txtFullname.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFullname.Location = new System.Drawing.Point(36, 84);
+            this.txtFullname.Margin = new System.Windows.Forms.Padding(5);
             this.txtFullname.Name = "txtFullname";
-            this.txtFullname.Padding = new System.Windows.Forms.Padding(4);
+            this.txtFullname.Padding = new System.Windows.Forms.Padding(5);
             this.txtFullname.PasswordChar = '\0';
             this.txtFullname.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.txtFullname.PlaceholderText = "Họ tên";
             this.txtFullname.SelectedText = "";
-            this.txtFullname.Size = new System.Drawing.Size(405, 50);
+            this.txtFullname.Size = new System.Drawing.Size(506, 62);
             this.txtFullname.TabIndex = 87;
             // 
             // btnUpdateProfile
@@ -436,15 +440,15 @@ namespace UEH_ChaCorner
             this.btnUpdateProfile.HoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateProfile.HoverState.ForeColor = System.Drawing.Color.Black;
             this.btnUpdateProfile.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnUpdateProfile.Location = new System.Drawing.Point(29, 210);
-            this.btnUpdateProfile.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpdateProfile.Location = new System.Drawing.Point(36, 262);
+            this.btnUpdateProfile.Margin = new System.Windows.Forms.Padding(5);
             this.btnUpdateProfile.Name = "btnUpdateProfile";
             this.btnUpdateProfile.ShadowDecoration.BorderRadius = 20;
             this.btnUpdateProfile.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.btnUpdateProfile.ShadowDecoration.Depth = 8;
             this.btnUpdateProfile.ShadowDecoration.Enabled = true;
             this.btnUpdateProfile.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 10, 10);
-            this.btnUpdateProfile.Size = new System.Drawing.Size(185, 50);
+            this.btnUpdateProfile.Size = new System.Drawing.Size(231, 62);
             this.btnUpdateProfile.TabIndex = 15;
             this.btnUpdateProfile.Text = "Cập nhật";
             this.btnUpdateProfile.UseTransparentBackground = true;
@@ -452,10 +456,10 @@ namespace UEH_ChaCorner
             // 
             // FAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1140, 650);
+            this.ClientSize = new System.Drawing.Size(1425, 812);
             this.Controls.Add(this.panelChangePwd);
             this.Controls.Add(this.panelUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
