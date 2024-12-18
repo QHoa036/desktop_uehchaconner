@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelRight = new Guna.UI2.WinForms.Guna2Panel();
             this.grStaffList = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.dgvStaff = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.panelGrStaffListFooter = new Guna.UI2.WinForms.Guna2Panel();
             this.panelGrStaffListHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbTitle5 = new System.Windows.Forms.Label();
@@ -50,6 +49,7 @@
             this.btXoa = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btSua = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.panelGrStaffListFooter = new Guna.UI2.WinForms.Guna2Panel();
             this.panelRight.SuspendLayout();
             this.grStaffList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
@@ -64,7 +64,7 @@
             this.panelRight.Controls.Add(this.grStaffList);
             this.panelRight.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelRight.Location = new System.Drawing.Point(0, 0);
-            this.panelRight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelRight.Margin = new System.Windows.Forms.Padding(4);
             this.panelRight.Name = "panelRight";
             this.panelRight.Size = new System.Drawing.Size(1425, 510);
             this.panelRight.TabIndex = 21;
@@ -87,7 +87,7 @@
             this.grStaffList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(28)))), ((int)(((byte)(20)))));
             this.grStaffList.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.grStaffList.Location = new System.Drawing.Point(16, 15);
-            this.grStaffList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grStaffList.Margin = new System.Windows.Forms.Padding(4);
             this.grStaffList.Name = "grStaffList";
             this.grStaffList.ShadowDecoration.BorderRadius = 30;
             this.grStaffList.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(68)))), ((int)(((byte)(54)))));
@@ -97,37 +97,37 @@
             // 
             // dgvStaff
             // 
-            dataGridViewCellStyle37.BackColor = System.Drawing.Color.White;
-            this.dgvStaff.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle37;
-            this.dgvStaff.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle38.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle38;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvStaff.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvStaff.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvStaff.ColumnHeadersHeight = 40;
             this.dgvStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle39.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle39.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(212)))));
-            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
-            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvStaff.DefaultCellStyle = dataGridViewCellStyle39;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(28)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(212)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvStaff.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvStaff.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvStaff.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.dgvStaff.Location = new System.Drawing.Point(0, 75);
-            this.dgvStaff.Margin = new System.Windows.Forms.Padding(20, 20, 20, 20);
+            this.dgvStaff.Margin = new System.Windows.Forms.Padding(20);
             this.dgvStaff.Name = "dgvStaff";
             this.dgvStaff.ReadOnly = true;
             this.dgvStaff.RowHeadersVisible = false;
             this.dgvStaff.RowHeadersWidth = 50;
             this.dgvStaff.RowTemplate.Height = 40;
-            this.dgvStaff.Size = new System.Drawing.Size(1394, 354);
+            this.dgvStaff.Size = new System.Drawing.Size(1394, 376);
             this.dgvStaff.TabIndex = 45;
             this.dgvStaff.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvStaff.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -152,21 +152,6 @@
             this.dgvStaff.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.dgvStaff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStaff_CellClick);
             // 
-            // panelGrStaffListFooter
-            // 
-            this.panelGrStaffListFooter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
-            this.panelGrStaffListFooter.BorderRadius = 24;
-            this.panelGrStaffListFooter.CustomizableEdges.TopLeft = false;
-            this.panelGrStaffListFooter.CustomizableEdges.TopRight = false;
-            this.panelGrStaffListFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelGrStaffListFooter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
-            this.panelGrStaffListFooter.ForeColor = System.Drawing.Color.White;
-            this.panelGrStaffListFooter.Location = new System.Drawing.Point(0, 429);
-            this.panelGrStaffListFooter.Margin = new System.Windows.Forms.Padding(2);
-            this.panelGrStaffListFooter.Name = "panelGrStaffListFooter";
-            this.panelGrStaffListFooter.Size = new System.Drawing.Size(1394, 51);
-            this.panelGrStaffListFooter.TabIndex = 44;
-            // 
             // panelGrStaffListHeader
             // 
             this.panelGrStaffListHeader.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
@@ -179,7 +164,7 @@
             this.panelGrStaffListHeader.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.panelGrStaffListHeader.ForeColor = System.Drawing.Color.White;
             this.panelGrStaffListHeader.Location = new System.Drawing.Point(0, 0);
-            this.panelGrStaffListHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelGrStaffListHeader.Margin = new System.Windows.Forms.Padding(4);
             this.panelGrStaffListHeader.Name = "panelGrStaffListHeader";
             this.panelGrStaffListHeader.Size = new System.Drawing.Size(1394, 75);
             this.panelGrStaffListHeader.TabIndex = 43;
@@ -204,8 +189,9 @@
             this.txtSearch.Location = new System.Drawing.Point(954, 13);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(10, 4, 2, 4);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Padding = new System.Windows.Forms.Padding(30, 30, 30, 30);
+            this.txtSearch.Padding = new System.Windows.Forms.Padding(30);
             this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PlaceholderForeColor = System.Drawing.Color.Black;
             this.txtSearch.PlaceholderText = "Tìm kiếm nhân viên";
             this.txtSearch.SelectedText = "";
             this.txtSearch.Size = new System.Drawing.Size(353, 50);
@@ -231,6 +217,7 @@
             this.grStaff.BackColor = System.Drawing.Color.Transparent;
             this.grStaff.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.grStaff.BorderRadius = 20;
+            this.grStaff.BorderThickness = 0;
             this.grStaff.Controls.Add(this.lbNgaysinh);
             this.grStaff.Controls.Add(this.lbHoten);
             this.grStaff.Controls.Add(this.txtSDT);
@@ -243,14 +230,14 @@
             this.grStaff.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(233)))), ((int)(((byte)(239)))));
             this.grStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.grStaff.ForeColor = System.Drawing.Color.White;
-            this.grStaff.Location = new System.Drawing.Point(392, 8);
+            this.grStaff.Location = new System.Drawing.Point(392, 2);
             this.grStaff.Margin = new System.Windows.Forms.Padding(4);
             this.grStaff.Name = "grStaff";
             this.grStaff.ShadowDecoration.BorderRadius = 20;
             this.grStaff.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.grStaff.ShadowDecoration.Depth = 40;
             this.grStaff.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(7, 0, 0, 7);
-            this.grStaff.Size = new System.Drawing.Size(659, 281);
+            this.grStaff.Size = new System.Drawing.Size(650, 280);
             this.grStaff.TabIndex = 98;
             this.grStaff.Text = "Thông tin nhân viên";
             this.grStaff.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -261,7 +248,7 @@
             this.lbNgaysinh.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbNgaysinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNgaysinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(28)))), ((int)(((byte)(20)))));
-            this.lbNgaysinh.Location = new System.Drawing.Point(344, 161);
+            this.lbNgaysinh.Location = new System.Drawing.Point(330, 160);
             this.lbNgaysinh.Margin = new System.Windows.Forms.Padding(0);
             this.lbNgaysinh.Name = "lbNgaysinh";
             this.lbNgaysinh.Size = new System.Drawing.Size(300, 29);
@@ -274,7 +261,7 @@
             this.lbHoten.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbHoten.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHoten.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(28)))), ((int)(((byte)(20)))));
-            this.lbHoten.Location = new System.Drawing.Point(18, 161);
+            this.lbHoten.Location = new System.Drawing.Point(14, 160);
             this.lbHoten.Margin = new System.Windows.Forms.Padding(0);
             this.lbHoten.Name = "lbHoten";
             this.lbHoten.Size = new System.Drawing.Size(304, 29);
@@ -301,7 +288,7 @@
             this.txtSDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(151)))), ((int)(((byte)(59)))));
             this.txtSDT.IconLeftOffset = new System.Drawing.Point(4, 0);
             this.txtSDT.IconLeftSize = new System.Drawing.Size(14, 14);
-            this.txtSDT.Location = new System.Drawing.Point(22, 203);
+            this.txtSDT.Location = new System.Drawing.Point(22, 202);
             this.txtSDT.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Padding = new System.Windows.Forms.Padding(5);
@@ -327,7 +314,7 @@
             this.dtpNgaySinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgaySinh.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.dtpNgaySinh.Location = new System.Drawing.Point(348, 203);
+            this.dtpNgaySinh.Location = new System.Drawing.Point(338, 202);
             this.dtpNgaySinh.Margin = new System.Windows.Forms.Padding(5);
             this.dtpNgaySinh.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpNgaySinh.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
@@ -358,14 +345,14 @@
             this.txtGioiTinh.FormattingEnabled = true;
             this.txtGioiTinh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(151)))), ((int)(((byte)(59)))));
             this.txtGioiTinh.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtGioiTinh.ItemHeight = 44;
+            this.txtGioiTinh.ItemHeight = 34;
             this.txtGioiTinh.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.txtGioiTinh.Location = new System.Drawing.Point(348, 97);
+            this.txtGioiTinh.Location = new System.Drawing.Point(334, 97);
             this.txtGioiTinh.Margin = new System.Windows.Forms.Padding(5);
             this.txtGioiTinh.Name = "txtGioiTinh";
-            this.txtGioiTinh.Size = new System.Drawing.Size(290, 50);
+            this.txtGioiTinh.Size = new System.Drawing.Size(290, 40);
             this.txtGioiTinh.StartIndex = 0;
             this.txtGioiTinh.TabIndex = 85;
             this.txtGioiTinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -375,7 +362,7 @@
             this.lbGioitinh.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbGioitinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbGioitinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(28)))), ((int)(((byte)(20)))));
-            this.lbGioitinh.Location = new System.Drawing.Point(344, 55);
+            this.lbGioitinh.Location = new System.Drawing.Point(330, 55);
             this.lbGioitinh.Margin = new System.Windows.Forms.Padding(0);
             this.lbGioitinh.Name = "lbGioitinh";
             this.lbGioitinh.Size = new System.Drawing.Size(300, 29);
@@ -388,7 +375,7 @@
             this.lbTenNV.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbTenNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTenNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(28)))), ((int)(((byte)(20)))));
-            this.lbTenNV.Location = new System.Drawing.Point(18, 55);
+            this.lbTenNV.Location = new System.Drawing.Point(14, 55);
             this.lbTenNV.Margin = new System.Windows.Forms.Padding(0);
             this.lbTenNV.Name = "lbTenNV";
             this.lbTenNV.Size = new System.Drawing.Size(304, 29);
@@ -472,6 +459,21 @@
             this.panelLeft.Size = new System.Drawing.Size(1425, 302);
             this.panelLeft.TabIndex = 22;
             // 
+            // panelGrStaffListFooter
+            // 
+            this.panelGrStaffListFooter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
+            this.panelGrStaffListFooter.BorderRadius = 24;
+            this.panelGrStaffListFooter.CustomizableEdges.TopLeft = false;
+            this.panelGrStaffListFooter.CustomizableEdges.TopRight = false;
+            this.panelGrStaffListFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelGrStaffListFooter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
+            this.panelGrStaffListFooter.ForeColor = System.Drawing.Color.White;
+            this.panelGrStaffListFooter.Location = new System.Drawing.Point(0, 451);
+            this.panelGrStaffListFooter.Margin = new System.Windows.Forms.Padding(2);
+            this.panelGrStaffListFooter.Name = "panelGrStaffListFooter";
+            this.panelGrStaffListFooter.Size = new System.Drawing.Size(1394, 29);
+            this.panelGrStaffListFooter.TabIndex = 44;
+            // 
             // FStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -499,7 +501,6 @@
         #endregion
         private Guna.UI2.WinForms.Guna2Panel panelRight;
         public Guna.UI2.WinForms.Guna2GradientPanel grStaffList;
-        private Guna.UI2.WinForms.Guna2Panel panelGrStaffListFooter;
         private Guna.UI2.WinForms.Guna2Panel panelGrStaffListHeader;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private System.Windows.Forms.Label lbTitle5;
@@ -516,5 +517,6 @@
         private Guna.UI2.WinForms.Guna2ImageButton btXoa;
         private Guna.UI2.WinForms.Guna2ImageButton btSua;
         private System.Windows.Forms.Panel panelLeft;
+        private Guna.UI2.WinForms.Guna2Panel panelGrStaffListFooter;
     }
 }

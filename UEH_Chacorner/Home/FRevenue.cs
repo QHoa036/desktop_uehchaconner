@@ -209,9 +209,9 @@ namespace UEH_ChaCorner.Home
             }
         }
 
-        private void btnTimTenNV_Click(object sender, EventArgs e)
+        private void btnTimTenNV_TextChanged(object sender, EventArgs e)
         {
-            string tenNV = txtTenNV.Text.Trim();
+            string tenNV = txtSearch.Text.Trim();
 
             if (string.IsNullOrEmpty(tenNV))
             {
@@ -223,12 +223,21 @@ namespace UEH_ChaCorner.Home
             FilterDataGridByTenNV(tenNV);
         }
 
-        private void txtTenNV_KeyDown(object sender, KeyEventArgs e)
+        private void dgvHoaDon_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            // Kiểm tra xem có dòng nào được chọn không
+            if (dgvHoaDon.CurrentRow == null)
             {
-                btnTimTenNV.PerformClick(); // Giả lập việc nhấn nút tìm
+                MessageBox.Show("Vui lòng chọn một hóa đơn!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
+
+            // Lấy MaHD từ dòng được chọn
+            int _maHD = Convert.ToInt32(dgvHoaDon.CurrentRow.Cells[0].Value);
+
+            // Mở form chi tiết hóa đơn
+            FRevenueDetails fCTHD = new FRevenueDetails(_maHD);
+            fCTHD.ShowDialog();
         }
     }
 }
