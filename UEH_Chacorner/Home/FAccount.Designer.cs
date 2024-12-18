@@ -152,7 +152,7 @@ namespace UEH_ChaCorner
             this.grChangePwd.Location = new System.Drawing.Point(35, 435);
             this.grChangePwd.Margin = new System.Windows.Forms.Padding(4);
             this.grChangePwd.Name = "grChangePwd";
-            this.grChangePwd.Size = new System.Drawing.Size(1119, 350);
+            this.grChangePwd.Size = new System.Drawing.Size(1103, 350);
             this.grChangePwd.TabIndex = 38;
             this.grChangePwd.Text = "Thay đổi mật khẩu";
             // 
@@ -181,7 +181,7 @@ namespace UEH_ChaCorner
             this.btnChangePassword.ShadowDecoration.Depth = 8;
             this.btnChangePassword.ShadowDecoration.Enabled = true;
             this.btnChangePassword.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 10, 10);
-            this.btnChangePassword.Size = new System.Drawing.Size(231, 62);
+            this.btnChangePassword.Size = new System.Drawing.Size(215, 62);
             this.btnChangePassword.TabIndex = 6;
             this.btnChangePassword.Text = "Đổi mật khẩu";
             this.btnChangePassword.UseTransparentBackground = true;
@@ -213,7 +213,7 @@ namespace UEH_ChaCorner
             this.txtOldPassword.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.txtOldPassword.PlaceholderText = "Mật khẩu cũ";
             this.txtOldPassword.SelectedText = "";
-            this.txtOldPassword.Size = new System.Drawing.Size(1046, 62);
+            this.txtOldPassword.Size = new System.Drawing.Size(1030, 62);
             this.txtOldPassword.TabIndex = 13;
             this.txtOldPassword.UseSystemPasswordChar = true;
             // 
@@ -243,7 +243,7 @@ namespace UEH_ChaCorner
             this.txtConfirmPassword.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.txtConfirmPassword.PlaceholderText = "Nhập lại mật khẩu";
             this.txtConfirmPassword.SelectedText = "";
-            this.txtConfirmPassword.Size = new System.Drawing.Size(506, 62);
+            this.txtConfirmPassword.Size = new System.Drawing.Size(490, 62);
             this.txtConfirmPassword.TabIndex = 13;
             this.txtConfirmPassword.UseSystemPasswordChar = true;
             // 
@@ -273,7 +273,7 @@ namespace UEH_ChaCorner
             this.txtNewPassword.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.txtNewPassword.PlaceholderText = "Mật khẩu mới";
             this.txtNewPassword.SelectedText = "";
-            this.txtNewPassword.Size = new System.Drawing.Size(506, 62);
+            this.txtNewPassword.Size = new System.Drawing.Size(490, 62);
             this.txtNewPassword.TabIndex = 14;
             this.txtNewPassword.UseSystemPasswordChar = true;
             // 
@@ -295,7 +295,7 @@ namespace UEH_ChaCorner
             this.grAccountSetting.Location = new System.Drawing.Point(35, 49);
             this.grAccountSetting.Margin = new System.Windows.Forms.Padding(4);
             this.grAccountSetting.Name = "grAccountSetting";
-            this.grAccountSetting.Size = new System.Drawing.Size(1119, 350);
+            this.grAccountSetting.Size = new System.Drawing.Size(1103, 350);
             this.grAccountSetting.TabIndex = 36;
             this.grAccountSetting.Text = "Cài đặt tài khoản";
             // 
@@ -320,7 +320,7 @@ namespace UEH_ChaCorner
             this.txtPhone.IconLeft = global::UEH_ChaCorner.Properties.Resources.telephone;
             this.txtPhone.IconLeftOffset = new System.Drawing.Point(4, 0);
             this.txtPhone.IconLeftSize = new System.Drawing.Size(14, 14);
-            this.txtPhone.Location = new System.Drawing.Point(36, 175);
+            this.txtPhone.Location = new System.Drawing.Point(28, 175);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Padding = new System.Windows.Forms.Padding(5);
@@ -354,7 +354,7 @@ namespace UEH_ChaCorner
             this.txtGender.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.txtGender.Location = new System.Drawing.Point(577, 175);
+            this.txtGender.Location = new System.Drawing.Point(569, 175);
             this.txtGender.Margin = new System.Windows.Forms.Padding(5);
             this.txtGender.Name = "txtGender";
             this.txtGender.Size = new System.Drawing.Size(505, 62);
@@ -376,7 +376,7 @@ namespace UEH_ChaCorner
             this.txtDOB.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.txtDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtDOB.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.txtDOB.Location = new System.Drawing.Point(576, 84);
+            this.txtDOB.Location = new System.Drawing.Point(568, 84);
             this.txtDOB.Margin = new System.Windows.Forms.Padding(5);
             this.txtDOB.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.txtDOB.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
@@ -412,7 +412,7 @@ namespace UEH_ChaCorner
             this.txtFullname.IconLeft = global::UEH_ChaCorner.Properties.Resources.user1;
             this.txtFullname.IconLeftOffset = new System.Drawing.Point(4, 0);
             this.txtFullname.IconLeftSize = new System.Drawing.Size(14, 14);
-            this.txtFullname.Location = new System.Drawing.Point(36, 84);
+            this.txtFullname.Location = new System.Drawing.Point(28, 84);
             this.txtFullname.Margin = new System.Windows.Forms.Padding(5);
             this.txtFullname.Name = "txtFullname";
             this.txtFullname.Padding = new System.Windows.Forms.Padding(5);
@@ -448,7 +448,7 @@ namespace UEH_ChaCorner
             this.btnUpdateProfile.ShadowDecoration.Depth = 8;
             this.btnUpdateProfile.ShadowDecoration.Enabled = true;
             this.btnUpdateProfile.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 10, 10);
-            this.btnUpdateProfile.Size = new System.Drawing.Size(231, 62);
+            this.btnUpdateProfile.Size = new System.Drawing.Size(215, 62);
             this.btnUpdateProfile.TabIndex = 15;
             this.btnUpdateProfile.Text = "Cập nhật";
             this.btnUpdateProfile.UseTransparentBackground = true;

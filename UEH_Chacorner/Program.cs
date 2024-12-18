@@ -16,7 +16,7 @@ namespace UEH_ChaCorner
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FTable());
+            Application.Run(new FLogin());
         }
     }
 }

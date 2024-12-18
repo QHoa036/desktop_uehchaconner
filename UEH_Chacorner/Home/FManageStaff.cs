@@ -38,7 +38,10 @@ namespace UEH_ChaCorner.Home
 
             // Đặt lại tiêu đề cột
             if (dgvStaff.Columns.Contains("MaNV"))
+            {
                 dgvStaff.Columns["MaNV"].HeaderText = @"Mã";
+                dgvStaff.Columns["MaNV"].Width = 50;
+            }
 
             if (dgvStaff.Columns.Contains("TenNV"))
                 dgvStaff.Columns["TenNV"].HeaderText = @"Họ tên";

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelRight = new Guna.UI2.WinForms.Guna2Panel();
             this.grStaffList = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.dgvStaff = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -38,9 +38,6 @@
             this.panelGrStaffListHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbTitle5 = new System.Windows.Forms.Label();
-            this.panelLeft = new System.Windows.Forms.Panel();
-            this.btSua = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btXoa = new Guna.UI2.WinForms.Guna2ImageButton();
             this.grStaff = new Guna.UI2.WinForms.Guna2GroupBox();
             this.lbNgaysinh = new System.Windows.Forms.Label();
             this.lbHoten = new System.Windows.Forms.Label();
@@ -50,22 +47,26 @@
             this.lbGioitinh = new System.Windows.Forms.Label();
             this.lbTenNV = new System.Windows.Forms.Label();
             this.txtTenNV = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btXoa = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btSua = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.panelLeft = new System.Windows.Forms.Panel();
             this.panelRight.SuspendLayout();
             this.grStaffList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
             this.panelGrStaffListHeader.SuspendLayout();
-            this.panelLeft.SuspendLayout();
             this.grStaff.SuspendLayout();
+            this.panelLeft.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelRight
             // 
             this.panelRight.BackColor = System.Drawing.Color.Transparent;
             this.panelRight.Controls.Add(this.grStaffList);
-            this.panelRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelRight.Location = new System.Drawing.Point(560, 0);
+            this.panelRight.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelRight.Location = new System.Drawing.Point(0, 0);
+            this.panelRight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelRight.Name = "panelRight";
-            this.panelRight.Size = new System.Drawing.Size(580, 650);
+            this.panelRight.Size = new System.Drawing.Size(1425, 510);
             this.panelRight.TabIndex = 21;
             // 
             // grStaffList
@@ -85,47 +86,48 @@
             this.grStaffList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
             this.grStaffList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(28)))), ((int)(((byte)(20)))));
             this.grStaffList.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.grStaffList.Location = new System.Drawing.Point(13, 12);
+            this.grStaffList.Location = new System.Drawing.Point(16, 15);
+            this.grStaffList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grStaffList.Name = "grStaffList";
             this.grStaffList.ShadowDecoration.BorderRadius = 30;
             this.grStaffList.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(68)))), ((int)(((byte)(54)))));
             this.grStaffList.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 10, 10);
-            this.grStaffList.Size = new System.Drawing.Size(555, 626);
+            this.grStaffList.Size = new System.Drawing.Size(1394, 480);
             this.grStaffList.TabIndex = 98;
             // 
             // dgvStaff
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvStaff.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvStaff.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(111)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle37.BackColor = System.Drawing.Color.White;
+            this.dgvStaff.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle37;
+            this.dgvStaff.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle38;
             this.dgvStaff.ColumnHeadersHeight = 40;
             this.dgvStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(111)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvStaff.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle39.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(212)))));
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvStaff.DefaultCellStyle = dataGridViewCellStyle39;
             this.dgvStaff.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvStaff.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
-            this.dgvStaff.Location = new System.Drawing.Point(0, 60);
-            this.dgvStaff.Margin = new System.Windows.Forms.Padding(16);
+            this.dgvStaff.Location = new System.Drawing.Point(0, 75);
+            this.dgvStaff.Margin = new System.Windows.Forms.Padding(20, 20, 20, 20);
             this.dgvStaff.Name = "dgvStaff";
             this.dgvStaff.ReadOnly = true;
             this.dgvStaff.RowHeadersVisible = false;
-            this.dgvStaff.RowHeadersWidth = 51;
-            this.dgvStaff.RowTemplate.Height = 30;
-            this.dgvStaff.Size = new System.Drawing.Size(555, 525);
+            this.dgvStaff.RowHeadersWidth = 50;
+            this.dgvStaff.RowTemplate.Height = 40;
+            this.dgvStaff.Size = new System.Drawing.Size(1394, 354);
             this.dgvStaff.TabIndex = 45;
             this.dgvStaff.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvStaff.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -145,7 +147,7 @@
             this.dgvStaff.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
             this.dgvStaff.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvStaff.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
-            this.dgvStaff.ThemeStyle.RowsStyle.Height = 30;
+            this.dgvStaff.ThemeStyle.RowsStyle.Height = 40;
             this.dgvStaff.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(233)))), ((int)(((byte)(239)))));
             this.dgvStaff.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.dgvStaff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStaff_CellClick);
@@ -159,10 +161,10 @@
             this.panelGrStaffListFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelGrStaffListFooter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.panelGrStaffListFooter.ForeColor = System.Drawing.Color.White;
-            this.panelGrStaffListFooter.Location = new System.Drawing.Point(0, 585);
+            this.panelGrStaffListFooter.Location = new System.Drawing.Point(0, 429);
             this.panelGrStaffListFooter.Margin = new System.Windows.Forms.Padding(2);
             this.panelGrStaffListFooter.Name = "panelGrStaffListFooter";
-            this.panelGrStaffListFooter.Size = new System.Drawing.Size(555, 41);
+            this.panelGrStaffListFooter.Size = new System.Drawing.Size(1394, 51);
             this.panelGrStaffListFooter.TabIndex = 44;
             // 
             // panelGrStaffListHeader
@@ -177,8 +179,9 @@
             this.panelGrStaffListHeader.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.panelGrStaffListHeader.ForeColor = System.Drawing.Color.White;
             this.panelGrStaffListHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelGrStaffListHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelGrStaffListHeader.Name = "panelGrStaffListHeader";
-            this.panelGrStaffListHeader.Size = new System.Drawing.Size(555, 60);
+            this.panelGrStaffListHeader.Size = new System.Drawing.Size(1394, 75);
             this.panelGrStaffListHeader.TabIndex = 43;
             // 
             // txtSearch
@@ -193,18 +196,19 @@
             this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(127)))), ((int)(((byte)(149)))));
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.IconRight = global::UEH_ChaCorner.Properties.Resources.search;
             this.txtSearch.IconRightOffset = new System.Drawing.Point(8, 0);
             this.txtSearch.IconRightSize = new System.Drawing.Size(16, 16);
-            this.txtSearch.Location = new System.Drawing.Point(341, 10);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(8, 3, 2, 3);
+            this.txtSearch.Location = new System.Drawing.Point(954, 13);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(10, 4, 2, 4);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Padding = new System.Windows.Forms.Padding(24);
+            this.txtSearch.Padding = new System.Windows.Forms.Padding(30, 30, 30, 30);
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Tìm kiếm nhân viên";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(210, 40);
+            this.txtSearch.Size = new System.Drawing.Size(353, 50);
             this.txtSearch.TabIndex = 39;
             this.txtSearch.TextChanged += new System.EventHandler(this.btnSearch_TextChanged);
             // 
@@ -216,63 +220,11 @@
             this.lbTitle5.Location = new System.Drawing.Point(0, 0);
             this.lbTitle5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTitle5.Name = "lbTitle5";
-            this.lbTitle5.Padding = new System.Windows.Forms.Padding(16, 0, 0, 0);
-            this.lbTitle5.Size = new System.Drawing.Size(239, 60);
+            this.lbTitle5.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.lbTitle5.Size = new System.Drawing.Size(299, 75);
             this.lbTitle5.TabIndex = 38;
             this.lbTitle5.Text = "Danh sách nhân viên";
             this.lbTitle5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // panelLeft
-            // 
-            this.panelLeft.BackColor = System.Drawing.Color.Transparent;
-            this.panelLeft.Controls.Add(this.btSua);
-            this.panelLeft.Controls.Add(this.btXoa);
-            this.panelLeft.Controls.Add(this.grStaff);
-            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelLeft.Location = new System.Drawing.Point(0, 0);
-            this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(560, 650);
-            this.panelLeft.TabIndex = 22;
-            // 
-            // btSua
-            // 
-            this.btSua.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btSua.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btSua.HoverState.Image = global::UEH_ChaCorner.Properties.Resources.edit___hover;
-            this.btSua.HoverState.ImageSize = new System.Drawing.Size(60, 60);
-            this.btSua.Image = global::UEH_ChaCorner.Properties.Resources.edit;
-            this.btSua.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btSua.ImageRotate = 0F;
-            this.btSua.ImageSize = new System.Drawing.Size(60, 60);
-            this.btSua.Location = new System.Drawing.Point(203, 513);
-            this.btSua.Margin = new System.Windows.Forms.Padding(2);
-            this.btSua.Name = "btSua";
-            this.btSua.PressedState.Image = global::UEH_ChaCorner.Properties.Resources.edit___hover;
-            this.btSua.PressedState.ImageSize = new System.Drawing.Size(60, 60);
-            this.btSua.Size = new System.Drawing.Size(68, 60);
-            this.btSua.TabIndex = 93;
-            this.btSua.UseTransparentBackground = true;
-            this.btSua.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
-            // btXoa
-            // 
-            this.btXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btXoa.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btXoa.HoverState.Image = global::UEH_ChaCorner.Properties.Resources.delete___hover;
-            this.btXoa.HoverState.ImageSize = new System.Drawing.Size(60, 60);
-            this.btXoa.Image = global::UEH_ChaCorner.Properties.Resources.delete;
-            this.btXoa.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btXoa.ImageRotate = 0F;
-            this.btXoa.ImageSize = new System.Drawing.Size(60, 60);
-            this.btXoa.Location = new System.Drawing.Point(299, 513);
-            this.btXoa.Margin = new System.Windows.Forms.Padding(2);
-            this.btXoa.Name = "btXoa";
-            this.btXoa.PressedState.Image = global::UEH_ChaCorner.Properties.Resources.delete___hover;
-            this.btXoa.PressedState.ImageSize = new System.Drawing.Size(60, 60);
-            this.btXoa.Size = new System.Drawing.Size(68, 60);
-            this.btXoa.TabIndex = 94;
-            this.btXoa.UseTransparentBackground = true;
-            this.btXoa.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // grStaff
             // 
@@ -291,14 +243,15 @@
             this.grStaff.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(233)))), ((int)(((byte)(239)))));
             this.grStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.grStaff.ForeColor = System.Drawing.Color.White;
-            this.grStaff.Location = new System.Drawing.Point(12, 205);
+            this.grStaff.Location = new System.Drawing.Point(392, 8);
+            this.grStaff.Margin = new System.Windows.Forms.Padding(4);
             this.grStaff.Name = "grStaff";
             this.grStaff.ShadowDecoration.BorderRadius = 20;
             this.grStaff.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.grStaff.ShadowDecoration.Depth = 40;
             this.grStaff.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(7, 0, 0, 7);
-            this.grStaff.Size = new System.Drawing.Size(542, 235);
-            this.grStaff.TabIndex = 92;
+            this.grStaff.Size = new System.Drawing.Size(659, 281);
+            this.grStaff.TabIndex = 98;
             this.grStaff.Text = "Thông tin nhân viên";
             this.grStaff.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.grStaff.UseTransparentBackground = true;
@@ -308,10 +261,10 @@
             this.lbNgaysinh.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbNgaysinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbNgaysinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(28)))), ((int)(((byte)(20)))));
-            this.lbNgaysinh.Location = new System.Drawing.Point(284, 136);
+            this.lbNgaysinh.Location = new System.Drawing.Point(344, 161);
             this.lbNgaysinh.Margin = new System.Windows.Forms.Padding(0);
             this.lbNgaysinh.Name = "lbNgaysinh";
-            this.lbNgaysinh.Size = new System.Drawing.Size(240, 23);
+            this.lbNgaysinh.Size = new System.Drawing.Size(300, 29);
             this.lbNgaysinh.TabIndex = 89;
             this.lbNgaysinh.Text = "Ngày sinh";
             this.lbNgaysinh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -321,10 +274,10 @@
             this.lbHoten.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbHoten.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHoten.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(28)))), ((int)(((byte)(20)))));
-            this.lbHoten.Location = new System.Drawing.Point(16, 136);
+            this.lbHoten.Location = new System.Drawing.Point(18, 161);
             this.lbHoten.Margin = new System.Windows.Forms.Padding(0);
             this.lbHoten.Name = "lbHoten";
-            this.lbHoten.Size = new System.Drawing.Size(243, 23);
+            this.lbHoten.Size = new System.Drawing.Size(304, 29);
             this.lbHoten.TabIndex = 88;
             this.lbHoten.Text = "Số điện thoại";
             this.lbHoten.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -348,17 +301,17 @@
             this.txtSDT.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(151)))), ((int)(((byte)(59)))));
             this.txtSDT.IconLeftOffset = new System.Drawing.Point(4, 0);
             this.txtSDT.IconLeftSize = new System.Drawing.Size(14, 14);
-            this.txtSDT.Location = new System.Drawing.Point(19, 170);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtSDT.Location = new System.Drawing.Point(22, 203);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Padding = new System.Windows.Forms.Padding(4);
+            this.txtSDT.Padding = new System.Windows.Forms.Padding(5);
             this.txtSDT.PasswordChar = '\0';
             this.txtSDT.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.txtSDT.PlaceholderText = "";
             this.txtSDT.SelectedText = "";
             this.txtSDT.ShadowDecoration.BorderRadius = 13;
             this.txtSDT.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0);
-            this.txtSDT.Size = new System.Drawing.Size(240, 40);
+            this.txtSDT.Size = new System.Drawing.Size(290, 50);
             this.txtSDT.TabIndex = 87;
             // 
             // dtpNgaySinh
@@ -374,16 +327,16 @@
             this.dtpNgaySinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgaySinh.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.dtpNgaySinh.Location = new System.Drawing.Point(284, 170);
-            this.dtpNgaySinh.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpNgaySinh.Location = new System.Drawing.Point(348, 203);
+            this.dtpNgaySinh.Margin = new System.Windows.Forms.Padding(5);
             this.dtpNgaySinh.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpNgaySinh.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.Padding = new System.Windows.Forms.Padding(4);
+            this.dtpNgaySinh.Padding = new System.Windows.Forms.Padding(5);
             this.dtpNgaySinh.ShadowDecoration.BorderRadius = 12;
             this.dtpNgaySinh.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(49)))), ((int)(((byte)(46)))));
             this.dtpNgaySinh.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 10, 10);
-            this.dtpNgaySinh.Size = new System.Drawing.Size(240, 40);
+            this.dtpNgaySinh.Size = new System.Drawing.Size(290, 50);
             this.dtpNgaySinh.TabIndex = 86;
             this.dtpNgaySinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.dtpNgaySinh.UseTransparentBackground = true;
@@ -405,14 +358,14 @@
             this.txtGioiTinh.FormattingEnabled = true;
             this.txtGioiTinh.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(151)))), ((int)(((byte)(59)))));
             this.txtGioiTinh.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtGioiTinh.ItemHeight = 34;
+            this.txtGioiTinh.ItemHeight = 44;
             this.txtGioiTinh.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.txtGioiTinh.Location = new System.Drawing.Point(284, 85);
-            this.txtGioiTinh.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGioiTinh.Location = new System.Drawing.Point(348, 97);
+            this.txtGioiTinh.Margin = new System.Windows.Forms.Padding(5);
             this.txtGioiTinh.Name = "txtGioiTinh";
-            this.txtGioiTinh.Size = new System.Drawing.Size(240, 40);
+            this.txtGioiTinh.Size = new System.Drawing.Size(290, 50);
             this.txtGioiTinh.StartIndex = 0;
             this.txtGioiTinh.TabIndex = 85;
             this.txtGioiTinh.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -422,10 +375,10 @@
             this.lbGioitinh.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbGioitinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbGioitinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(28)))), ((int)(((byte)(20)))));
-            this.lbGioitinh.Location = new System.Drawing.Point(284, 51);
+            this.lbGioitinh.Location = new System.Drawing.Point(344, 55);
             this.lbGioitinh.Margin = new System.Windows.Forms.Padding(0);
             this.lbGioitinh.Name = "lbGioitinh";
-            this.lbGioitinh.Size = new System.Drawing.Size(240, 23);
+            this.lbGioitinh.Size = new System.Drawing.Size(300, 29);
             this.lbGioitinh.TabIndex = 77;
             this.lbGioitinh.Text = "Giới tính";
             this.lbGioitinh.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -435,10 +388,10 @@
             this.lbTenNV.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbTenNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTenNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(28)))), ((int)(((byte)(20)))));
-            this.lbTenNV.Location = new System.Drawing.Point(16, 51);
+            this.lbTenNV.Location = new System.Drawing.Point(18, 55);
             this.lbTenNV.Margin = new System.Windows.Forms.Padding(0);
             this.lbTenNV.Name = "lbTenNV";
-            this.lbTenNV.Size = new System.Drawing.Size(243, 23);
+            this.lbTenNV.Size = new System.Drawing.Size(304, 29);
             this.lbTenNV.TabIndex = 76;
             this.lbTenNV.Text = "Họ tên";
             this.lbTenNV.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -458,22 +411,73 @@
             this.txtTenNV.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTenNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.txtTenNV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenNV.Location = new System.Drawing.Point(19, 85);
+            this.txtTenNV.Location = new System.Drawing.Point(22, 97);
             this.txtTenNV.Margin = new System.Windows.Forms.Padding(0);
             this.txtTenNV.Name = "txtTenNV";
             this.txtTenNV.PasswordChar = '\0';
             this.txtTenNV.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.txtTenNV.PlaceholderText = "";
             this.txtTenNV.SelectedText = "";
-            this.txtTenNV.Size = new System.Drawing.Size(240, 40);
+            this.txtTenNV.Size = new System.Drawing.Size(290, 50);
             this.txtTenNV.TabIndex = 22;
+            // 
+            // btXoa
+            // 
+            this.btXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btXoa.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btXoa.HoverState.Image = global::UEH_ChaCorner.Properties.Resources.delete___hover;
+            this.btXoa.HoverState.ImageSize = new System.Drawing.Size(50, 50);
+            this.btXoa.Image = global::UEH_ChaCorner.Properties.Resources.delete;
+            this.btXoa.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btXoa.ImageRotate = 0F;
+            this.btXoa.ImageSize = new System.Drawing.Size(50, 50);
+            this.btXoa.Location = new System.Drawing.Point(1124, 161);
+            this.btXoa.Margin = new System.Windows.Forms.Padding(2);
+            this.btXoa.Name = "btXoa";
+            this.btXoa.PressedState.Image = global::UEH_ChaCorner.Properties.Resources.delete___hover;
+            this.btXoa.PressedState.ImageSize = new System.Drawing.Size(50, 50);
+            this.btXoa.Size = new System.Drawing.Size(100, 100);
+            this.btXoa.TabIndex = 97;
+            this.btXoa.UseTransparentBackground = true;
+            // 
+            // btSua
+            // 
+            this.btSua.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btSua.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btSua.HoverState.Image = global::UEH_ChaCorner.Properties.Resources.edit___hover;
+            this.btSua.HoverState.ImageSize = new System.Drawing.Size(50, 50);
+            this.btSua.Image = global::UEH_ChaCorner.Properties.Resources.edit;
+            this.btSua.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btSua.ImageRotate = 0F;
+            this.btSua.ImageSize = new System.Drawing.Size(50, 50);
+            this.btSua.Location = new System.Drawing.Point(1124, 57);
+            this.btSua.Margin = new System.Windows.Forms.Padding(2);
+            this.btSua.Name = "btSua";
+            this.btSua.PressedState.Image = global::UEH_ChaCorner.Properties.Resources.edit___hover;
+            this.btSua.PressedState.ImageSize = new System.Drawing.Size(50, 50);
+            this.btSua.Size = new System.Drawing.Size(100, 100);
+            this.btSua.TabIndex = 96;
+            this.btSua.UseTransparentBackground = true;
+            // 
+            // panelLeft
+            // 
+            this.panelLeft.BackColor = System.Drawing.Color.Transparent;
+            this.panelLeft.Controls.Add(this.grStaff);
+            this.panelLeft.Controls.Add(this.btSua);
+            this.panelLeft.Controls.Add(this.btXoa);
+            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelLeft.Location = new System.Drawing.Point(0, 510);
+            this.panelLeft.Margin = new System.Windows.Forms.Padding(4);
+            this.panelLeft.Name = "panelLeft";
+            this.panelLeft.Size = new System.Drawing.Size(1425, 302);
+            this.panelLeft.TabIndex = 22;
             // 
             // FStaff
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1140, 650);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(1425, 812);
             this.Controls.Add(this.panelLeft);
             this.Controls.Add(this.panelRight);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -486,8 +490,8 @@
             this.grStaffList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).EndInit();
             this.panelGrStaffListHeader.ResumeLayout(false);
-            this.panelLeft.ResumeLayout(false);
             this.grStaff.ResumeLayout(false);
+            this.panelLeft.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -500,17 +504,17 @@
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private System.Windows.Forms.Label lbTitle5;
         private Guna.UI2.WinForms.Guna2DataGridView dgvStaff;
-        private System.Windows.Forms.Panel panelLeft;
-        private Guna.UI2.WinForms.Guna2TextBox txtTenNV;
         private Guna.UI2.WinForms.Guna2GroupBox grStaff;
-        private System.Windows.Forms.Label lbTenNV;
-        private System.Windows.Forms.Label lbGioitinh;
-        private Guna.UI2.WinForms.Guna2ComboBox txtGioiTinh;
-        private Guna.UI2.WinForms.Guna2TextBox txtSDT;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtpNgaySinh;
         private System.Windows.Forms.Label lbNgaysinh;
         private System.Windows.Forms.Label lbHoten;
-        private Guna.UI2.WinForms.Guna2ImageButton btSua;
+        private Guna.UI2.WinForms.Guna2TextBox txtSDT;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpNgaySinh;
+        private Guna.UI2.WinForms.Guna2ComboBox txtGioiTinh;
+        private System.Windows.Forms.Label lbGioitinh;
+        private System.Windows.Forms.Label lbTenNV;
+        private Guna.UI2.WinForms.Guna2TextBox txtTenNV;
         private Guna.UI2.WinForms.Guna2ImageButton btXoa;
+        private Guna.UI2.WinForms.Guna2ImageButton btSua;
+        private System.Windows.Forms.Panel panelLeft;
     }
 }
