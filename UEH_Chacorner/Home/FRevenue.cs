@@ -11,7 +11,6 @@ namespace UEH_ChaCorner.Home
     {
         private readonly CTHD_BLL _cthdBll = new CTHD_BLL();
         private readonly HOADON_BLL _hoadonBll = new HOADON_BLL();
-        private readonly NHANVIEN_BLL _nhanvienBll = new NHANVIEN_BLL();
 
         public FRevenue()
         {

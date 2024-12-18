@@ -101,6 +101,13 @@ namespace UEH_ChaCorner.Home
                 string oldSDT = dgvStaff.SelectedRows[0].Cells["SDT"].Value.ToString().Trim();
                 string oldGioiTinh = dgvStaff.SelectedRows[0].Cells["GioiTinh"].Value.ToString().Trim();
 
+                // Kiểm tra nếu các ô nhập liệu trống
+                if (string.IsNullOrWhiteSpace(tenNV) || string.IsNullOrWhiteSpace(txtSDT.Text) || string.IsNullOrWhiteSpace(gioiTinh))
+                {
+                    MessageBox.Show("Bạn chưa chọn nhân viên cần sửa thông tin.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 // So sánh thông tin cũ và mới
                 if (oldTenNV == tenNV &&
                     oldNgaySinh.Date == dtpNgaySinh.Value.Date &&

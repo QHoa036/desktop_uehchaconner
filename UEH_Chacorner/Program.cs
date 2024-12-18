@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
 
+using UEH_ChaCorner;
+using UEH_ChaCorner.Home;
+
 namespace UEH_ChaCorner
 {
     internal static class Program
@@ -13,7 +16,7 @@ namespace UEH_ChaCorner
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FLogin());
+            Application.Run(new FMenu());
         }
     }
 }
