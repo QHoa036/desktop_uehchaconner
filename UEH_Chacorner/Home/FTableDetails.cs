@@ -27,9 +27,6 @@ namespace UEH_Chacorner.Home
             _maBan = maBan;
             _maHD = maHD;
         }
-
-        #region Method
-
         private void LoadDataGrid_SanPham()
         {
             bindingSourceSanPham.DataSource = _sanPhamBll.Load_SanPham();
@@ -91,15 +88,10 @@ namespace UEH_Chacorner.Home
             txtThanhTien.Text = TongTien.ToString("N0") + "đ";  // Định dạng số và thêm "đ" vào cuối
         }
 
-        #endregion
-
-
-        #region Event
-
         private void FTableDetails_Load(object sender, EventArgs e)
         {
             // Hiển thị mã hóa đơn trên Label
-            lblMaBan.Text = $"Mã bàn: {_maBan}";
+            lbTitle5.Text = $"Thực đơn Bàn {_maBan}";
             txtMaHD.Text = _maHD.ToString();
             
 
@@ -160,9 +152,7 @@ namespace UEH_Chacorner.Home
                 txtMaSP.Text = row.Cells["MaSP"].Value.ToString();
             }
         }
-
-        #endregion
-
+        
         private void btnThemMon_Click(object sender, EventArgs e)
         {
             if (dgvSanPham.SelectedRows.Count > 0)

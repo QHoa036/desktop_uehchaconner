@@ -26,8 +26,6 @@ namespace UEH_Chacorner.Home
             InitializeComponent();
         }
 
-        #region Method
-
         private void LoadDataGrid_Ban()
         {
             bindingSourceBan.DataSource = _banBll.load_ban();
@@ -54,10 +52,6 @@ namespace UEH_Chacorner.Home
             dgvBan.Columns[3].HeaderText = @"Thứ tự";
             dgvBan.Columns[4].Visible = false;
         }
-
-        #endregion
-
-        #region Event
 
         private void FTable_Load(object sender, EventArgs e)
         {
@@ -335,13 +329,49 @@ namespace UEH_Chacorner.Home
             {
                 MessageBox.Show("Thêm hóa đơn thất bại.", "Lỗi");
             }
-
-
         }
 
-        #endregion
+        private void dgvBan_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Kiểm tra xem tên bàn có hợp lệ không
+            if (dgvBan.CurrentRow == null)
+            {
+                MessageBox.Show("Vui lòng chọn bàn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            int maBan = Convert.ToInt32(dgvBan.CurrentRow.Cells["MaBan"].Value);
 
+            // Lấy dữ liệu
+            var newHoaDon = new HOADON_DTO
+            {
+                MaBan = maBan,
+                MaNV = _maNV,
+                NgayLap = DateTime.Now,
+                TrangThai = "Chưa Thanh Toán"
+            };
 
+            // Thêm hóa đơn
+            int insert_hoadon = _hoadonBll.insert_hoadon(newHoaDon);
+
+            if (insert_hoadon > 0)
+            {
+                // Lấy mã hóa đơn vừa tạo
+                int maHD = _hoadonBll.load_hoadon_new(newHoaDon);
+                if (maHD > 0)
+                {
+                    FTableDetails fTableDetails = new FTableDetails(maBan, maHD);
+                    fTableDetails.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy mã hóa đơn vừa tạo.", "Lỗi");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Thêm hóa đơn thất bại.", "Lỗi");
+            }
+        }
     }
 }
