@@ -48,6 +48,7 @@ namespace UEH_ChaCorner
             this.imgLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.MainElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.ImgPic = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.SidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgPic)).BeginInit();
@@ -56,7 +57,7 @@ namespace UEH_ChaCorner
             // DragControl
             // 
             this.DragControl.DockIndicatorTransparencyValue = 0.6D;
-            this.DragControl.TargetControl = this;
+            this.DragControl.TargetControl = this.SidePanel;
             this.DragControl.UseTransparentDrag = true;
             // 
             // ShadowForm
@@ -414,6 +415,12 @@ namespace UEH_ChaCorner
             this.ImgPic.TabStop = false;
             this.ImgPic.UseTransparentBackground = true;
             // 
+            // DragControl2
+            // 
+            this.DragControl2.DockIndicatorTransparencyValue = 0.6D;
+            this.DragControl2.TargetControl = this.ImgPic;
+            this.DragControl2.UseTransparentDrag = true;
+            // 
             // FRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -456,5 +463,6 @@ namespace UEH_ChaCorner
         private Guna.UI2.WinForms.Guna2PictureBox imgLogo;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnBack;
         private Guna.UI2.WinForms.Guna2DateTimePicker txtDOB;
+        private Guna.UI2.WinForms.Guna2DragControl DragControl2;
     }
 }

@@ -1,17 +1,16 @@
 ﻿using BLL;
 using DTO;
-
 using System;
 using System.Windows.Forms;
-
 using UEH_ChaCorner.Common;
 
 namespace UEH_ChaCorner
 {
     public partial class FAccount : Form
     {
+        private readonly NHANVIEN_BLL _nhanvienBll = new NHANVIEN_BLL();
         private readonly TAIKHOAN_BLL _accountBll = new TAIKHOAN_BLL();
-        private string _quyennv = "", _tennv = "", _manv = "";
+        private string _quyennv = "", _tennv = "", _tentk = "", _manv = "", _sdt = "", _gioitinh = "", _ngaysinh = "";
 
         public FAccount()
         {
@@ -19,10 +18,9 @@ namespace UEH_ChaCorner
         }
 
         public string MaNV { get; set; }
-
         public string TenNV { get; set; }
-
         public string Quyen { get; set; }
+        public string TenTK { get; set; }
 
         private void FAccount_Load(object sender, EventArgs e)
         {
@@ -30,6 +28,11 @@ namespace UEH_ChaCorner
             _quyennv = Quyen;
             _tennv = TenNV;
             _manv = MaNV;
+            _tentk = TenTK;
+            var searchResults = _nhanvienBll.TIM_TenNV_hoatdong(new NHANVIEN_DTO { TenNV = _tennv });
+            _sdt = searchResults.Rows[0]["SDT"].ToString().Trim();
+            _gioitinh = searchResults.Rows[0]["GioiTinh"].ToString().Trim();
+            _ngaysinh = searchResults.Rows[0]["NgaySinh"].ToString().Trim();
 
             // Hiển thị thông tin tài khoản
             lbName.Text = _tennv;
@@ -41,19 +44,61 @@ namespace UEH_ChaCorner
             {
                 lbRole.Text = "Nhân viên";
             }
+            txtFullname.Text = _tennv;
+            txtPhone.Text = _sdt;
+            txtGender.Text = _gioitinh;
+            txtDOB.Text = _ngaysinh;
+        }
+
+        private void btnUpdateProfile_Click(object sender, EventArgs e)
+        {
+            var nhanvien = new NHANVIEN_DTO
+            {
+                MaNV = _manv,
+                TenNV = txtFullname.Text.Trim(),
+                SDT = txtPhone.Text.Trim(),
+                GioiTinh = txtGender.Text.Trim(),
+                NgaySinh = Convert.ToDateTime(txtDOB.Text.Trim())
+            };
+
+            try
+            {
+                int result = _nhanvienBll.update_nhanvien(nhanvien);
+                if (result == 1)
+                {
+                    Utils.ShowSuccess("Cập nhật thông tin thành công.");
+                    _tennv = TenNV = txtFullname.Text.Trim();
+                    lbName.Text = TenNV;
+                    FHomepage.MainMenu.setVisible(_quyennv, _tennv, _tentk, _manv);
+                }
+                else
+                {
+                    Utils.ShowError("Cập nhật thông tin thất bại.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Utils.ShowError($"{ex.Message}");
+            }
         }
 
         public void FAccount_FormClosing(object sender, FormClosingEventArgs e)
         {
-            FHomepage.MainMenu.setVisible(_quyennv, _tennv, _manv);
+            // Reset thông tin tài khoản
+            _quyennv = _tennv = _tentk = _manv = _sdt = _gioitinh = _ngaysinh = "";
+
+            // Chuyển về trang chủ
+            FHomepage.MainMenu.setVisible(_quyennv, _tennv, _tentk, _manv);
         }
 
         private void btChangePassword_Click(object sender, EventArgs e)
         {
             var account = new TAIKHOAN_DTO
             {
-                TenTK = TenNV,
-                MatKhau = txtOldPassword.Text.Trim()
+                TenTK = _tentk,
+                MatKhau = txtOldPassword.Text.Trim(),
+                Quyen = _quyennv,
+                MaNV = _manv
             };
 
             try
@@ -78,7 +123,7 @@ namespace UEH_ChaCorner
                             Utils.ShowSuccess("Đổi mật khẩu thành công.");
                             txtOldPassword.Clear();
                             txtNewPassword.Clear();
-                            txtOldPassword.Focus();
+                            txtConfirmPassword.Clear();
                         }
                         else
                         {

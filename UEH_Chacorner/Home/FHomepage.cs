@@ -13,7 +13,7 @@ namespace UEH_ChaCorner
         private readonly FAccount _taikhoan = new FAccount();
 
         private Form _activeForm;
-        private string _manv = "", _quyennv = "", _tennv = "";
+        private string _manv = "", _quyennv = "", _tennv = "", _tentk = "";
         private bool _isProfile = false;
         private bool _isStaff = false;
         private bool _isChart = false;
@@ -27,9 +27,14 @@ namespace UEH_ChaCorner
             MainMenu = this;
         }
 
+        private void FHomepage_Load(object sender, EventArgs e)
+        {
+        }
+
         private void FMainMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            var fLogin = new FLogin();
+            fLogin.Show();
         }
 
         private void OpenChildForm(Form childForm)
@@ -45,28 +50,31 @@ namespace UEH_ChaCorner
             childForm.Show();
         }
 
-        internal void setVisible(string quyennv, string tennv, string manv)
+        internal void setVisible(string quyennv, string tennv, string tentk, string manv)
         {
             // Lấy thông tin tài khoản
             _manv = manv;
             _quyennv = quyennv;
             _tennv = lbUsername.Text = tennv;
+            _tentk = tentk;
 
             // Hiển thị chức năng tương ứng với quyền
-            switch (quyennv)
+            if (string.Equals(quyennv.ToLower(), "admin", StringComparison.OrdinalIgnoreCase))
             {
-                case @"ADMIN":
-                    btStaff.Visible = true;
-                    btStatistic.Visible = true;
-                    btMenu.Visible = true;
-                    btManage.Visible = true;
-                    btExit.Visible = true;
-                    break;
-
-                case @"NhanVien":
-                    btManage.Visible = true;
-                    btExit.Visible = true;
-                    break;
+                btHome.Visible = true;
+                btAccount.Visible = true;
+                btStaff.Visible = true;
+                btStatistic.Visible = true;
+                btMenu.Visible = true;
+                btManage.Visible = true;
+                btExit.Visible = true;
+            }
+            else
+            {
+                btStaff.Visible = false;
+                btStatistic.Visible = false;
+                btMenu.Visible = false;
+                btExit.Visible = true;
             }
         }
 
@@ -115,6 +123,7 @@ namespace UEH_ChaCorner
                 _taikhoan.TenNV = _tennv;
                 _taikhoan.Quyen = _quyennv;
                 _taikhoan.MaNV = _manv;
+                _taikhoan.TenTK = _tentk;
                 OpenChildForm(_taikhoan);
             }
             if (_isTable)
@@ -125,6 +134,7 @@ namespace UEH_ChaCorner
                 _taikhoan.TenNV = _tennv;
                 _taikhoan.Quyen = _quyennv;
                 _taikhoan.MaNV = _manv;
+                _taikhoan.TenTK = _tentk;
                 OpenChildForm(_taikhoan);
             }
             if (_isMenu)
@@ -135,6 +145,7 @@ namespace UEH_ChaCorner
                 _taikhoan.TenNV = _tennv;
                 _taikhoan.Quyen = _quyennv;
                 _taikhoan.MaNV = _manv;
+                _taikhoan.TenTK = _tentk;
                 OpenChildForm(_taikhoan);
             }
             if (_isStaff)
@@ -145,6 +156,7 @@ namespace UEH_ChaCorner
                 _taikhoan.TenNV = _tennv;
                 _taikhoan.Quyen = _quyennv;
                 _taikhoan.MaNV = _manv;
+                _taikhoan.TenTK = _tentk;
                 OpenChildForm(_taikhoan);
             }
             if (_isChart)
@@ -155,6 +167,7 @@ namespace UEH_ChaCorner
                 _taikhoan.TenNV = _tennv;
                 _taikhoan.Quyen = _quyennv;
                 _taikhoan.MaNV = _manv;
+                _taikhoan.TenTK = _tentk;
                 OpenChildForm(_taikhoan);
             }
         }
@@ -240,9 +253,7 @@ namespace UEH_ChaCorner
 
         private void btExit_Click(object sender, EventArgs e)
         {
-            Hide();
-            var fLogin = new FLogin();
-            fLogin.ShowDialog();
+            Close();
         }
     }
 }

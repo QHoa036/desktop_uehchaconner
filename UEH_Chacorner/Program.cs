@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 
-using UEH_ChaCorner;
-using UEH_ChaCorner.Home;
-
 namespace UEH_ChaCorner
 {
     internal static class Program
@@ -12,7 +9,7 @@ namespace UEH_ChaCorner
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

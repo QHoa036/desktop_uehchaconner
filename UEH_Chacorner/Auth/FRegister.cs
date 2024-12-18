@@ -1,12 +1,10 @@
-﻿using System;
+﻿using BLL;
+using DTO;
+using System;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
-
-using BLL;
-using DTO;
-
 
 namespace UEH_ChaCorner
 {
@@ -56,7 +54,7 @@ namespace UEH_ChaCorner
                 MatKhau = txtPassword.Text,
                 Quyen = _quyen,
                 MaNV = "NV" + _manv
-            }; 
+            };
             _tkBll.insert_taikhoan(tkPublic);
         }
 
@@ -88,7 +86,6 @@ namespace UEH_ChaCorner
                 Hide();
                 var fLogin = new FLogin();
                 fLogin.Show();
-
             }
             catch (SqlException loi)
             {

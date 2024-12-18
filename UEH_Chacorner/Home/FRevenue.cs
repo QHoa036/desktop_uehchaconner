@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Globalization;
-using BLL;
+﻿using BLL;
 using DTO;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Windows.Forms;
 
 namespace UEH_ChaCorner.Home
 {
@@ -23,8 +17,6 @@ namespace UEH_ChaCorner.Home
         {
             InitializeComponent();
         }
-
-        #region Method
 
         private void LoadDataGrid()
         {
@@ -165,11 +157,6 @@ namespace UEH_ChaCorner.Home
             chartRevenue.ChartAreas[0].AxisY.LabelStyle.Format = "#,0";  // Định dạng số liệu trục Y
         }
 
-
-        #endregion
-
-        #region Event
-
         private void FRevenue_Load(object sender, EventArgs e)
         {
             LoadDataGrid();
@@ -244,9 +231,5 @@ namespace UEH_ChaCorner.Home
                 btnTimTenNV.PerformClick(); // Giả lập việc nhấn nút tìm
             }
         }
-
-        #endregion
-
-
     }
 }

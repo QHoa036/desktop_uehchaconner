@@ -1,10 +1,8 @@
-﻿using System;
+﻿using BLL;
+using DTO;
+using System;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-using BLL;
-using DTO;
-
 using UEH_ChaCorner.Common;
 
 namespace UEH_ChaCorner
@@ -26,7 +24,7 @@ namespace UEH_ChaCorner
             txtUsername.Focus();
             AcceptButton = btnLogin;
         }
-        
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -61,16 +59,15 @@ namespace UEH_ChaCorner
                         _tennv = roleAndName.Rows[0]["TenNV"].ToString().Trim();
                         _manv = roleAndName.Rows[0]["MaNV"].ToString().Trim();
 
-                        // Tắt form đăng nhập 
+                        // Tắt form đăng nhập
                         Hide();
 
                         // Chuyển sang trang Loading
                         //await ShowSplashScreenAsync();
 
                         // Mở form chính
-                        MainMenu.setVisible(_quyennv, _tennv, _manv);
+                        MainMenu.setVisible(_quyennv, _tennv, txtUsername.Text.Trim(), _manv);
                         MainMenu.ShowDialog();
-
                     }
                     else
                     {

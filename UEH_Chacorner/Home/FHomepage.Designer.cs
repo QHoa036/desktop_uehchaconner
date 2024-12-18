@@ -84,9 +84,9 @@ namespace UEH_ChaCorner
             this.panelSideRight.Controls.Add(this.panelControl);
             this.panelSideRight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelSideRight.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.panelSideRight.Location = new System.Drawing.Point(60, 0);
+            this.panelSideRight.Location = new System.Drawing.Point(80, 0);
             this.panelSideRight.Name = "panelSideRight";
-            this.panelSideRight.Size = new System.Drawing.Size(1140, 650);
+            this.panelSideRight.Size = new System.Drawing.Size(1120, 650);
             this.panelSideRight.TabIndex = 28;
             this.panelSideRight.UseTransparentBackground = true;
             // 
@@ -105,7 +105,7 @@ namespace UEH_ChaCorner
             this.panelControl.Location = new System.Drawing.Point(0, 0);
             this.panelControl.Margin = new System.Windows.Forms.Padding(2);
             this.panelControl.Name = "panelControl";
-            this.panelControl.Size = new System.Drawing.Size(1140, 50);
+            this.panelControl.Size = new System.Drawing.Size(1120, 50);
             this.panelControl.TabIndex = 23;
             this.panelControl.UseTransparentBackground = true;
             // 
@@ -116,7 +116,7 @@ namespace UEH_ChaCorner
             this.lbUsername.BackColor = System.Drawing.Color.Transparent;
             this.lbUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
-            this.lbUsername.Location = new System.Drawing.Point(642, 17);
+            this.lbUsername.Location = new System.Drawing.Point(622, 17);
             this.lbUsername.Name = "lbUsername";
             this.lbUsername.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lbUsername.Size = new System.Drawing.Size(421, 20);
@@ -141,7 +141,7 @@ namespace UEH_ChaCorner
             this.btAccount.HoverState.Image = global::UEH_ChaCorner.Properties.Resources.user___hover;
             this.btAccount.Image = global::UEH_ChaCorner.Properties.Resources.user;
             this.btAccount.ImageSize = new System.Drawing.Size(32, 32);
-            this.btAccount.Location = new System.Drawing.Point(1069, 5);
+            this.btAccount.Location = new System.Drawing.Point(1059, 5);
             this.btAccount.Name = "btAccount";
             this.btAccount.PressedColor = System.Drawing.Color.White;
             this.btAccount.Size = new System.Drawing.Size(40, 40);
@@ -179,7 +179,7 @@ namespace UEH_ChaCorner
             this.panelSideLeft.Location = new System.Drawing.Point(0, 0);
             this.panelSideLeft.Margin = new System.Windows.Forms.Padding(2);
             this.panelSideLeft.Name = "panelSideLeft";
-            this.panelSideLeft.Size = new System.Drawing.Size(60, 650);
+            this.panelSideLeft.Size = new System.Drawing.Size(80, 650);
             this.panelSideLeft.TabIndex = 24;
             // 
             // btHome
@@ -201,7 +201,7 @@ namespace UEH_ChaCorner
             this.btHome.HoverState.Image = global::UEH_ChaCorner.Properties.Resources.home___hover;
             this.btHome.Image = global::UEH_ChaCorner.Properties.Resources.home;
             this.btHome.ImageSize = new System.Drawing.Size(24, 24);
-            this.btHome.Location = new System.Drawing.Point(0, 161);
+            this.btHome.Location = new System.Drawing.Point(10, 161);
             this.btHome.Name = "btHome";
             this.btHome.PressedColor = System.Drawing.Color.White;
             this.btHome.Size = new System.Drawing.Size(60, 40);
@@ -226,7 +226,7 @@ namespace UEH_ChaCorner
             this.btStaff.HoverState.Image = global::UEH_ChaCorner.Properties.Resources.people_hover;
             this.btStaff.Image = ((System.Drawing.Image)(resources.GetObject("btStaff.Image")));
             this.btStaff.ImageSize = new System.Drawing.Size(32, 32);
-            this.btStaff.Location = new System.Drawing.Point(0, 375);
+            this.btStaff.Location = new System.Drawing.Point(10, 375);
             this.btStaff.Name = "btStaff";
             this.btStaff.PressedColor = System.Drawing.Color.White;
             this.btStaff.Size = new System.Drawing.Size(60, 40);
@@ -250,7 +250,7 @@ namespace UEH_ChaCorner
             this.btMenu.HoverState.Image = global::UEH_ChaCorner.Properties.Resources.bubble_tea_hover;
             this.btMenu.Image = global::UEH_ChaCorner.Properties.Resources.bubble_tea;
             this.btMenu.ImageSize = new System.Drawing.Size(32, 32);
-            this.btMenu.Location = new System.Drawing.Point(0, 303);
+            this.btMenu.Location = new System.Drawing.Point(10, 303);
             this.btMenu.Name = "btMenu";
             this.btMenu.PressedColor = System.Drawing.Color.White;
             this.btMenu.Size = new System.Drawing.Size(60, 40);
@@ -276,7 +276,7 @@ namespace UEH_ChaCorner
             this.btManage.HoverState.Image = global::UEH_ChaCorner.Properties.Resources.table_hover;
             this.btManage.Image = global::UEH_ChaCorner.Properties.Resources.table;
             this.btManage.ImageSize = new System.Drawing.Size(32, 32);
-            this.btManage.Location = new System.Drawing.Point(0, 231);
+            this.btManage.Location = new System.Drawing.Point(10, 231);
             this.btManage.Name = "btManage";
             this.btManage.PressedColor = System.Drawing.Color.White;
             this.btManage.Size = new System.Drawing.Size(60, 40);
@@ -299,7 +299,7 @@ namespace UEH_ChaCorner
             this.btStatistic.HoverState.Image = global::UEH_ChaCorner.Properties.Resources.statistic_hover;
             this.btStatistic.Image = global::UEH_ChaCorner.Properties.Resources.statistic;
             this.btStatistic.ImageSize = new System.Drawing.Size(32, 32);
-            this.btStatistic.Location = new System.Drawing.Point(0, 447);
+            this.btStatistic.Location = new System.Drawing.Point(10, 447);
             this.btStatistic.Name = "btStatistic";
             this.btStatistic.PressedColor = System.Drawing.Color.White;
             this.btStatistic.Size = new System.Drawing.Size(60, 40);
@@ -327,7 +327,7 @@ namespace UEH_ChaCorner
             this.btExit.Location = new System.Drawing.Point(0, 584);
             this.btExit.Name = "btExit";
             this.btExit.PressedColor = System.Drawing.Color.White;
-            this.btExit.Size = new System.Drawing.Size(60, 40);
+            this.btExit.Size = new System.Drawing.Size(80, 40);
             this.btExit.TabIndex = 16;
             this.btExit.UseTransparentBackground = true;
             this.btExit.Click += new System.EventHandler(this.btExit_Click);
@@ -358,6 +358,7 @@ namespace UEH_ChaCorner
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainMenu";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FMainMenu_FormClosing);
+            this.Load += new System.EventHandler(this.FHomepage_Load);
             this.panelChildForm.ResumeLayout(false);
             this.panelSideRight.ResumeLayout(false);
             this.panelControl.ResumeLayout(false);

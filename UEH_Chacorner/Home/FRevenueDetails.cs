@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Microsoft.Office.Interop.Word;
-using System.Globalization;
-using BLL;
+﻿using BLL;
 using DTO;
-using System.IO;
+using Microsoft.Office.Interop.Word;
+using System;
+using System.Globalization;
+using System.Windows.Forms;
 
 namespace UEH_ChaCorner.Home
 {
@@ -31,8 +23,6 @@ namespace UEH_ChaCorner.Home
             // Truyền DTO vào phương thức
             bindingSourceCTHD.DataSource = _cthdBll.load_cthd(cthdDto);
         }
-
-        #region Method
 
         public string Tenban { get; set; }
 
@@ -59,11 +49,9 @@ namespace UEH_ChaCorner.Home
 
             foreach (DataGridViewRow row in dgvCTHD.Rows)
             {
-
                 // Lấy giá trị thành tiền từ cột "Thành tiền"
                 decimal ThanhTien = Convert.ToDecimal(row.Cells[4].Value);
                 TongTien += ThanhTien;
-
             }
 
             // Cập nhật tổng thành tiền vào TextBox
@@ -143,7 +131,7 @@ namespace UEH_ChaCorner.Home
                 for (var c = 0; c <= columnCount - 1; c++)
                     oDoc.Application.Selection.Tables[1].Cell(1, c + 1).Range.Text = dgv.Columns[c].HeaderText;
 
-                //Thiết lập kiểu bảng                      
+                //Thiết lập kiểu bảng
                 oDoc.Application.Selection.Tables[1].set_Style("Table Grid 3");
                 oDoc.Application.Selection.Tables[1].Rows[1].Select();
                 oDoc.Application.Selection.Cells.VerticalAlignment = WdCellVerticalAlignment.wdCellAlignVerticalCenter;
@@ -153,7 +141,7 @@ namespace UEH_ChaCorner.Home
                 var TongTien = p.Range;
                 TongTien.Text = @"Tổng tiền: " + txtThanhTien.Text;
 
-                // Căn lề phải cho tổng tiền 
+                // Căn lề phải cho tổng tiền
                 TongTien.ParagraphFormat.Alignment = WdParagraphAlignment.wdAlignParagraphRight;
                 TongTien.Font.Name = "Tahoma";
                 TongTien.ParagraphFormat.LineUnitBefore = 3;
@@ -188,10 +176,6 @@ namespace UEH_ChaCorner.Home
             }
         }
 
-        #endregion
-
-        #region Event
-
         private void FRevenueDetails_Load(object sender, EventArgs e)
         {
             // Hiển thị mã hóa đơn trên Label
@@ -215,7 +199,5 @@ namespace UEH_ChaCorner.Home
         {
             PrintBill();
         }
-
-        #endregion
     }
 }

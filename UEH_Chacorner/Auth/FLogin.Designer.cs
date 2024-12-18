@@ -45,6 +45,7 @@ namespace UEH_ChaCorner
             this.SidePanel = new Guna.UI2.WinForms.Guna2Panel();
             this.imgLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.imgPic = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.SidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPic)).BeginInit();
@@ -59,7 +60,7 @@ namespace UEH_ChaCorner
             // 
             this.DragControl.ContainerControl = this;
             this.DragControl.DockIndicatorTransparencyValue = 0.6D;
-            this.DragControl.TargetControl = this;
+            this.DragControl.TargetControl = this.SidePanel;
             this.DragControl.UseTransparentDrag = true;
             // 
             // ShadowForm
@@ -296,6 +297,13 @@ namespace UEH_ChaCorner
             this.imgPic.TabStop = false;
             this.imgPic.UseTransparentBackground = true;
             // 
+            // DragControl2
+            // 
+            this.DragControl2.ContainerControl = this;
+            this.DragControl2.DockIndicatorTransparencyValue = 0.6D;
+            this.DragControl2.TargetControl = this.imgPic;
+            this.DragControl2.UseTransparentDrag = true;
+            // 
             // FLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -335,5 +343,6 @@ namespace UEH_ChaCorner
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private Guna.UI2.WinForms.Guna2PictureBox imgLogo;
         private Guna.UI2.WinForms.Guna2PictureBox imgPic;
+        private Guna.UI2.WinForms.Guna2DragControl DragControl2;
     }
 }

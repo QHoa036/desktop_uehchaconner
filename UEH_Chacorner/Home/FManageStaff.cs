@@ -1,24 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlTypes;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-using BLL;
+﻿using BLL;
 using DTO;
+using System;
+using System.Data;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace UEH_ChaCorner.Home
 {
     public partial class FStaff : Form
     {
-        // Khai báo các đối tượng BLL 
+        // Khai báo các đối tượng BLL
         private readonly NHANVIEN_BLL _nhanvienBll = new NHANVIEN_BLL();
+
         private readonly TAIKHOAN_BLL _taikhoanBll = new TAIKHOAN_BLL();
 
         private DataTable _staffData;
@@ -27,9 +20,10 @@ namespace UEH_ChaCorner.Home
         {
             InitializeComponent();
         }
+
         private bool KiemTraTenHopLe(string ten)
         {
-            // Tên chỉ chứa chữ cái 
+            // Tên chỉ chứa chữ cái
             var regex = new Regex(@"^[\p{L}\s]+$");
             return regex.IsMatch(ten.Trim());
         }
@@ -64,7 +58,6 @@ namespace UEH_ChaCorner.Home
             if (dgvStaff.Columns.Contains("Quyen"))
                 dgvStaff.Columns["Quyen"].HeaderText = @"Chức vụ";
 
-
             // Ẩn các cột không cần thiết
             if (dgvStaff.Columns.Contains("MatKhau"))
                 dgvStaff.Columns["MatKhau"].Visible = false;
@@ -77,7 +70,7 @@ namespace UEH_ChaCorner.Home
         }
 
         public bool KiemTraSoDienThoai(string sdt, string maNV)
-        {   
+        {
             DataTable dtNhanVien = _nhanvienBll.load_nhanvien();
             // Kiểm tra số điện thoại trùng (ngoại trừ nhân viên đang chỉnh sửa)
             foreach (DataRow row in dtNhanVien.Rows)
@@ -92,7 +85,6 @@ namespace UEH_ChaCorner.Home
             }
             return false;
         }
-
 
         private void EditEmployee()
         {
@@ -166,7 +158,6 @@ namespace UEH_ChaCorner.Home
                     return;
                 }
 
-
                 // Tạo đối tượng nhân viên
                 var employee = new NHANVIEN_DTO
                 {
@@ -215,7 +206,6 @@ namespace UEH_ChaCorner.Home
             {
                 LoadStaffList();
             }
-
         }
 
         // Nút xóa nhân viên
@@ -247,7 +237,6 @@ namespace UEH_ChaCorner.Home
             {
                 MessageBox.Show("Chọn nhân viên cần xóa.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
         }
 
         // Nút sửa thông tin
@@ -256,7 +245,7 @@ namespace UEH_ChaCorner.Home
             EditEmployee();
         }
 
-        // CellClick DataGridView 
+        // CellClick DataGridView
         private void dgvStaff_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -285,7 +274,7 @@ namespace UEH_ChaCorner.Home
                     }
                     else
                     {
-                        txtGioiTinh.SelectedIndex = -1; 
+                        txtGioiTinh.SelectedIndex = -1;
                     }
                 }
             }
@@ -293,7 +282,3 @@ namespace UEH_ChaCorner.Home
         }
     }
 }
-
-
-
-
