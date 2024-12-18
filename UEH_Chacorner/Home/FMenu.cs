@@ -64,6 +64,22 @@ namespace UEH_ChaCorner.Home
                 cbbMaDMSP.Items.Add(i);
             }
         }
+        public bool KiemTraTenSanPhamExist(string tenSanPham, int maSP)
+        {
+            DataTable dtSanPham = _sanphamBll.Load_SanPham(); 
+            // Kiểm tra tên sản phẩm trùng
+            foreach (DataRow row in dtSanPham.Rows)
+            {
+                string tenSanPhamRow = row["TenSanPham"].ToString().Trim();
+                int maSPRow = Convert.ToInt32(row["MaSP"].ToString().Trim());
+
+                if (tenSanPhamRow == tenSanPham.Trim() && maSPRow != maSP)
+                {
+                    return true; 
+                }
+            }
+            return false; 
+        }
 
         // Tìm sp
         private void SearchProduct()
@@ -141,6 +157,14 @@ namespace UEH_ChaCorner.Home
                     oldDonGia == newDonGia)
                 {
                     MessageBox.Show("Bạn chưa thay đổi thông tin gì.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                // Kiểm tra tên sản phẩm đã tồn tại trong cơ sở dữ liệu
+                bool isTenSanPhamExist = KiemTraTenSanPhamExist(newTenSanPham, maSP);
+                if (isTenSanPhamExist)
+                {
+                    MessageBox.Show("Tên sản phẩm này đã tồn tại. Vui lòng chọn tên khác.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -228,6 +252,15 @@ namespace UEH_ChaCorner.Home
             if (string.IsNullOrWhiteSpace(txttensp.Text) || string.IsNullOrWhiteSpace(txtgia.Text) || cbbMaDMSP.SelectedItem == null)
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ thông tin.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string newTenSanPham = txttensp.Text.Trim();           
+            // Kiểm tra tên sản phẩm đã tồn tại trong cơ sở dữ liệu
+            bool isTenSanPhamExist = KiemTraTenSanPhamExist(newTenSanPham, 0); 
+            if (isTenSanPhamExist)
+            {
+                MessageBox.Show("Tên sản phẩm này đã tồn tại. Vui lòng chọn tên khác cho sản phẩm mới.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
