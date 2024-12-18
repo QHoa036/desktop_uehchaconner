@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FMenu));
             this.panelRight = new Guna.UI2.WinForms.Guna2Panel();
             this.grStaffList = new Guna.UI2.WinForms.Guna2GradientPanel();
@@ -95,27 +95,27 @@
             // 
             // dgvsanpham
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvsanpham.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.dgvsanpham.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvsanpham.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvsanpham.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvsanpham.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvsanpham.ColumnHeadersHeight = 40;
             this.dgvsanpham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(28)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(212)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvsanpham.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(28)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(212)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvsanpham.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvsanpham.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvsanpham.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.dgvsanpham.Location = new System.Drawing.Point(0, 75);
@@ -205,7 +205,7 @@
             this.txtSearch.Padding = new System.Windows.Forms.Padding(30);
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.Black;
-            this.txtSearch.PlaceholderText = "Nhập món ăn tại đây";
+            this.txtSearch.PlaceholderText = "Nhập món tại đây";
             this.txtSearch.SelectedText = "";
             this.txtSearch.Size = new System.Drawing.Size(353, 50);
             this.txtSearch.TabIndex = 39;
@@ -222,7 +222,7 @@
             this.lbTitle5.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
             this.lbTitle5.Size = new System.Drawing.Size(299, 75);
             this.lbTitle5.TabIndex = 38;
-            this.lbTitle5.Text = "Danh sách nhân viên";
+            this.lbTitle5.Text = "Danh sách thực đơn";
             this.lbTitle5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // grStaff
@@ -250,7 +250,7 @@
             this.grStaff.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(7, 0, 0, 7);
             this.grStaff.Size = new System.Drawing.Size(650, 280);
             this.grStaff.TabIndex = 99;
-            this.grStaff.Text = "Thông tin nhân viên";
+            this.grStaff.Text = "Thông tin thực đơn";
             this.grStaff.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.grStaff.UseTransparentBackground = true;
             // 
