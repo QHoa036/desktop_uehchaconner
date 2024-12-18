@@ -34,6 +34,7 @@
             this.panelRight = new Guna.UI2.WinForms.Guna2Panel();
             this.grStaffList = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.dgvStaff = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.panelGrStaffListFooter = new Guna.UI2.WinForms.Guna2Panel();
             this.panelGrStaffListHeader = new Guna.UI2.WinForms.Guna2Panel();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbTitle5 = new System.Windows.Forms.Label();
@@ -49,7 +50,6 @@
             this.btXoa = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btSua = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panelLeft = new System.Windows.Forms.Panel();
-            this.panelGrStaffListFooter = new Guna.UI2.WinForms.Guna2Panel();
             this.panelRight.SuspendLayout();
             this.grStaffList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
@@ -151,6 +151,21 @@
             this.dgvStaff.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(233)))), ((int)(((byte)(239)))));
             this.dgvStaff.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.dgvStaff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStaff_CellClick);
+            // 
+            // panelGrStaffListFooter
+            // 
+            this.panelGrStaffListFooter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
+            this.panelGrStaffListFooter.BorderRadius = 24;
+            this.panelGrStaffListFooter.CustomizableEdges.TopLeft = false;
+            this.panelGrStaffListFooter.CustomizableEdges.TopRight = false;
+            this.panelGrStaffListFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelGrStaffListFooter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
+            this.panelGrStaffListFooter.ForeColor = System.Drawing.Color.White;
+            this.panelGrStaffListFooter.Location = new System.Drawing.Point(0, 451);
+            this.panelGrStaffListFooter.Margin = new System.Windows.Forms.Padding(2);
+            this.panelGrStaffListFooter.Name = "panelGrStaffListFooter";
+            this.panelGrStaffListFooter.Size = new System.Drawing.Size(1394, 29);
+            this.panelGrStaffListFooter.TabIndex = 44;
             // 
             // panelGrStaffListHeader
             // 
@@ -458,21 +473,6 @@
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(1425, 302);
             this.panelLeft.TabIndex = 22;
-            // 
-            // panelGrStaffListFooter
-            // 
-            this.panelGrStaffListFooter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
-            this.panelGrStaffListFooter.BorderRadius = 24;
-            this.panelGrStaffListFooter.CustomizableEdges.TopLeft = false;
-            this.panelGrStaffListFooter.CustomizableEdges.TopRight = false;
-            this.panelGrStaffListFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelGrStaffListFooter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
-            this.panelGrStaffListFooter.ForeColor = System.Drawing.Color.White;
-            this.panelGrStaffListFooter.Location = new System.Drawing.Point(0, 451);
-            this.panelGrStaffListFooter.Margin = new System.Windows.Forms.Padding(2);
-            this.panelGrStaffListFooter.Name = "panelGrStaffListFooter";
-            this.panelGrStaffListFooter.Size = new System.Drawing.Size(1394, 29);
-            this.panelGrStaffListFooter.TabIndex = 44;
             // 
             // FStaff
             // 

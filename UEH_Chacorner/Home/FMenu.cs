@@ -21,7 +21,7 @@ namespace UEH_ChaCorner.Home
         {
             InitializeComponent();
         }
-        #region Method
+
         private void LoadProductList()
         {
             LoadComboBoxMaDMSP();
@@ -195,10 +195,6 @@ namespace UEH_ChaCorner.Home
             }
         }
 
-
-        #endregion
-
-        #region Event
         // Event Load form
         private void FMenu_Load(object sender, EventArgs e)
         {
@@ -299,8 +295,11 @@ namespace UEH_ChaCorner.Home
         {
             EditProduct();         
         }
-    
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            SearchProduct();
+        }
     }
-    #endregion
 }
 
