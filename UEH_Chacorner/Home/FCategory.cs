@@ -89,7 +89,7 @@ namespace UEH_ChaCorner.Home
             bool isTenSanPhamExist = KiemTraTenSanPhamExist(newTenSanPham, 0);
             if (isTenSanPhamExist)
             {
-                MessageBox.Show("Tên sản phẩm này đã tồn tại. Vui lòng chọn tên khác cho sản phẩm mới.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Tên danh mục sản phẩm này đã tồn tại. Vui lòng chọn tên khác cho sản phẩm mới.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -101,12 +101,12 @@ namespace UEH_ChaCorner.Home
             int result = _danhMucBll.Insert_DanhMucSanPham(sanPham);
             if (result > 0)
             {
-                MessageBox.Show("Sản phẩm đã được thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Danh mục sản phẩm đã được thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadCategoryList(); // Refresh danh sách sản phẩm
             }
             else
             {
-                MessageBox.Show("Thêm sản phẩm thất bại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Thêm danh mục sản phẩm thất bại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -124,7 +124,7 @@ namespace UEH_ChaCorner.Home
                 // Kiểm tra nếu các ô nhập liệu trống
                 if ( string.IsNullOrWhiteSpace(newTenSanPham))
                 {
-                    MessageBox.Show("Bạn chưa chọn sản phẩm cần sửa.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Bạn chưa chọn danh mục sản phẩm cần sửa.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -132,7 +132,7 @@ namespace UEH_ChaCorner.Home
                 bool isTenSanPhamExist = KiemTraTenSanPhamExist(newTenSanPham, oldMaDMSP);
                 if (isTenSanPhamExist)
                 {
-                    MessageBox.Show("Tên sản phẩm này đã tồn tại. Vui lòng chọn tên khác.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Tên danh mục sản phẩm này đã tồn tại. Vui lòng chọn tên khác.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -147,17 +147,17 @@ namespace UEH_ChaCorner.Home
                 int result = _danhMucBll.Update_DanhMucSanPham(product);
                 if (result > 0)
                 {
-                    MessageBox.Show("Thông tin sản phẩm đã được cập nhật.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Thông tin danh mục sản phẩm đã được cập nhật.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     LoadCategoryList(); // Refresh danh sách sản phẩm
                 }
                 else
                 {
-                    MessageBox.Show("Không thể cập nhật thông tin sản phẩm.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Không thể cập nhật thông tin danh mục sản phẩm.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Chọn sản phẩm cần chỉnh sửa.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Chọn danh mục sản phẩm cần chỉnh sửa.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -174,22 +174,22 @@ namespace UEH_ChaCorner.Home
 
                     if (result > 0)
                     {
-                        MessageBox.Show("Sản phẩm đã được xóa thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Danh mục sản phẩm đã được xóa thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LoadCategoryList();
                     }
                     else
                     {
-                        MessageBox.Show("Không thể xóa sản phẩm.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Không thể xóa danh mục sản phẩm.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Vui lòng chọn một sản phẩm để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Vui lòng chọn một danh mục sản phẩm để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch
             {
-                MessageBox.Show("Không thể xóa sản phẩm (Do lỗi khóa ngoại với bảng SanPham).", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Không thể xóa danh mục sản phẩm (Do lỗi khóa ngoại với bảng SanPham).", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
