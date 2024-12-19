@@ -67,6 +67,7 @@ namespace UEH_ChaCorner
             if (string.Equals(quyennv.ToLower(), "admin", StringComparison.OrdinalIgnoreCase))
             {
                 btHome.Visible = true;
+                btCategory.Visible = true;
                 btAccount.Visible = true;
                 btStaff.Visible = true;
                 btStatistic.Visible = true;
