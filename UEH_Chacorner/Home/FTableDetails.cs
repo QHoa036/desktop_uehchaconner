@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
 using BLL;
 using DTO;
 
@@ -15,17 +8,25 @@ namespace UEH_Chacorner.Home
 {
     public partial class FTableDetails : Form
     {
+        private Panel _panel;
+
         private readonly SANPHAM_BLL _sanPhamBll = new SANPHAM_BLL();
         private readonly HOADON_BLL _hoadonBll = new HOADON_BLL();
         private readonly CTHD_BLL _cthdBll = new CTHD_BLL();
+
         private readonly int _maBan;
         private readonly int _maHD;
+        private readonly string _maNV;
 
-        public FTableDetails(int maBan, int maHD)
+        public FTableDetails(int maBan, int maHD, string maNV, Panel panel)
         {
             InitializeComponent();
+
+            // Gán giá trị từ Form Table
             _maBan = maBan;
+            _maNV = maNV;
             _maHD = maHD;
+            _panel = panel;
         }
         private void LoadDataGrid_SanPham()
         {
@@ -56,6 +57,7 @@ namespace UEH_Chacorner.Home
             // Gán dữ liệu vào DataGridView
             dgvCTHD.DataSource = bindingSourceCTHD;
 
+            // Tính tổng tiền
             TinhTongTien();
         }
 
@@ -102,7 +104,7 @@ namespace UEH_Chacorner.Home
             {
                 MaHD = Convert.ToInt32(txtMaHD.Text),
                 MaBan = _maBan,
-                MaNV = "00579",
+                MaNV = _maNV,
                 NgayLap = DateTime.Now,
                 TrangThai = "Đã Thanh Toán"
             };
@@ -123,7 +125,7 @@ namespace UEH_Chacorner.Home
         private void FTableDetails_Load(object sender, EventArgs e)
         {
             // Hiển thị mã hóa đơn trên Label
-            lbTitle5.Text = $"Thực đơn Bàn {_maBan}";
+            lbTable.Text = $"Thực đơn Bàn {_maBan}";
             txtMaHD.Text = _maHD.ToString();
 
             LoadDataGrid_SanPham();
@@ -185,7 +187,9 @@ namespace UEH_Chacorner.Home
         {
             if (e.RowIndex >= 0)
             {
+                // Lấy dòng hiện tại
                 DataGridViewRow row = dgvSanPham.Rows[e.RowIndex];
+
                 // Hiển thị thông tin vào các textbox
                 txtMaSP.Text = row.Cells["MaSP"].Value.ToString();
             }
@@ -330,6 +334,12 @@ namespace UEH_Chacorner.Home
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
             ThanhToan();
+        }
+
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            _panel.SendToBack();
+            _panel.Controls.Clear();
         }
     }
 }

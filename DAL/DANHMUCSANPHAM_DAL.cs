@@ -61,6 +61,5 @@ namespace DAL
             var sql = "DELETE_DanhMucSanPham";
             return _conn.ExecuteData(sql, name, values, parameter);
         }
-        
     }
 }

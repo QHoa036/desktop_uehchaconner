@@ -29,21 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FTable));
-            this.bindingSourceBan = new System.Windows.Forms.BindingSource(this.components);
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.numThuTu = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.cbbTrangThai = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.panelRight = new Guna.UI2.WinForms.Guna2Panel();
-            this.grStaffList = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.dgvBan = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.panelGrStaffListFooter = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.panelGrStaffListHeader = new Guna.UI2.WinForms.Guna2Panel();
-            this.lbTitle5 = new System.Windows.Forms.Label();
-            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.btThem = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btSua = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btXoa = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -52,24 +43,32 @@
             this.lbTenNV = new System.Windows.Forms.Label();
             this.txtTenBan = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            this.cbbTrangThai = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.btnTatCa = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btTrong = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnCoNguoi = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceBan)).BeginInit();
+            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.panelGrStaffListHeader = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbTitle5 = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.dgvBan = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.panelGrStaffListFooter = new Guna.UI2.WinForms.Guna2Panel();
+            this.grStaffList = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.bindingSourceBan = new System.Windows.Forms.BindingSource(this.components);
+            this.panelChildForm = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)(this.numThuTu)).BeginInit();
-            this.panelRight.SuspendLayout();
-            this.grStaffList.SuspendLayout();
+            this.guna2Panel6.SuspendLayout();
+            this.guna2Panel5.SuspendLayout();
+            this.guna2Panel3.SuspendLayout();
+            this.guna2Panel4.SuspendLayout();
+            this.panelGrStaffListHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBan)).BeginInit();
             this.panelGrStaffListFooter.SuspendLayout();
-            this.panelGrStaffListHeader.SuspendLayout();
-            this.guna2Panel4.SuspendLayout();
-            this.guna2Panel6.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
-            this.guna2Panel3.SuspendLayout();
+            this.grStaffList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceBan)).BeginInit();
             this.SuspendLayout();
             // 
             // numThuTu
@@ -92,199 +91,19 @@
             0,
             0});
             // 
-            // cbbTrangThai
+            // label2
             // 
-            this.cbbTrangThai.BackColor = System.Drawing.Color.Transparent;
-            this.cbbTrangThai.BorderRadius = 4;
-            this.cbbTrangThai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cbbTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbTrangThai.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbTrangThai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbbTrangThai.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbbTrangThai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbbTrangThai.ItemHeight = 30;
-            this.cbbTrangThai.Location = new System.Drawing.Point(20, 217);
-            this.cbbTrangThai.Margin = new System.Windows.Forms.Padding(4);
-            this.cbbTrangThai.Name = "cbbTrangThai";
-            this.cbbTrangThai.Size = new System.Drawing.Size(822, 36);
-            this.cbbTrangThai.TabIndex = 35;
-            // 
-            // panelRight
-            // 
-            this.panelRight.BackColor = System.Drawing.Color.Transparent;
-            this.panelRight.Controls.Add(this.grStaffList);
-            this.panelRight.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelRight.Location = new System.Drawing.Point(0, 0);
-            this.panelRight.Margin = new System.Windows.Forms.Padding(4);
-            this.panelRight.Name = "panelRight";
-            this.panelRight.Size = new System.Drawing.Size(1425, 434);
-            this.panelRight.TabIndex = 102;
-            // 
-            // grStaffList
-            // 
-            this.grStaffList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.grStaffList.BackColor = System.Drawing.Color.Transparent;
-            this.grStaffList.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
-            this.grStaffList.BorderRadius = 24;
-            this.grStaffList.BorderThickness = 1;
-            this.grStaffList.Controls.Add(this.dgvBan);
-            this.grStaffList.Controls.Add(this.panelGrStaffListFooter);
-            this.grStaffList.Controls.Add(this.panelGrStaffListHeader);
-            this.grStaffList.FillColor = System.Drawing.Color.White;
-            this.grStaffList.FillColor2 = System.Drawing.Color.White;
-            this.grStaffList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            this.grStaffList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(28)))), ((int)(((byte)(20)))));
-            this.grStaffList.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.grStaffList.Location = new System.Drawing.Point(15, 10);
-            this.grStaffList.Margin = new System.Windows.Forms.Padding(4);
-            this.grStaffList.Name = "grStaffList";
-            this.grStaffList.ShadowDecoration.BorderRadius = 30;
-            this.grStaffList.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(68)))), ((int)(((byte)(54)))));
-            this.grStaffList.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 10, 10);
-            this.grStaffList.Size = new System.Drawing.Size(1394, 414);
-            this.grStaffList.TabIndex = 99;
-            // 
-            // dgvBan
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvBan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvBan.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(77)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvBan.ColumnHeadersHeight = 40;
-            this.dgvBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(28)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(212)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBan.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvBan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvBan.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
-            this.dgvBan.Location = new System.Drawing.Point(0, 75);
-            this.dgvBan.Margin = new System.Windows.Forms.Padding(20);
-            this.dgvBan.Name = "dgvBan";
-            this.dgvBan.ReadOnly = true;
-            this.dgvBan.RowHeadersVisible = false;
-            this.dgvBan.RowHeadersWidth = 50;
-            this.dgvBan.RowTemplate.Height = 40;
-            this.dgvBan.Size = new System.Drawing.Size(1394, 310);
-            this.dgvBan.TabIndex = 46;
-            this.dgvBan.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvBan.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvBan.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvBan.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvBan.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvBan.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvBan.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
-            this.dgvBan.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(111)))), ((int)(((byte)(42)))));
-            this.dgvBan.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvBan.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvBan.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvBan.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.dgvBan.ThemeStyle.HeaderStyle.Height = 40;
-            this.dgvBan.ThemeStyle.ReadOnly = true;
-            this.dgvBan.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvBan.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
-            this.dgvBan.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvBan.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
-            this.dgvBan.ThemeStyle.RowsStyle.Height = 40;
-            this.dgvBan.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(233)))), ((int)(((byte)(239)))));
-            this.dgvBan.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
-            this.dgvBan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBan_CellClick_1);
-            this.dgvBan.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBan_CellDoubleClick);
-            // 
-            // panelGrStaffListFooter
-            // 
-            this.panelGrStaffListFooter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
-            this.panelGrStaffListFooter.BorderRadius = 24;
-            this.panelGrStaffListFooter.Controls.Add(this.guna2Panel1);
-            this.panelGrStaffListFooter.CustomizableEdges.TopLeft = false;
-            this.panelGrStaffListFooter.CustomizableEdges.TopRight = false;
-            this.panelGrStaffListFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelGrStaffListFooter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
-            this.panelGrStaffListFooter.ForeColor = System.Drawing.Color.White;
-            this.panelGrStaffListFooter.Location = new System.Drawing.Point(0, 385);
-            this.panelGrStaffListFooter.Margin = new System.Windows.Forms.Padding(2);
-            this.panelGrStaffListFooter.Name = "panelGrStaffListFooter";
-            this.panelGrStaffListFooter.Size = new System.Drawing.Size(1394, 29);
-            this.panelGrStaffListFooter.TabIndex = 44;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
-            this.guna2Panel1.BorderRadius = 24;
-            this.guna2Panel1.CustomizableEdges.TopLeft = false;
-            this.guna2Panel1.CustomizableEdges.TopRight = false;
-            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
-            this.guna2Panel1.ForeColor = System.Drawing.Color.White;
-            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1394, 29);
-            this.guna2Panel1.TabIndex = 45;
-            // 
-            // panelGrStaffListHeader
-            // 
-            this.panelGrStaffListHeader.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
-            this.panelGrStaffListHeader.BorderRadius = 24;
-            this.panelGrStaffListHeader.Controls.Add(this.lbTitle5);
-            this.panelGrStaffListHeader.CustomizableEdges.BottomLeft = false;
-            this.panelGrStaffListHeader.CustomizableEdges.BottomRight = false;
-            this.panelGrStaffListHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelGrStaffListHeader.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
-            this.panelGrStaffListHeader.ForeColor = System.Drawing.Color.White;
-            this.panelGrStaffListHeader.Location = new System.Drawing.Point(0, 0);
-            this.panelGrStaffListHeader.Margin = new System.Windows.Forms.Padding(4);
-            this.panelGrStaffListHeader.Name = "panelGrStaffListHeader";
-            this.panelGrStaffListHeader.Size = new System.Drawing.Size(1394, 75);
-            this.panelGrStaffListHeader.TabIndex = 43;
-            // 
-            // lbTitle5
-            // 
-            this.lbTitle5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbTitle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitle5.ForeColor = System.Drawing.Color.White;
-            this.lbTitle5.Location = new System.Drawing.Point(0, 0);
-            this.lbTitle5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbTitle5.Name = "lbTitle5";
-            this.lbTitle5.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.lbTitle5.Size = new System.Drawing.Size(299, 75);
-            this.lbTitle5.TabIndex = 38;
-            this.lbTitle5.Text = "Danh sách bàn";
-            this.lbTitle5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // guna2Panel4
-            // 
-            this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel4.BorderRadius = 24;
-            this.guna2Panel4.Controls.Add(this.btThem);
-            this.guna2Panel4.Controls.Add(this.btSua);
-            this.guna2Panel4.Controls.Add(this.btXoa);
-            this.guna2Panel4.Controls.Add(this.label1);
-            this.guna2Panel4.Controls.Add(this.lbHoten);
-            this.guna2Panel4.Controls.Add(this.lbTenNV);
-            this.guna2Panel4.Controls.Add(this.txtTenBan);
-            this.guna2Panel4.Controls.Add(this.guna2Panel6);
-            this.guna2Panel4.Controls.Add(this.cbbTrangThai);
-            this.guna2Panel4.Controls.Add(this.numThuTu);
-            this.guna2Panel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(233)))), ((int)(((byte)(239)))));
-            this.guna2Panel4.Location = new System.Drawing.Point(15, 432);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(980, 376);
-            this.guna2Panel4.TabIndex = 108;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.label2.Size = new System.Drawing.Size(980, 75);
+            this.label2.TabIndex = 38;
+            this.label2.Text = "Thông tin bàn";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btThem
             // 
@@ -297,7 +116,7 @@
             this.btThem.ImageOffset = new System.Drawing.Point(0, 0);
             this.btThem.ImageRotate = 0F;
             this.btThem.ImageSize = new System.Drawing.Size(50, 50);
-            this.btThem.Location = new System.Drawing.Point(872, 91);
+            this.btThem.Location = new System.Drawing.Point(872, 82);
             this.btThem.Margin = new System.Windows.Forms.Padding(2);
             this.btThem.Name = "btThem";
             this.btThem.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
@@ -318,7 +137,7 @@
             this.btSua.ImageOffset = new System.Drawing.Point(0, 0);
             this.btSua.ImageRotate = 0F;
             this.btSua.ImageSize = new System.Drawing.Size(50, 50);
-            this.btSua.Location = new System.Drawing.Point(872, 183);
+            this.btSua.Location = new System.Drawing.Point(872, 174);
             this.btSua.Margin = new System.Windows.Forms.Padding(2);
             this.btSua.Name = "btSua";
             this.btSua.PressedState.Image = global::UEH_ChaCorner.Properties.Resources.edit___hover;
@@ -339,7 +158,7 @@
             this.btXoa.ImageOffset = new System.Drawing.Point(0, 0);
             this.btXoa.ImageRotate = 0F;
             this.btXoa.ImageSize = new System.Drawing.Size(50, 50);
-            this.btXoa.Location = new System.Drawing.Point(872, 275);
+            this.btXoa.Location = new System.Drawing.Point(872, 266);
             this.btXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btXoa.Name = "btXoa";
             this.btXoa.PressedState.Image = global::UEH_ChaCorner.Properties.Resources.delete___hover;
@@ -426,34 +245,57 @@
             this.guna2Panel6.Size = new System.Drawing.Size(980, 75);
             this.guna2Panel6.TabIndex = 103;
             // 
-            // label2
+            // guna2Panel5
             // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.label2.Size = new System.Drawing.Size(980, 75);
-            this.label2.TabIndex = 38;
-            this.label2.Text = "Thông tin bàn";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.guna2Panel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel5.BorderRadius = 24;
+            this.guna2Panel5.Controls.Add(this.btThem);
+            this.guna2Panel5.Controls.Add(this.btSua);
+            this.guna2Panel5.Controls.Add(this.btXoa);
+            this.guna2Panel5.Controls.Add(this.label1);
+            this.guna2Panel5.Controls.Add(this.lbHoten);
+            this.guna2Panel5.Controls.Add(this.lbTenNV);
+            this.guna2Panel5.Controls.Add(this.txtTenBan);
+            this.guna2Panel5.Controls.Add(this.guna2Panel6);
+            this.guna2Panel5.Controls.Add(this.cbbTrangThai);
+            this.guna2Panel5.Controls.Add(this.numThuTu);
+            this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(233)))), ((int)(((byte)(239)))));
+            this.guna2Panel5.Location = new System.Drawing.Point(15, 429);
+            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel5.Name = "guna2Panel5";
+            this.guna2Panel5.Size = new System.Drawing.Size(980, 358);
+            this.guna2Panel5.TabIndex = 115;
             // 
-            // guna2Panel2
+            // cbbTrangThai
             // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel2.BorderRadius = 24;
-            this.guna2Panel2.Controls.Add(this.btnTatCa);
-            this.guna2Panel2.Controls.Add(this.btTrong);
-            this.guna2Panel2.Controls.Add(this.btnCoNguoi);
-            this.guna2Panel2.Controls.Add(this.guna2Panel3);
-            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(233)))), ((int)(((byte)(239)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(1015, 432);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(383, 372);
-            this.guna2Panel2.TabIndex = 109;
+            this.cbbTrangThai.BackColor = System.Drawing.Color.Transparent;
+            this.cbbTrangThai.BorderRadius = 4;
+            this.cbbTrangThai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbbTrangThai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbTrangThai.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbTrangThai.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbbTrangThai.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbTrangThai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbbTrangThai.ItemHeight = 30;
+            this.cbbTrangThai.Location = new System.Drawing.Point(20, 217);
+            this.cbbTrangThai.Margin = new System.Windows.Forms.Padding(4);
+            this.cbbTrangThai.Name = "cbbTrangThai";
+            this.cbbTrangThai.Size = new System.Drawing.Size(822, 36);
+            this.cbbTrangThai.TabIndex = 35;
+            // 
+            // label5
+            // 
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(0, 0);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.label5.Size = new System.Drawing.Size(383, 75);
+            this.label5.TabIndex = 38;
+            this.label5.Text = "Lọc bàn";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnTatCa
             // 
@@ -481,7 +323,7 @@
             this.btnTatCa.ShadowDecoration.Depth = 8;
             this.btnTatCa.ShadowDecoration.Enabled = true;
             this.btnTatCa.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 4, 4);
-            this.btnTatCa.Size = new System.Drawing.Size(340, 60);
+            this.btnTatCa.Size = new System.Drawing.Size(340, 50);
             this.btnTatCa.TabIndex = 110;
             this.btnTatCa.Text = "Tất cả";
             this.btnTatCa.UseTransparentBackground = true;
@@ -503,7 +345,7 @@
             this.btTrong.HoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btTrong.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
             this.btTrong.ImageSize = new System.Drawing.Size(30, 30);
-            this.btTrong.Location = new System.Drawing.Point(24, 194);
+            this.btTrong.Location = new System.Drawing.Point(24, 193);
             this.btTrong.Margin = new System.Windows.Forms.Padding(5);
             this.btTrong.Name = "btTrong";
             this.btTrong.Padding = new System.Windows.Forms.Padding(2);
@@ -513,7 +355,7 @@
             this.btTrong.ShadowDecoration.Depth = 8;
             this.btTrong.ShadowDecoration.Enabled = true;
             this.btTrong.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 4, 4);
-            this.btTrong.Size = new System.Drawing.Size(340, 60);
+            this.btTrong.Size = new System.Drawing.Size(340, 50);
             this.btTrong.TabIndex = 104;
             this.btTrong.Text = "Trống";
             this.btTrong.UseTransparentBackground = true;
@@ -545,7 +387,7 @@
             this.btnCoNguoi.ShadowDecoration.Depth = 8;
             this.btnCoNguoi.ShadowDecoration.Enabled = true;
             this.btnCoNguoi.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 4, 4);
-            this.btnCoNguoi.Size = new System.Drawing.Size(340, 60);
+            this.btnCoNguoi.Size = new System.Drawing.Size(340, 50);
             this.btnCoNguoi.TabIndex = 47;
             this.btnCoNguoi.Text = "Có người";
             this.btnCoNguoi.UseTransparentBackground = true;
@@ -553,33 +395,187 @@
             // 
             // guna2Panel3
             // 
-            this.guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
+            this.guna2Panel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel3.BorderRadius = 24;
-            this.guna2Panel3.Controls.Add(this.label5);
-            this.guna2Panel3.CustomizableEdges.BottomLeft = false;
-            this.guna2Panel3.CustomizableEdges.BottomRight = false;
-            this.guna2Panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
-            this.guna2Panel3.ForeColor = System.Drawing.Color.White;
-            this.guna2Panel3.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel3.Controls.Add(this.btnTatCa);
+            this.guna2Panel3.Controls.Add(this.btTrong);
+            this.guna2Panel3.Controls.Add(this.btnCoNguoi);
+            this.guna2Panel3.Controls.Add(this.guna2Panel4);
+            this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(233)))), ((int)(((byte)(239)))));
+            this.guna2Panel3.Location = new System.Drawing.Point(1015, 429);
             this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(383, 75);
-            this.guna2Panel3.TabIndex = 103;
+            this.guna2Panel3.Size = new System.Drawing.Size(383, 358);
+            this.guna2Panel3.TabIndex = 116;
             // 
-            // label5
+            // guna2Panel4
             // 
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(0, 0);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
-            this.label5.Size = new System.Drawing.Size(383, 75);
-            this.label5.TabIndex = 38;
-            this.label5.Text = "Lọc bàn";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.guna2Panel4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
+            this.guna2Panel4.BorderRadius = 24;
+            this.guna2Panel4.Controls.Add(this.label5);
+            this.guna2Panel4.CustomizableEdges.BottomLeft = false;
+            this.guna2Panel4.CustomizableEdges.BottomRight = false;
+            this.guna2Panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
+            this.guna2Panel4.ForeColor = System.Drawing.Color.White;
+            this.guna2Panel4.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.Size = new System.Drawing.Size(383, 75);
+            this.guna2Panel4.TabIndex = 103;
+            // 
+            // panelGrStaffListHeader
+            // 
+            this.panelGrStaffListHeader.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
+            this.panelGrStaffListHeader.BorderRadius = 24;
+            this.panelGrStaffListHeader.Controls.Add(this.lbTitle5);
+            this.panelGrStaffListHeader.CustomizableEdges.BottomLeft = false;
+            this.panelGrStaffListHeader.CustomizableEdges.BottomRight = false;
+            this.panelGrStaffListHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelGrStaffListHeader.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
+            this.panelGrStaffListHeader.ForeColor = System.Drawing.Color.White;
+            this.panelGrStaffListHeader.Location = new System.Drawing.Point(0, 0);
+            this.panelGrStaffListHeader.Margin = new System.Windows.Forms.Padding(4);
+            this.panelGrStaffListHeader.Name = "panelGrStaffListHeader";
+            this.panelGrStaffListHeader.Size = new System.Drawing.Size(1394, 75);
+            this.panelGrStaffListHeader.TabIndex = 43;
+            // 
+            // lbTitle5
+            // 
+            this.lbTitle5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lbTitle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitle5.ForeColor = System.Drawing.Color.White;
+            this.lbTitle5.Location = new System.Drawing.Point(0, 0);
+            this.lbTitle5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbTitle5.Name = "lbTitle5";
+            this.lbTitle5.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.lbTitle5.Size = new System.Drawing.Size(299, 75);
+            this.lbTitle5.TabIndex = 38;
+            this.lbTitle5.Text = "Danh sách bàn";
+            this.lbTitle5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
+            this.guna2Panel1.BorderRadius = 24;
+            this.guna2Panel1.CustomizableEdges.TopLeft = false;
+            this.guna2Panel1.CustomizableEdges.TopRight = false;
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
+            this.guna2Panel1.ForeColor = System.Drawing.Color.White;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1394, 29);
+            this.guna2Panel1.TabIndex = 45;
+            // 
+            // dgvBan
+            // 
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.dgvBan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvBan.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(77)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvBan.ColumnHeadersHeight = 40;
+            this.dgvBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(28)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(212)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvBan.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvBan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvBan.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
+            this.dgvBan.Location = new System.Drawing.Point(0, 75);
+            this.dgvBan.Margin = new System.Windows.Forms.Padding(20);
+            this.dgvBan.Name = "dgvBan";
+            this.dgvBan.ReadOnly = true;
+            this.dgvBan.RowHeadersVisible = false;
+            this.dgvBan.RowHeadersWidth = 50;
+            this.dgvBan.RowTemplate.Height = 40;
+            this.dgvBan.Size = new System.Drawing.Size(1394, 282);
+            this.dgvBan.TabIndex = 46;
+            this.dgvBan.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvBan.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvBan.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvBan.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvBan.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvBan.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dgvBan.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
+            this.dgvBan.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(111)))), ((int)(((byte)(42)))));
+            this.dgvBan.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvBan.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvBan.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvBan.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvBan.ThemeStyle.HeaderStyle.Height = 40;
+            this.dgvBan.ThemeStyle.ReadOnly = true;
+            this.dgvBan.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvBan.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
+            this.dgvBan.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvBan.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
+            this.dgvBan.ThemeStyle.RowsStyle.Height = 40;
+            this.dgvBan.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(233)))), ((int)(((byte)(239)))));
+            this.dgvBan.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
+            this.dgvBan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBan_CellClick);
+            this.dgvBan.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBan_CellDoubleClick);
+            // 
+            // panelGrStaffListFooter
+            // 
+            this.panelGrStaffListFooter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
+            this.panelGrStaffListFooter.BorderRadius = 24;
+            this.panelGrStaffListFooter.Controls.Add(this.guna2Panel1);
+            this.panelGrStaffListFooter.CustomizableEdges.TopLeft = false;
+            this.panelGrStaffListFooter.CustomizableEdges.TopRight = false;
+            this.panelGrStaffListFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelGrStaffListFooter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
+            this.panelGrStaffListFooter.ForeColor = System.Drawing.Color.White;
+            this.panelGrStaffListFooter.Location = new System.Drawing.Point(0, 357);
+            this.panelGrStaffListFooter.Margin = new System.Windows.Forms.Padding(2);
+            this.panelGrStaffListFooter.Name = "panelGrStaffListFooter";
+            this.panelGrStaffListFooter.Size = new System.Drawing.Size(1394, 29);
+            this.panelGrStaffListFooter.TabIndex = 44;
+            // 
+            // grStaffList
+            // 
+            this.grStaffList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grStaffList.BackColor = System.Drawing.Color.Transparent;
+            this.grStaffList.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(95)))), ((int)(((byte)(105)))));
+            this.grStaffList.BorderRadius = 24;
+            this.grStaffList.BorderThickness = 1;
+            this.grStaffList.Controls.Add(this.dgvBan);
+            this.grStaffList.Controls.Add(this.panelGrStaffListFooter);
+            this.grStaffList.Controls.Add(this.panelGrStaffListHeader);
+            this.grStaffList.FillColor = System.Drawing.Color.White;
+            this.grStaffList.FillColor2 = System.Drawing.Color.White;
+            this.grStaffList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F);
+            this.grStaffList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(28)))), ((int)(((byte)(20)))));
+            this.grStaffList.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.grStaffList.Location = new System.Drawing.Point(15, 25);
+            this.grStaffList.Margin = new System.Windows.Forms.Padding(4);
+            this.grStaffList.Name = "grStaffList";
+            this.grStaffList.ShadowDecoration.BorderRadius = 30;
+            this.grStaffList.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(68)))), ((int)(((byte)(54)))));
+            this.grStaffList.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 10, 10);
+            this.grStaffList.Size = new System.Drawing.Size(1394, 386);
+            this.grStaffList.TabIndex = 114;
+            // 
+            // panelChildForm
+            // 
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(0, 0);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(1425, 812);
+            this.panelChildForm.TabIndex = 117;
             // 
             // FTable
             // 
@@ -587,56 +583,57 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1425, 812);
-            this.Controls.Add(this.guna2Panel2);
-            this.Controls.Add(this.guna2Panel4);
-            this.Controls.Add(this.panelRight);
+            this.Controls.Add(this.guna2Panel5);
+            this.Controls.Add(this.guna2Panel3);
+            this.Controls.Add(this.grStaffList);
+            this.Controls.Add(this.panelChildForm);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FTable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FTable";
             this.Load += new System.EventHandler(this.FTable_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceBan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numThuTu)).EndInit();
-            this.panelRight.ResumeLayout(false);
-            this.grStaffList.ResumeLayout(false);
+            this.guna2Panel6.ResumeLayout(false);
+            this.guna2Panel5.ResumeLayout(false);
+            this.guna2Panel3.ResumeLayout(false);
+            this.guna2Panel4.ResumeLayout(false);
+            this.panelGrStaffListHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBan)).EndInit();
             this.panelGrStaffListFooter.ResumeLayout(false);
-            this.panelGrStaffListHeader.ResumeLayout(false);
-            this.guna2Panel4.ResumeLayout(false);
-            this.guna2Panel6.ResumeLayout(false);
-            this.guna2Panel2.ResumeLayout(false);
-            this.guna2Panel3.ResumeLayout(false);
+            this.grStaffList.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSourceBan)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.BindingSource bindingSourceBan;
+
         private Guna.UI2.WinForms.Guna2NumericUpDown numThuTu;
-        private Guna.UI2.WinForms.Guna2ComboBox cbbTrangThai;
-        private Guna.UI2.WinForms.Guna2Panel panelRight;
-        public Guna.UI2.WinForms.Guna2GradientPanel grStaffList;
-        private Guna.UI2.WinForms.Guna2DataGridView dgvBan;
-        private Guna.UI2.WinForms.Guna2Panel panelGrStaffListFooter;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2Panel panelGrStaffListHeader;
-        private System.Windows.Forms.Label lbTitle5;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2GradientTileButton btnCoNguoi;
-        private Guna.UI2.WinForms.Guna2GradientTileButton btTrong;
-        private Guna.UI2.WinForms.Guna2GradientTileButton btnTatCa;
-        private System.Windows.Forms.Label lbHoten;
-        private System.Windows.Forms.Label lbTenNV;
-        private Guna.UI2.WinForms.Guna2TextBox txtTenBan;
-        private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ImageButton btThem;
         private Guna.UI2.WinForms.Guna2ImageButton btSua;
         private Guna.UI2.WinForms.Guna2ImageButton btXoa;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbHoten;
+        private System.Windows.Forms.Label lbTenNV;
+        private Guna.UI2.WinForms.Guna2TextBox txtTenBan;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
+        private Guna.UI2.WinForms.Guna2ComboBox cbbTrangThai;
+        private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnTatCa;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btTrong;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnCoNguoi;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
+        private Guna.UI2.WinForms.Guna2Panel panelGrStaffListHeader;
+        private System.Windows.Forms.Label lbTitle5;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvBan;
+        private Guna.UI2.WinForms.Guna2Panel panelGrStaffListFooter;
+        public Guna.UI2.WinForms.Guna2GradientPanel grStaffList;
+        private System.Windows.Forms.BindingSource bindingSourceBan;
+        private Guna.UI2.WinForms.Guna2Panel panelChildForm;
     }
 }

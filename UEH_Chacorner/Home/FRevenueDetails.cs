@@ -9,14 +9,19 @@ namespace UEH_ChaCorner.Home
 {
     public partial class FRevenueDetails : Form
     {
-        private readonly int _maHD;
+        private Panel _panel;
+
         private readonly CTHD_BLL _cthdBll = new CTHD_BLL();
         private readonly HOADON_BLL _hoadonBll = new HOADON_BLL();
 
-        public FRevenueDetails(int maHD)
+        private readonly int _maHD;
+
+        public FRevenueDetails(int maHD, Panel panel)
         {
             InitializeComponent();
             _maHD = maHD;
+            _panel = panel;
+
             // Tạo đối tượng DTO
             CTHD_DTO cthdDto = new CTHD_DTO { MaHD = _maHD };
 
@@ -199,6 +204,12 @@ namespace UEH_ChaCorner.Home
         private void btnExportToWord_Click(object sender, EventArgs e)
         {
             PrintBill();
+        }
+
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            _panel.SendToBack();
+            _panel.Controls.Clear();
         }
     }
 }

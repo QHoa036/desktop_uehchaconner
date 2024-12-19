@@ -1,9 +1,10 @@
-﻿using BLL;
-using DTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
+
+using BLL;
+using DTO;
 
 namespace UEH_ChaCorner.Home
 {
@@ -11,6 +12,8 @@ namespace UEH_ChaCorner.Home
     {
         private readonly CTHD_BLL _cthdBll = new CTHD_BLL();
         private readonly HOADON_BLL _hoadonBll = new HOADON_BLL();
+
+        private Form _activeForm;
 
         public FRevenue()
         {
@@ -171,31 +174,6 @@ namespace UEH_ChaCorner.Home
             LoadChartRevenue(); // Tải dữ liệu vào chart
         }
 
-        private void btnXemCTHD_Click(object sender, EventArgs e)
-        {
-            // Kiểm tra xem có dòng nào được chọn không
-            if (dgvHoaDon.CurrentRow == null)
-            {
-                MessageBox.Show("Vui lòng chọn một hóa đơn!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Lấy MaHD từ dòng được chọn
-            int _maHD = Convert.ToInt32(dgvHoaDon.CurrentRow.Cells[0].Value);
-
-            // Mở form chi tiết hóa đơn
-            FRevenueDetails fCTHD = new FRevenueDetails(_maHD);
-            fCTHD.ShowDialog();
-        }
-
-        private void datetimepicker_CloseUp(object sender, EventArgs e)
-        {
-            DateTime selectedDate = datetimepicker.Value.Date;
-
-            // Gọi phương thức lọc
-            FilterDataGridByNgayLap(selectedDate);
-        }
-
         private void btnHienThiTatCa_Click(object sender, EventArgs e)
         {
             LoadDataGrid();  // Gọi lại phương thức load tất cả hóa đơn
@@ -236,8 +214,30 @@ namespace UEH_ChaCorner.Home
             int _maHD = Convert.ToInt32(dgvHoaDon.CurrentRow.Cells[0].Value);
 
             // Mở form chi tiết hóa đơn
-            FRevenueDetails fCTHD = new FRevenueDetails(_maHD);
-            fCTHD.ShowDialog();
+            FRevenueDetails fCTHD = new FRevenueDetails(_maHD, panelChildForm);
+            OpenChildForm(fCTHD);
+        }
+
+        private void OpenChildForm(Form childForm)
+        {
+            _activeForm?.Hide();
+            _activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag = childForm;
+            panelChildForm.BringToFront();
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void datetimepicker_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime selectedDate = datetimepicker.Value.Date;
+
+            // Gọi phương thức lọc
+            FilterDataGridByNgayLap(selectedDate);
         }
     }
 }

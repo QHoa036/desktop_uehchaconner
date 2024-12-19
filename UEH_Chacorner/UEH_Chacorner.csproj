@@ -139,6 +139,12 @@
     <Compile Include="Home\FTableDetails.Designer.cs">
       <DependentUpon>FTableDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home\FTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home\FTest.Designer.cs">
+      <DependentUpon>FTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Auth\FLoading.resx">
@@ -173,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home\FTableDetails.resx">
       <DependentUpon>FTableDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home\FTest.resx">
+      <DependentUpon>FTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.Common;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
 using BLL;
 using DTO;
+
+using UEH_ChaCorner;
 
 namespace UEH_Chacorner.Home
 {
@@ -19,7 +13,10 @@ namespace UEH_Chacorner.Home
         // Khai báo các đối tượng BLL 
         private readonly BAN_BLL _banBll = new BAN_BLL();
         private readonly HOADON_BLL _hoadonBll = new HOADON_BLL();
-        private string _maNV = "00579";
+
+        public string MaNV { get; set; }
+
+        private Form _activeForm;
 
         public FTable()
         {
@@ -106,12 +103,11 @@ namespace UEH_Chacorner.Home
             {
                 Ten = txtTenBan.Text,
                 TrangThai = cbbTrangThai.SelectedItem.ToString(),
-                ThuTu = (int)numThuTu.Value
+                ThuTu = int.TryParse(numThuTu.Value.ToString(), out int ThuTu) ? ThuTu : 0
             };
 
             // Thêm bàn vào DB
             int result = _banBll.insert_ban(newTable);
-
             if (result > 0)
             {
                 MessageBox.Show("Thêm bàn thành công.", "Thông báo");
@@ -131,12 +127,11 @@ namespace UEH_Chacorner.Home
                 int maban = Convert.ToInt32(dgvBan.SelectedRows[0].Cells["MaBan"].Value);
                 var ban = new BAN_DTO { MaBan = maban };
 
-                DialogResult dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa bàn này?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                var dialogResult = MessageBox.Show("Bạn có chắc chắn muốn xóa bàn này?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (dialogResult == DialogResult.Yes)
                 {
                     // Xóa bàn trong bảng Ban
                     int result = _banBll.delete_ban_daxoa(ban);
-
                     if (result > 0)
                     {
                         MessageBox.Show("Bàn đã được xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -258,79 +253,6 @@ namespace UEH_Chacorner.Home
             }
         }
 
-        private void dgvBan_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dgvBan.Rows[e.RowIndex];
-                // Hiển thị thông tin vào các textbox
-                txtTenBan.Text = row.Cells["Ten"].Value.ToString();
-                numThuTu.Value = Convert.ToInt32(row.Cells["ThuTu"].Value);
-                // Đặt giá trị trạng thái cho ComboBox từ cột "TrangThai" trong DataGridView
-                string TrangThai = row.Cells["TrangThai"].Value.ToString();
-
-                // Kiểm tra và chọn trạng thái trong ComboBox
-                if (TrangThai.Equals("Trống", StringComparison.OrdinalIgnoreCase))
-                {
-                    cbbTrangThai.SelectedItem = "Trống";  // Chọn "Trống"
-                }
-                else if (TrangThai.Equals("Có người", StringComparison.OrdinalIgnoreCase))
-                {
-                    cbbTrangThai.SelectedItem = "Có người";  // Chọn "Có người"
-                }
-                else
-                {
-                    cbbTrangThai.SelectedIndex = -1;  // Nếu không khớp, bỏ chọn
-                }
-            }
-            txtTenBan.Focus();
-
-        }
-
-        private void btnTableDetails_Click(object sender, EventArgs e)
-        {
-            
-            // Kiểm tra xem tên bàn có hợp lệ không
-            if (dgvBan.CurrentRow == null)
-            {
-                MessageBox.Show("Vui lòng chọn bàn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            int maBan = Convert.ToInt32(dgvBan.CurrentRow.Cells["MaBan"].Value);
-
-            // Lấy dữ liệu
-            var newHoaDon = new HOADON_DTO
-            {
-                MaBan = maBan,
-                MaNV = _maNV,
-                NgayLap = DateTime.Now,
-                TrangThai = "Chưa Thanh Toán"
-            };
-
-            // Thêm hóa đơn
-            int insert_hoadon = _hoadonBll.insert_hoadon(newHoaDon);
-
-            if (insert_hoadon > 0)
-            {
-                // Lấy mã hóa đơn vừa tạo
-                int maHD = _hoadonBll.load_hoadon_new(newHoaDon);
-                if (maHD > 0)
-                {
-                    FTableDetails fTableDetails = new FTableDetails(maBan, maHD);
-                    fTableDetails.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("Không tìm thấy mã hóa đơn vừa tạo.", "Lỗi");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Thêm hóa đơn thất bại.", "Lỗi");
-            }
-        }
-
         private void dgvBan_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             // Kiểm tra xem tên bàn có hợp lệ không
@@ -346,7 +268,7 @@ namespace UEH_Chacorner.Home
             var newHoaDon = new HOADON_DTO
             {
                 MaBan = maBan,
-                MaNV = _maNV,
+                MaNV = MaNV,
                 NgayLap = DateTime.Now,
                 TrangThai = "Chưa Thanh Toán"
             };
@@ -360,8 +282,8 @@ namespace UEH_Chacorner.Home
                 int maHD = _hoadonBll.load_hoadon_new(newHoaDon);
                 if (maHD > 0)
                 {
-                    FTableDetails fTableDetails = new FTableDetails(maBan, maHD);
-                    fTableDetails.ShowDialog();
+                    FTableDetails fTableDetails = new FTableDetails(maBan, maHD, MaNV, panelChildForm);
+                    OpenChildForm(fTableDetails);
                 }
                 else
                 {
@@ -374,7 +296,7 @@ namespace UEH_Chacorner.Home
             }
         }
 
-        private void dgvBan_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        private void dgvBan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
@@ -382,6 +304,7 @@ namespace UEH_Chacorner.Home
                 // Hiển thị thông tin vào các textbox
                 txtTenBan.Text = row.Cells["Ten"].Value.ToString();
                 numThuTu.Value = Convert.ToInt32(row.Cells["ThuTu"].Value);
+
                 // Đặt giá trị trạng thái cho ComboBox từ cột "TrangThai" trong DataGridView
                 string TrangThai = row.Cells["TrangThai"].Value.ToString();
 
@@ -400,7 +323,20 @@ namespace UEH_Chacorner.Home
                 }
             }
             txtTenBan.Focus();
+        }
 
+        private void OpenChildForm(Form childForm)
+        {
+            _activeForm?.Hide();
+            _activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag = childForm;
+            panelChildForm.BringToFront();
+            childForm.BringToFront();
+            childForm.Show();
         }
     }
 }

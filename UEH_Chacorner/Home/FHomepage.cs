@@ -182,6 +182,7 @@ namespace UEH_ChaCorner
             {
                 _isHome = false;
                 _isTable = true;
+                _table.MaNV = _manv;
                 OpenChildForm(_table);
             }
             if (_isProfile)
@@ -189,6 +190,7 @@ namespace UEH_ChaCorner
                 _isProfile = false;
                 _isTable = true;
                 _taikhoan.Hide();
+                _table.MaNV = _manv;
                 OpenChildForm(_table);
             }
             if (_isStaff)
@@ -196,6 +198,7 @@ namespace UEH_ChaCorner
                 _isStaff = false;
                 _isTable = true;
                 _nhanvien.Hide();
+                _table.MaNV = _manv;
                 OpenChildForm(_table);
             }
             if (_isMenu)
@@ -203,6 +206,7 @@ namespace UEH_ChaCorner
                 _isMenu = false;
                 _isTable = true;
                 _menu.Hide();
+                _table.MaNV = _manv;
                 OpenChildForm(_table);
             }
             if (_isChart)
@@ -210,6 +214,7 @@ namespace UEH_ChaCorner
                 _isChart = false;
                 _isTable = true;
                 _thongke.Hide();
+                _table.MaNV = _manv;
                 OpenChildForm(_table);
             }
 
