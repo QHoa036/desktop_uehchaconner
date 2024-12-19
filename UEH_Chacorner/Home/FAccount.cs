@@ -1,6 +1,8 @@
 ﻿using BLL;
 using DTO;
 using System;
+using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
 using UEH_ChaCorner.Common;
 
@@ -61,6 +63,10 @@ namespace UEH_ChaCorner
                 NgaySinh = Convert.ToDateTime(txtDOB.Text.Trim())
             };
 
+            if (!ValidateInputs())
+            {
+                return;
+            }
             try
             {
                 int result = _nhanvienBll.update_nhanvien(nhanvien);
@@ -145,6 +151,51 @@ namespace UEH_ChaCorner
             {
                 Utils.ShowError($"{ex.Message}");
             }
+        }
+
+        private bool ValidateInputs()
+        {
+            if (txtFullname.TextLength == 0)
+            {
+                ShowWarning(@"Chưa điền họ và tên.");
+                return false;
+            }
+            if (txtFullname.TextLength >= 100)
+            {
+                ShowWarning(@"Họ và tên quá dài.");
+                return false;
+            }
+            if (txtDOB.Value.Year == DateTime.Today.Year)
+            {
+                ShowWarning(@"Chưa chọn ngày sinh.");
+                return false;
+            }
+            if (txtPhone.TextLength == 0)
+            {
+                ShowWarning(@"Chưa điền số điện thoại.");
+                return false;
+            }
+            if (txtPhone.TextLength != txtPhone.Text.Where(char.IsDigit).Count())
+            {
+                ShowWarning(@"Số điện thoại không hợp lệ.");
+                return false;
+            }
+            if (txtPhone.TextLength >= 12)
+            {
+                ShowWarning(@"Số điện thoại quá dài.");
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtDOB.Text))
+            {
+                ShowWarning(@"Chưa chọn giới tính.");
+                return false;
+            }
+            return true;
+        }
+
+        private void ShowWarning(string message)
+        {
+            MessageBox.Show(message, @"Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }
