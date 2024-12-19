@@ -163,26 +163,33 @@ namespace UEH_ChaCorner.Home
 
         private void btXoa_Click(object sender, EventArgs e)
         {
-            if (dgvsanpham.SelectedRows.Count > 0)
+            try
             {
-                int MaDMSP = Convert.ToInt32(dgvsanpham.SelectedRows[0].Cells["MaDMSP"].Value);
-                var product = new DANHMUCSANPHAM_DTO { MaDMSP = MaDMSP };
-
-                int result = _danhMucBll.Delete_DanhMucSanPham(product);
-
-                if (result > 0)
+                if (dgvsanpham.SelectedRows.Count > 0)
                 {
-                    MessageBox.Show("Sản phẩm đã được xóa thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadCategoryList();
+                    int MaDMSP = Convert.ToInt32(dgvsanpham.SelectedRows[0].Cells["MaDMSP"].Value);
+                    var product = new DANHMUCSANPHAM_DTO { MaDMSP = MaDMSP };
+
+                    int result = _danhMucBll.Delete_DanhMucSanPham(product);
+
+                    if (result > 0)
+                    {
+                        MessageBox.Show("Sản phẩm đã được xóa thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LoadCategoryList();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không thể xóa sản phẩm.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Không thể xóa sản phẩm.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Vui lòng chọn một sản phẩm để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            else
+            catch
             {
-                MessageBox.Show("Vui lòng chọn một sản phẩm để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Không thể xóa sản phẩm (Do lỗi khóa ngoại với bảng SanPham).", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
