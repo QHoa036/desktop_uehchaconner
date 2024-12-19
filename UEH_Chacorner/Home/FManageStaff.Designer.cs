@@ -441,6 +441,7 @@
             this.btXoa.Size = new System.Drawing.Size(100, 100);
             this.btXoa.TabIndex = 97;
             this.btXoa.UseTransparentBackground = true;
+            this.btXoa.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btSua
             // 
@@ -460,6 +461,7 @@
             this.btSua.Size = new System.Drawing.Size(100, 100);
             this.btSua.TabIndex = 96;
             this.btSua.UseTransparentBackground = true;
+            this.btSua.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // panelLeft
             // 
