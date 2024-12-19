@@ -70,7 +70,7 @@ namespace UEH_ChaCorner.Home
                 string maDMSP = dgvsanpham.Rows[index].Cells["MaDMSP"].Value.ToString();
 
                 // Cập nhật các thông tin khác
-                txttensp.Text = dgvsanpham.Rows[index].Cells["TenSanPham"].Value.ToString();
+                txttensp.Text = dgvsanpham.Rows[index].Cells["TenDMSP"].Value.ToString();
             }
         }
 

@@ -17,15 +17,13 @@ namespace DAL
         // Thêm danh mục sản phẩm
         public int Insert_DanhMucSanPham(DANHMUCSANPHAM_DTO danhMucPublic)
         {
-            var parameter = 2; // Số lượng tham số
+            var parameter = 1; // Số lượng tham số
             var name = new string[parameter];
             var values = new object[parameter];
 
-            name[0] = "@MaDMSP";
-            name[1] = "@TenDMSP";
+            name[0] = "@TenDMSP";
 
-            values[0] = danhMucPublic.MaDMSP;
-            values[1] = danhMucPublic.TenDMSP;
+            values[0] = danhMucPublic.TenDMSP;
 
             var sql = "INSERT_DanhMucSanPham";
             return _conn.ExecuteData(sql, name, values, parameter);

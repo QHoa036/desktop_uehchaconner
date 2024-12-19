@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 
 using BLL;
@@ -93,6 +94,14 @@ namespace UEH_Chacorner.Home
 
         private void ThanhToan()
         {
+            // Kiểm tra xem trong hóa đơn có sản phẩm chưa
+            if (dgvCTHD.Rows.Count == 1 && dgvCTHD.Rows[0].Cells.Cast<DataGridViewCell>().All(c => c.Value == null || c.Value == DBNull.Value))
+            {
+                MessageBox.Show("Hóa đơn chưa có sản phẩm.", "Lỗi");
+                return;
+            }
+
+            // Kiểm tra xem trong table có sản phẩm nào không
             if (dgvCTHD.Rows.Count == 0)
             {
                 MessageBox.Show("Hóa đơn chưa có sản phẩm.", "Lỗi");
@@ -102,7 +111,7 @@ namespace UEH_Chacorner.Home
             // Tạo đối tượng
             var hd_thanhtoan = new HOADON_DTO
             {
-                MaHD = Convert.ToInt32(txtMaHD.Text),
+                MaHD = !string.IsNullOrWhiteSpace(txtMaHD.Text) ? Convert.ToInt32(txtMaHD.Text) : 0, // Add safeguard for txtMaHD.Text
                 MaBan = _maBan,
                 MaNV = _maNV,
                 NgayLap = DateTime.Now,
@@ -121,7 +130,8 @@ namespace UEH_Chacorner.Home
                 MessageBox.Show("Thanh toán thất bại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
+
+
         private void FTableDetails_Load(object sender, EventArgs e)
         {
             // Hiển thị mã hóa đơn trên Label
@@ -279,13 +289,17 @@ namespace UEH_Chacorner.Home
 
         private void dgvCTHD_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            try
             {
-                DataGridViewRow row = dgvCTHD.Rows[e.RowIndex];
-                // Hiển thị thông tin vào các textbox
-                numSoLuong.Value = Convert.ToInt32(row.Cells["SoLuong"].Value);
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow row = dgvCTHD.Rows[e.RowIndex];
+                    // Hiển thị thông tin vào các textbox
+                    numSoLuong.Value = Convert.ToInt32(row.Cells["SoLuong"].Value);
+                }
+                numSoLuong.Focus();
             }
-            numSoLuong.Focus();
+            catch { }
         }
 
         private void btnXoaMon_Click(object sender, EventArgs e)
