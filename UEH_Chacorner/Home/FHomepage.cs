@@ -76,6 +76,7 @@ namespace UEH_ChaCorner
             }
             else
             {
+                btCategory.Visible = false;
                 btStaff.Visible = false;
                 btStatistic.Visible = false;
                 btMenu.Visible = false;
