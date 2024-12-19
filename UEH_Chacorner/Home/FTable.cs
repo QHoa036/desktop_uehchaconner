@@ -373,5 +373,34 @@ namespace UEH_Chacorner.Home
                 MessageBox.Show("Thêm hóa đơn thất bại.", "Lỗi");
             }
         }
+
+        private void dgvBan_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvBan.Rows[e.RowIndex];
+                // Hiển thị thông tin vào các textbox
+                txtTenBan.Text = row.Cells["Ten"].Value.ToString();
+                numThuTu.Value = Convert.ToInt32(row.Cells["ThuTu"].Value);
+                // Đặt giá trị trạng thái cho ComboBox từ cột "TrangThai" trong DataGridView
+                string TrangThai = row.Cells["TrangThai"].Value.ToString();
+
+                // Kiểm tra và chọn trạng thái trong ComboBox
+                if (TrangThai.Equals("Trống", StringComparison.OrdinalIgnoreCase))
+                {
+                    cbbTrangThai.SelectedItem = "Trống";  // Chọn "Trống"
+                }
+                else if (TrangThai.Equals("Có người", StringComparison.OrdinalIgnoreCase))
+                {
+                    cbbTrangThai.SelectedItem = "Có người";  // Chọn "Có người"
+                }
+                else
+                {
+                    cbbTrangThai.SelectedIndex = -1;  // Nếu không khớp, bỏ chọn
+                }
+            }
+            txtTenBan.Focus();
+
+        }
     }
 }

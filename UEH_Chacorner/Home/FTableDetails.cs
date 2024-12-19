@@ -42,6 +42,7 @@ namespace UEH_Chacorner.Home
             dgvSanPham.Columns[3].HeaderText = @"Tên sản phẩm";
             dgvSanPham.Columns[4].HeaderText = @"Đơn giá";
             dgvSanPham.Columns[4].DefaultCellStyle.Format = "N0";
+            dgvSanPham.Columns[5].Visible = false;
         }
 
         private void LoadDataGrid_CTHD()
@@ -88,12 +89,42 @@ namespace UEH_Chacorner.Home
             txtThanhTien.Text = TongTien.ToString("N0") + "đ";  // Định dạng số và thêm "đ" vào cuối
         }
 
+        private void ThanhToan()
+        {
+            if (dgvCTHD.Rows.Count == 0)
+            {
+                MessageBox.Show("Hóa đơn chưa có sản phẩm.", "Lỗi");
+                return;
+            }
+
+            // Tạo đối tượng
+            var hd_thanhtoan = new HOADON_DTO
+            {
+                MaHD = Convert.ToInt32(txtMaHD.Text),
+                MaBan = _maBan,
+                MaNV = "00579",
+                NgayLap = DateTime.Now,
+                TrangThai = "Đã Thanh Toán"
+            };
+
+            // Gọi phương thức cập nhật
+            int result = _hoadonBll.update_hoadon(hd_thanhtoan);
+            if (result > 0)
+            {
+                MessageBox.Show("Thanh toán thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtTrangThai.Text = "Đã Thanh Toán";
+            }
+            else
+            {
+                MessageBox.Show("Thanh toán thất bại.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        
         private void FTableDetails_Load(object sender, EventArgs e)
         {
             // Hiển thị mã hóa đơn trên Label
             lbTitle5.Text = $"Thực đơn Bàn {_maBan}";
             txtMaHD.Text = _maHD.ToString();
-            
 
             LoadDataGrid_SanPham();
             if (dgvSanPham.Rows.Count > 0)
@@ -113,6 +144,13 @@ namespace UEH_Chacorner.Home
 
         private void ThemMon()
         {
+            // Kiểm tra trạng thái hóa đơn
+            if (txtTrangThai.Text == "Đã Thanh Toán")
+            {
+                MessageBox.Show("Hóa đơn đã được thanh toán. Không thể cập nhật.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (txtMaSP.Text == null)
             {
                 MessageBox.Show("Vui lòng chọn sản phẩm.", "Lỗi");
@@ -174,6 +212,13 @@ namespace UEH_Chacorner.Home
 
         private void btnSuaMon_Click(object sender, EventArgs e)
         {
+            // Kiểm tra trạng thái hóa đơn
+            if (txtTrangThai.Text == "Đã Thanh Toán")
+            {
+                MessageBox.Show("Hóa đơn đã được thanh toán. Không thể cập nhật.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (dgvCTHD.SelectedRows.Count > 0)
             {
                 // Lấy mã CTHD và Mã SP
@@ -280,6 +325,11 @@ namespace UEH_Chacorner.Home
             {
                 MessageBox.Show("Chọn món cần xóa.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            ThanhToan();
         }
     }
 }

@@ -48,7 +48,7 @@ namespace DAL
 
         public int update_hoadon(HOADON_DTO hoadonPublic)
         {
-            var parameter = 4;
+            var parameter = 5;
             var name = new string[parameter];
             var values = new object[parameter];
 
@@ -56,11 +56,13 @@ namespace DAL
             name[1] = "@MaBan";
             name[2] = "@MaNV";
             name[3] = "@NgayLap";
+            name[4] = "@TrangThai";
 
             values[0] = hoadonPublic.MaHD;
             values[1] = hoadonPublic.MaBan;
             values[2] = hoadonPublic.MaNV;
             values[3] = hoadonPublic.NgayLap;
+            values[4] = hoadonPublic.TrangThai;
 
             var sql = "UPDATE_HoaDon";
             return _conn.ExecuteData(sql, name, values, parameter);
