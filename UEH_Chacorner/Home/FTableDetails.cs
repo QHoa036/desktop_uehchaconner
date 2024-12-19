@@ -304,6 +304,13 @@ namespace UEH_Chacorner.Home
 
         private void btnXoaMon_Click(object sender, EventArgs e)
         {
+            // Kiểm tra trạng thái hóa đơn
+            if (txtTrangThai.Text == "Đã Thanh Toán")
+            {
+                MessageBox.Show("Hóa đơn đã được thanh toán. Không thể cập nhật.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             if (dgvCTHD.SelectedRows.Count > 0)
             {
                 // Lấy mã CTHD và Mã SP
