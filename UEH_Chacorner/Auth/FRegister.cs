@@ -165,6 +165,24 @@ namespace UEH_ChaCorner
                 ShowWarning(@"Chưa chọn giới tính.");
                 return false;
             }
+
+            var now = DateTime.Now;
+            if (!DateTime.TryParse(txtDOB.Text, out var dob))
+            {
+                ShowWarning("Ngày sinh không hợp lệ. Vui lòng nhập đúng định dạng.");
+                return false;
+            }
+            var age = now.Year - dob.Year;
+            if (dob > now.AddYears(-age))
+            {
+                age--;
+            }
+            if (age < 18)
+            {
+                ShowWarning("Ngày sinh không được quá ngày hiện tại và tuổi phải ít nhất là 18.");
+                return false;
+            }
+
             return true;
         }
 
