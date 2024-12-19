@@ -187,20 +187,6 @@ namespace UEH_ChaCorner.Home
             }
         }
 
-        private void btnTimTenNV_TextChanged(object sender, EventArgs e)
-        {
-            string tenNV = txtSearch.Text.Trim();
-
-            if (string.IsNullOrEmpty(tenNV))
-            {
-                MessageBox.Show("Vui lòng nhập tên nhân viên.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Gọi phương thức lọc theo tên nhân viên
-            FilterDataGridByTenNV(tenNV);
-        }
-
         private void dgvHoaDon_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             // Kiểm tra xem có dòng nào được chọn không
@@ -238,6 +224,23 @@ namespace UEH_ChaCorner.Home
 
             // Gọi phương thức lọc
             FilterDataGridByNgayLap(selectedDate);
+        }
+
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                string tenNV = txtSearch.Text.Trim();
+
+                if (string.IsNullOrEmpty(tenNV))
+                {
+                    MessageBox.Show("Vui lòng nhập tên nhân viên.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Gọi phương thức lọc theo tên nhân viên
+                FilterDataGridByTenNV(tenNV);
+            }    
         }
     }
 }
