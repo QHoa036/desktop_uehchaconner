@@ -97,6 +97,12 @@
     <Compile Include="Home\FAccount.Designer.cs">
       <DependentUpon>FAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="Home\FCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home\FCategory.Designer.cs">
+      <DependentUpon>FCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home\FHomepage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home\FAccount.resx">
       <DependentUpon>FAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home\FCategory.resx">
+      <DependentUpon>FCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home\FHomepage.resx">
       <DependentUpon>FHomepage.cs</DependentUpon>
@@ -309,6 +318,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\homepage.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\category - hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\category.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

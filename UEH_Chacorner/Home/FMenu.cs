@@ -1,22 +1,17 @@
-﻿using BLL;
-using DTO;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
+using BLL;
+using DTO;
 
 namespace UEH_ChaCorner.Home
 {
     public partial class FMenu : Form
     {
         private readonly SANPHAM_BLL _sanphamBll = new SANPHAM_BLL();
-        private readonly DANHMUCSANPHAM_BLL _danhMucBll = new DANHMUCSANPHAM_BLL();
         private DataTable _productData;
+
         public FMenu()
         {
             InitializeComponent();
@@ -94,8 +89,8 @@ namespace UEH_ChaCorner.Home
             {
                 LoadProductList();
             }
-      
-}
+        }
+
         private void DeleteProduct()
         {
             if (dgvsanpham.SelectedRows.Count > 0)
@@ -229,12 +224,6 @@ namespace UEH_ChaCorner.Home
             }
         }
 
-        // Tìm 
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            SearchProduct();
-        }
-       
         // Xóa 
         private void btnDelete_Click(object sender, EventArgs e)
         {
