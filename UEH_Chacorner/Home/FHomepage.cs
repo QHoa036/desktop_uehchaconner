@@ -38,6 +38,16 @@ namespace UEH_ChaCorner
 
         private void FMainMenu_FormClosing(object sender, FormClosingEventArgs e)
         {
+            // Reset form
+            _isCategory = false;
+            _isProfile = false;
+            _isStaff = false;
+            _isChart = false;
+            _isMenu = false;
+            _isTable = false;
+            _isHome = true;
+            _activeForm?.Hide();
+
             var fLogin = new FLogin();
             fLogin.Show();
         }
