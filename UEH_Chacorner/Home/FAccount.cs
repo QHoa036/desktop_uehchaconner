@@ -124,8 +124,26 @@ namespace UEH_ChaCorner
                         _tennv = roleAndName.Rows[0]["TenNV"].ToString().Trim();
                         _manv = roleAndName.Rows[0]["MaNV"].ToString().Trim();
 
+                        string newPassword = txtNewPassword.Text.Trim();
+                        string confirmPassword = txtConfirmPassword.Text.Trim();
+
+                        // Kiểm tra mật khẩu mới và xác nhận mật khẩu
+                        if (newPassword != confirmPassword)
+                        {
+                            Utils.ShowError("Mật khẩu mới và xác nhận mật khẩu không khớp.");
+                            return;
+                        }
+
+                        // Kiểm tra xem mật khẩu mới không được trùng mật khẩu cũ
+                        if (newPassword == txtOldPassword.Text.Trim())
+                        {
+                            Utils.ShowError("Mật khẩu mới không được trùng với mật khẩu cũ.");
+                            return;
+                        }
+
                         // Cập nhật mật khẩu mới
-                        account.MatKhau = txtNewPassword.Text.Trim();
+                        account.MatKhau = newPassword;
+
                         int result = _accountBll.update_taikhoan(account);
                         if (result == 1)
                         {
@@ -146,7 +164,7 @@ namespace UEH_ChaCorner
                 }
                 else
                 {
-                    Utils.ShowError("Sai tài khoản hay mật khẩu."); // Sai thông tin
+                    Utils.ShowError("Sai mật khẩu."); // Sai thông tin
                     txtOldPassword.Focus();
                 }
             }
