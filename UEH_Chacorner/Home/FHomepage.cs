@@ -9,31 +9,58 @@ namespace UEH_ChaCorner
     {
         public static FHomepage MainMenu;
 
-        private readonly FRevenue _thongke = new FRevenue();
-        private readonly FStaff _nhanvien = new FStaff();
-        private readonly FAccount _taikhoan = new FAccount();
-        private readonly FCategory _danhmuc = new FCategory();
-        private readonly FMenu _menu = new FMenu();
-        private readonly FTable _table = new FTable();
+        // Khởi tạo các form con
+        private FRevenue _thongke = new FRevenue();
+        private FStaff _nhanvien = new FStaff();
+        private FAccount _taikhoan = new FAccount();
+        private FCategory _danhmuc = new FCategory();
+        private FMenu _menu = new FMenu();
+        private FTable _table = new FTable();
 
-        private Form _activeForm;
-        private string _manv = "", _quyennv = "", _tennv = "", _tentk = "";
-        private bool _isCategory = false;
-        private bool _isProfile = false;
-        private bool _isStaff = false;
-        private bool _isChart = false;
-        private bool _isMenu = false;
-        private bool _isTable = false;
-        private bool _isHome = true;
+        private Form _activeForm; // Form con đang hiển thị
+        private string _manv = "", _quyennv = "", _tennv = "", _tentk = ""; // Thông tin tài khoản người dùng
+        private bool _isCategory = false; // Trạng thái form danh mục
+        private bool _isProfile = false; // Trạng thái form tài khoản
+        private bool _isStaff = false; // Trạng thái form nhân viên
+        private bool _isChart = false; // Trạng thái form thống kê
+        private bool _isMenu = false; // Trạng thái form menu
+        private bool _isTable = false; // Trạng thái form quản lý bàn
+        private bool _isHome = true; // Trạng thái form trang chủ
 
         public FHomepage()
         {
-            InitializeComponent();
-            MainMenu = this;
+            InitializeComponent(); // Khởi tạo giao diện
+            MainMenu = this; // Gán form chính cho biến tĩnh MainMenu
         }
 
         private void FHomepage_Load(object sender, EventArgs e)
         {
+            // Sự kiện xảy ra khi form chính được tải
+            // Kiểm tra các form đã dispose chưa và được khởi tạo chưa
+            if (_taikhoan == null || _taikhoan.IsDisposed)
+            {
+                _taikhoan = new FAccount();
+            }
+            if (_danhmuc == null || _danhmuc.IsDisposed)
+            {
+                _danhmuc = new FCategory();
+            }
+            if (_nhanvien == null || _nhanvien.IsDisposed)
+            {
+                _nhanvien = new FStaff();
+            }
+            if (_thongke == null || _thongke.IsDisposed)
+            {
+                _thongke = new FRevenue();
+            }
+            if (_menu == null || _menu.IsDisposed)
+            {
+                _menu = new FMenu();
+            }
+            if (_table == null || _table.IsDisposed)
+            {
+                _table = new FTable();
+            }
         }
 
         private void FMainMenu_FormClosing(object sender, FormClosingEventArgs e)
@@ -48,14 +75,18 @@ namespace UEH_ChaCorner
             _isHome = true;
             _activeForm?.Hide();
 
+            // Hiển thị form đăng nhập khi form chính bị đóng
             var fLogin = new FLogin();
             fLogin.Show();
         }
 
         private void OpenChildForm(Form childForm)
         {
+            // Đóng form con đang hiển thị (nếu có)
             _activeForm?.Hide();
             _activeForm = childForm;
+
+            // Thiết lập và hiển thị form con mới
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
@@ -67,13 +98,13 @@ namespace UEH_ChaCorner
 
         internal void setVisible(string quyennv, string tennv, string tentk, string manv)
         {
-            // Lấy thông tin tài khoản
+            // Lấy thông tin tài khoản người dùng
             _manv = manv;
             _quyennv = quyennv;
             _tennv = lbUsername.Text = tennv;
             _tentk = tentk;
 
-            // Hiển thị chức năng tương ứng với quyền
+            // Hiển thị các chức năng phù hợp với quyền (Admin hoặc nhân viên)
             if (string.Equals(quyennv.ToLower(), "admin", StringComparison.OrdinalIgnoreCase))
             {
                 btHome.Visible = true;
@@ -97,7 +128,10 @@ namespace UEH_ChaCorner
 
         private void btHome_Click(object sender, EventArgs e)
         {
+            // Hiển thị form trang chủ
             if (_isHome) return;
+
+            // Ẩn tất cả các form con đang hiển thị và bật trạng thái Home
             if (_isProfile)
             {
                 _isProfile = false;
@@ -138,37 +172,35 @@ namespace UEH_ChaCorner
 
         private void btAccount_Click(object sender, EventArgs e)
         {
+            // Hiển thị form tài khoản
             if (_isProfile) return;
+
+            // Ẩn các form khác nếu đang hiển thị
             if (_isHome)
             {
                 _isHome = false;
                 _isProfile = true;
+                _taikhoan.Hide();
                 _taikhoan.TenNV = _tennv;
                 _taikhoan.Quyen = _quyennv;
                 _taikhoan.MaNV = _manv;
                 _taikhoan.TenTK = _tentk;
                 OpenChildForm(_taikhoan);
             }
+
+            // Kiểm tra và đóng các form khác để mở form tài khoản
             if (_isTable)
             {
                 _isTable = false;
                 _isProfile = true;
                 _table.Hide();
-                _taikhoan.TenNV = _tennv;
-                _taikhoan.Quyen = _quyennv;
-                _taikhoan.MaNV = _manv;
-                _taikhoan.TenTK = _tentk;
                 OpenChildForm(_taikhoan);
             }
             if (_isCategory)
             {
-                _isTable = false;
+                _isCategory = false;
                 _isProfile = true;
                 _danhmuc.Hide();
-                _taikhoan.TenNV = _tennv;
-                _taikhoan.Quyen = _quyennv;
-                _taikhoan.MaNV = _manv;
-                _taikhoan.TenTK = _tentk;
                 OpenChildForm(_taikhoan);
             }
             if (_isMenu)
@@ -176,10 +208,6 @@ namespace UEH_ChaCorner
                 _isMenu = false;
                 _isProfile = true;
                 _menu.Hide();
-                _taikhoan.TenNV = _tennv;
-                _taikhoan.Quyen = _quyennv;
-                _taikhoan.MaNV = _manv;
-                _taikhoan.TenTK = _tentk;
                 OpenChildForm(_taikhoan);
             }
             if (_isStaff)
@@ -187,10 +215,6 @@ namespace UEH_ChaCorner
                 _isStaff = false;
                 _isProfile = true;
                 _nhanvien.Hide();
-                _taikhoan.TenNV = _tennv;
-                _taikhoan.Quyen = _quyennv;
-                _taikhoan.MaNV = _manv;
-                _taikhoan.TenTK = _tentk;
                 OpenChildForm(_taikhoan);
             }
             if (_isChart)
@@ -198,17 +222,16 @@ namespace UEH_ChaCorner
                 _isChart = false;
                 _isProfile = true;
                 _thongke.Hide();
-                _taikhoan.TenNV = _tennv;
-                _taikhoan.Quyen = _quyennv;
-                _taikhoan.MaNV = _manv;
-                _taikhoan.TenTK = _tentk;
                 OpenChildForm(_taikhoan);
             }
         }
 
         private void btManage_Click(object sender, EventArgs e)
         {
+            // Hiển thị form quản lý bàn
             if (_isTable) return;
+
+            // Đóng các form khác nếu đang hiển thị
             if (_isHome)
             {
                 _isHome = false;
@@ -216,12 +239,11 @@ namespace UEH_ChaCorner
                 _table.MaNV = _manv;
                 OpenChildForm(_table);
             }
-            if(_isCategory)
+            if (_isCategory)
             {
                 _isCategory = false;
                 _isTable = true;
                 _danhmuc.Hide();
-                _table.MaNV = _manv;
                 OpenChildForm(_table);
             }
             if (_isProfile)
@@ -229,7 +251,6 @@ namespace UEH_ChaCorner
                 _isProfile = false;
                 _isTable = true;
                 _taikhoan.Hide();
-                _table.MaNV = _manv;
                 OpenChildForm(_table);
             }
             if (_isStaff)
@@ -237,7 +258,6 @@ namespace UEH_ChaCorner
                 _isStaff = false;
                 _isTable = true;
                 _nhanvien.Hide();
-                _table.MaNV = _manv;
                 OpenChildForm(_table);
             }
             if (_isMenu)
@@ -245,7 +265,6 @@ namespace UEH_ChaCorner
                 _isMenu = false;
                 _isTable = true;
                 _menu.Hide();
-                _table.MaNV = _manv;
                 OpenChildForm(_table);
             }
             if (_isChart)
@@ -253,15 +272,16 @@ namespace UEH_ChaCorner
                 _isChart = false;
                 _isTable = true;
                 _thongke.Hide();
-                _table.MaNV = _manv;
                 OpenChildForm(_table);
             }
-
         }
 
         private void btMenu_Click(object sender, EventArgs e)
         {
+            // Hiển thị form menu
             if (_isMenu) return;
+
+            // Đóng các form khác nếu đang hiển thị
             if (_isHome)
             {
                 _isHome = false;
@@ -275,7 +295,7 @@ namespace UEH_ChaCorner
                 _taikhoan.Hide();
                 OpenChildForm(_menu);
             }
-            if(_isCategory)
+            if (_isCategory)
             {
                 _isCategory = false;
                 _isMenu = true;
@@ -307,7 +327,10 @@ namespace UEH_ChaCorner
 
         private void btCategory_Click(object sender, EventArgs e)
         {
-            if(_isCategory) return;
+            // Hiển thị form danh mục
+            if (_isCategory) return;
+
+            // Đóng các form khác nếu đang hiển thị
             if (_isHome)
             {
                 _isHome = false;
@@ -353,7 +376,10 @@ namespace UEH_ChaCorner
 
         private void btStaff_Click(object sender, EventArgs e)
         {
+            // Hiển thị form nhân viên
             if (_isStaff) return;
+
+            // Đóng các form khác nếu đang hiển thị
             if (_isHome)
             {
                 _isHome = false;
@@ -399,12 +425,14 @@ namespace UEH_ChaCorner
 
         private void btStatistic_Click(object sender, EventArgs e)
         {
+            // Hiển thị form thống kê
             if (_isChart) return;
+
+            // Đóng các form khác nếu đang hiển thị
             if (_isHome)
             {
                 _isHome = false;
                 _isChart = true;
-                _thongke.Hide();
                 OpenChildForm(_thongke);
             }
             if (_isCategory)
@@ -446,7 +474,19 @@ namespace UEH_ChaCorner
 
         private void btExit_Click(object sender, EventArgs e)
         {
+            // Đóng ứng dụng
+            CloseChildForm();
             Close();
+
+        }
+
+        private void CloseChildForm()
+        {
+            if (_activeForm != null)
+            {
+                _activeForm.Close();
+                _activeForm = null;
+            }
         }
     }
 }

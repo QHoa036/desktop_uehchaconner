@@ -10,56 +10,63 @@ namespace UEH_ChaCorner
 {
     public partial class FRegister : Form
     {
+        // Đối tượng xử lý nghiệp vụ liên quan đến nhân viên và tài khoản
         private readonly NHANVIEN_BLL _nvBll = new NHANVIEN_BLL();
         private readonly TAIKHOAN_BLL _tkBll = new TAIKHOAN_BLL();
 
-        private int _manv;
-        private string _quyen = @"NHANVIEN";
+        private int _manv; // Biến lưu số thứ tự của nhân viên mới
+        private string _quyen = @"NHANVIEN"; // Mặc định quyền của tài khoản là nhân viên
 
         public FRegister()
         {
+            // Cho phép gọi các thao tác không an toàn trên các thread khác nhau
             CheckForIllegalCrossThreadCalls = false;
-            InitializeComponent();
+            InitializeComponent(); // Khởi tạo giao diện form
         }
 
         private void Tatlbtrangthai()
         {
+            // Tạm dừng trong 2 giây
             Thread.Sleep(2000);
         }
 
         private void FRegister_Load(object sender, EventArgs e)
         {
+            // Đặt chế độ cho ComboBox "Giới tính" chỉ cho phép chọn từ danh sách
             txtGender.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void Insertnhanvien()
         {
+            // Thêm thông tin nhân viên vào cơ sở dữ liệu
             var nvPublic = new NHANVIEN_DTO();
-            _manv = _nvBll.count_nhanvien();
+            _manv = _nvBll.count_nhanvien(); // Lấy số lượng nhân viên hiện tại để tạo mã mới
 
-            nvPublic.MaNV = "NV" + _manv;
-            nvPublic.TenNV = txtFullname.Text;
-            nvPublic.NgaySinh = DateTime.Parse(txtDOB.Text);
-            nvPublic.SDT = txtPhone.Text;
-            nvPublic.GioiTinh = txtGender.Text;
+            nvPublic.MaNV = "NV" + _manv; // Tạo mã nhân viên mới
+            nvPublic.TenNV = txtFullname.Text; // Lấy tên nhân viên từ ô nhập liệu
+            nvPublic.NgaySinh = DateTime.Parse(txtDOB.Text); // Lấy ngày sinh
+            nvPublic.SDT = txtPhone.Text; // Lấy số điện thoại
+            nvPublic.GioiTinh = txtGender.Text; // Lấy giới tính
 
-            _nvBll.insert_nhanvien(nvPublic);
+            _nvBll.insert_nhanvien(nvPublic); // Gọi phương thức thêm nhân viên
         }
 
         private void Inserttaikhoan()
         {
+            // Thêm thông tin tài khoản vào cơ sở dữ liệu
             var tkPublic = new TAIKHOAN_DTO
             {
-                TenTK = txtUsername.Text,
-                MatKhau = txtPassword.Text,
-                Quyen = _quyen,
-                MaNV = "NV" + _manv
+                TenTK = txtUsername.Text, // Tên tài khoản
+                MatKhau = txtPassword.Text, // Mật khẩu
+                Quyen = _quyen, // Quyền mặc định là nhân viên
+                MaNV = "NV" + _manv // Gắn mã nhân viên cho tài khoản
             };
-            _tkBll.insert_taikhoan(tkPublic);
+            _tkBll.insert_taikhoan(tkPublic); // Gọi phương thức thêm tài khoản
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            // Quay lại trang đăng nhập
             Hide();
             var fLogin = new FLogin();
             fLogin.ShowDialog();
@@ -67,19 +74,20 @@ namespace UEH_ChaCorner
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
+            // Kiểm tra dữ liệu nhập có hợp lệ không
             if (!ValidateInputs())
             {
-                var t = new Thread(Tatlbtrangthai) { IsBackground = false };
+                var t = new Thread(Tatlbtrangthai) { IsBackground = false }; // Hiển thị trạng thái lỗi trong 2 giây
                 t.Start();
                 return;
             }
             try
             {
-                // Thêm nhân viên và tài khoản
+                // Thêm thông tin nhân viên và tài khoản vào cơ sở dữ liệu
                 Insertnhanvien();
                 Inserttaikhoan();
 
-                // Thông báo thành công
+                // Hiển thị thông báo đăng ký thành công
                 MessageBox.Show(@"Đăng ký thành công.", @"Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 // Chuyển về trang đăng nhập
@@ -89,7 +97,7 @@ namespace UEH_ChaCorner
             }
             catch (SqlException loi)
             {
-                // Xóa nhân viên nếu tạo tài khoản thất bại
+                // Nếu lỗi do trùng tên tài khoản, hiển thị thông báo và xóa nhân viên vừa thêm
                 if (loi.Message.Contains("Violation of PRIMARY KEY constraint 'PK_TENTK'"))
                 {
                     MessageBox.Show(@"Tên tài khoản bị trùng.", @"Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -100,6 +108,8 @@ namespace UEH_ChaCorner
 
         private bool ValidateInputs()
         {
+            // Kiểm tra các điều kiện nhập liệu
+
             if (txtUsername.TextLength == 0)
             {
                 ShowWarning(@"Chưa điền tên tài khoản.");
@@ -183,16 +193,18 @@ namespace UEH_ChaCorner
                 return false;
             }
 
-            return true;
+            return true; // Dữ liệu hợp lệ
         }
 
         private void ShowWarning(string message)
         {
+            // Hiển thị thông báo lỗi với nội dung message
             MessageBox.Show(message, @"Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void DeleteNhanVien_Loi()
         {
+            // Xóa thông tin nhân viên trong trường hợp lỗi
             var nhanvienPublic = new NHANVIEN_DTO { MaNV = "NV" + _manv };
             _nvBll.delete_nhanvien(nhanvienPublic);
         }
