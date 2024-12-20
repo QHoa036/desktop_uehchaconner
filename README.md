@@ -1,4 +1,3 @@
-
 # MÔN PHÁT TRIỂN ỨNG DỤNG Desktop
 
 ## Tên đề tài : Quản lý cửa hàng trà sữa UEH (UEH Cha Corner)
@@ -40,7 +39,21 @@ Sau khi triển khai, việc bảo trì định kỳ giúp nâng cao hiệu su�
 
 [Xem tại đây](https://drive.google.com/file/d/1V73b4POEhpo3ghm88Q8X-2hC43bw8ctP/view?usp=sharing)
 
+## Hướng dẫn sử dung
 
+### Kết nối với CSDL
+Thay thế connectionString trong App.config.
+
+### Thông tin tài khoản
+
+Admin:
+* Tên đăng nhập: tk000
+* Mật khẩu: ad995
+
+Nhân viên:
+* Tên đăng nhập: tk003
+* Mật khẩu: nv333
+Hoặc đăng ký tài khoản nhân viên mới.
 
 ## Lời cảm ơn
 
