@@ -127,6 +127,13 @@ namespace UEH_ChaCorner
                         string newPassword = txtNewPassword.Text.Trim();
                         string confirmPassword = txtConfirmPassword.Text.Trim();
 
+                        // Kiểm tra độ mạnh của mật khẩu mới
+                        if (newPassword.Length < 5)
+                        {
+                            Utils.ShowError("Mật khẩu mới phải có ít nhất 5 ký tự.");
+                            return;
+                        }
+
                         // Kiểm tra mật khẩu mới và xác nhận mật khẩu
                         if (newPassword != confirmPassword)
                         {

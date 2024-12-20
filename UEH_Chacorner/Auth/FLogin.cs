@@ -72,7 +72,7 @@ namespace UEH_ChaCorner
                         Hide();
 
                         // Hiển thị màn hình loading
-                        //await ShowSplashScreenAsync();
+                        await ShowSplashScreenAsync();
 
                         // Hiển thị form chính và chuyển quyền truy cập
                         MainMenu.setVisible(_quyennv, _tennv, txtUsername.Text.Trim(), _manv);
