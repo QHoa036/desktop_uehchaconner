@@ -42,19 +42,8 @@ Sau khi triển khai, việc bảo trì định kỳ giúp nâng cao hiệu su�
 ## Hướng dẫn sử dung
 
 ### Kết nối với CSDL
-Thay thế connectionString trong App.config.
-
-### Thông tin tài khoản
-
-Admin:
-* Tên đăng nhập: tk000
-* Mật khẩu: ad995
-
-Nhân viên:
-* Tên đăng nhập: tk003
-* Mật khẩu: nv333
-
-Hoặc đăng ký tài khoản nhân viên mới.
+- Thay thế connectionString trong App.config.
+- Hoặc đăng ký tài khoản nhân viên mới.
 
 ## Lời cảm ơn
 
